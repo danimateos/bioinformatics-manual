@@ -1,0 +1,27 @@
+---
+  title: "02-Databases"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Databases
+
+## Scientific literature
+
+## Searching the literature
+
+## Bibliography management
+
+## Biomedical Databases
+
+## Elements of a biomedical DB
+
+## Ontologies
+
+## The database landscape
+
+## Accessing information in DBs
+
+## Genome browsers

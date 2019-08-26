@@ -1,0 +1,23 @@
+---
+  title: "01-Introduction_to_Bioinformatics"
+---
+
+# Introduction to Bioinformatics
+
+## Setting up our environment
+
+## What is bioinformatics?
+
+## Why is bioinformatics so important?
+
+## Types of bioinformatics software
+
+## Molecular Biology refresher
+
+## Linux overview
+
+## Virtual Machines
+
+## Installing Ubuntu
+
+## Installing Conda 
