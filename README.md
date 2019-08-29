@@ -18,6 +18,19 @@ This book is written using [bookdown]. If you want to contribute, you will find 
 Contributions
 =============
 
-This manual aspires to be a collaborative work. If you see errors, have any suggestion, or want to expand any section please fork, improve, and send me a Pull Request!
+This manual aspires to be a collaborative work. If you see errors, have any suggestion, or want to expand any section please fork, improve, and send me a [Pull Request]!
+
+
+Sources
+=======
+
+The course follows two books:
+
+- Bioinformatics and Functional Genomics (3rd edition). J. Pevsner, Wiley, 2015 ISBN: 9781118581780
+
+- Bioinformatics Data Skills. Vince Buffalo, O’Reilly, 2015. ISBN: 9781449367374
+
+Fourther sources are cited inline.
 
 [bookdown]: https://bookdown.org
+[Pull Request]: https://help.github.com/en/articles/about-pull-requests
