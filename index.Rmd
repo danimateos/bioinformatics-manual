@@ -1,0 +1,17 @@
+--- 
+title: "Bioinformatics Manual"
+author: "Daniel Mateos San Martín"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+github-repo: danimateos/bioinformatics_manual
+description: "This is the official manual for the Bioinformatics course taught at the CEU San Pablo Bioengineering degree."
+---
+
+# Prerequisites
+  
+This is a course designed for 4th year students of Biomedical Engineering. As such, the required knowledge includes but is not limited to:
+
+- Molecular Biology, in particular genomics
+- Command line Linux 
