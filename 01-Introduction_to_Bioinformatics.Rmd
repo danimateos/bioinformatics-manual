@@ -47,9 +47,15 @@ TODO: image from Pevsner
 The famous Moore’s law in silicon chips was stated as “a halving of feature size every 18 months” .
 Sequencing technology has evolved much faster.
 
-![Sequence growth](https://www.ebi.ac.uk/ena/statistics/ena_embl_growth.png)
 
-![Cost reduction](https://www.genome.gov/sites/default/files/inline-images/Sequencing_Cost_per_Genome_Feb2019_0.png)
+![Sequence growth](images/ena_embl_growth.png)
+
+@EMBL-EBI2018
+
+
+![Cost reduction](images/Sequencing_Cost_per_Genome_Feb2019_0.png)
+
+@NationalHumanGenomeResearchInstitute2019
 
 ### Applications
 
@@ -97,7 +103,9 @@ In reality, it is even more complex: see next slide
 
 ### Representation of a gene
 
-![p53 in box representation](https://www.researchgate.net/profile/Jean_Christophe_Bourdon/publication/6200243/figure/fig6/AS:667035998617604@1536045183169/Human-p53-A-Schema-of-the-human-p53-gene-structure-Alternative-splicing-a-b-g-and.png)
+  ![p53 in box representation](images/Human-p53-A-Schema-of-the-human-p53-gene-structure-Alternative-splicing-a-b-g-and.png)
+
+@Bourdon 
 
 ### Transcriptional regulation
 
