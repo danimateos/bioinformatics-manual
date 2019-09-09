@@ -2,26 +2,845 @@
   title: "02-Databases"
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-# Databases
+# Databases and the scientific literature
 
 ## Scientific literature
 
+History of scientific literature
+
+Conventional scientific literature:
+
+Formal written articles or books
+
+Euclid, Newton, Copernicus…
+
+Currently, most scientific literature is published as peer-reviewed journals 
+
+### Why is communication important in science?
+
+### Peer-reviewed journals
+
+First journal: Philosophical Transactions of the Royal Society
+
+Functions:
+
+* Dissemination of knowledge
+
+* Registration of credit
+
+Use of external reviewers only became common in the second half of the XXth century.
+
+@Spier2002
+
+### Peer review
+
+The peer review system exists to validate academic work and helps to improve the quality of published research.
+
+It takes the form of anonymous reviews requested by the editor when deciding whether to publish a manuscript.
+
+\cite{Elsevier}
+
+
+
+### Physical libraries
+
+Until relatively recently, a scientific organization produced and distributed at regular intervals, a paperbound “issue” containing one or more articles:
+
+* High costs of production
+
+* Sources of support: sales, page charges to authors...
+
+* Several trends have buffeted the system:
+
+* More papers are being published
+
+Problem of space in libraries
+
+Electronic facilities
+
+
+### Grant evaluation and the importance of publishing
+
+Most funding agencies give grants taking into account impact factor (IF).
+
+IF is a journal-level metric. It measures the average number of citations in a year, per article published  in the previous two years.
+
+Example: 2017 impact factor
+
+A = the number of times articles published in 2015 and 2016 were cited by indexed journals during 2017.
+
+B = the total number of "citable items" published in 2015 and 2016.
+
+2017 impact factor  =  A/B
+ 
+DeGroote2016
+
+
+### The effect of Impact Factor on evaluation
+
+Since it is a journal level metric, strong incentive to publish on top journals.
+
+No effect of quality of the paper itself, within the same journal.
+
+Editorials have a very strong position.
+
+### Open Access
+
+In the last years there’s been a strong push from scientists and funding agencies to move to an open access model.
+
+Retains the “peer-review” as the criterion for publication.
+
+Accepted articles are placed on the web.
+
+Free access.
+
+Freely usable by readers.
+
+Authors retain copyright, rather than assign it to the publisher.
+
+### Open Access mandates
+
+NIH Public Access Policy: 2008
+
+Fair Access to Science and Technology Research (FASTR) Act: proposed (USA)
+
+Plan S: 2020
+
+
+https://en.wikipedia.org/wiki/NIH_Public_Access_Policy
+
+https://www.nature.com/articles/d41586-018-06178-7
+
+https://en.wikipedia.org/wiki/Fair_Access_to_Science_and_Technology_Research_Act
+
+
+
+
+### sci-hub
+
+(pirated) repository holding any scientific paper.
+
+Founded by Alexandra Elbakyan in 2011.
+
+Based on sharing of credentials and storage of the downloaded papers.
+
+https://en.wikipedia.org/wiki/Sci-Hub
+
+
+### The preprint push
+
+Preprints: papers published before peer-review.
+
+arXiv: preprint server for physics and math, mostly. Since 1991.
+
+bioRxiv: preprint server for biology 2013.
+
+Effects:
+
+* Speed up sharing of research results, more transparency
+
+* Priority Claims
+
+* Undermine journals’ business case.
+
+Prelights: an initiative to select and criticize choice preprints in biology.
+
+https://arxiv.org/
+
+https://www.biorxiv.org/
+
+https://prelights.biologists.com/
+
+### Post-publication peer review
+
+Pubpeer: Website for post-publication peer review
+
+https://pubpeer.com/ 
+
+#### Exercise: 
+
+search for articles by Susana González. Read a few of the reviews. Do you find anything amiss?
+
+https://pubpeer.com/publications/CD3325D6086BF005D1C72E75ED722D#17
+
+
 ## Searching the literature
 
-## Bibliography management
+### PubMed
 
-## Biomedical Databases
+For biomedical literature:
 
-## Elements of a biomedical DB
+National Library of Medicine (NML)
 
-## Ontologies
+World’s largest medical library
+
+Created in 1971
+
+MEDLINE (Medical Literature, Analysis and Retrieval System Online): bibliographic DB
+
+Free access is provided by
+https://www.ncbi.nlm.nih.gov/pubmed/
+
+PubMed: DB from NLM
+
+* Bibliographic component of the DB ENTREZ (NCBI)
+
+How does it work?
+
+https://www.ncbi.nlm.nih.gov/pubmed/
+
+
+#### How to search PubMed
+
+Boolean operators
+
+Wildcard: *
+
+Helpful tags:
+
+[au]: author
+
+[ti]: title
+
+[tiab]: title/abstract
+
+[tw]: text words
+
+
+
+#### PubMed search exercises
+
+* Find all papers that I (Daniel Mateos San Martín) have published.
+
+* Find all papers that my PhD advisor (Miguel Torres) has ever published in Nature, Cell, or Science.
+
+* Find all those that he published in any journal in 2013, that did not include me as one of the authors. 
+
+
+
+### Other Literature DBs
+
+Google Scholar: open
+
+https://scholar.google.com/
+
+ScienceDirect: by subscription
+
+http://www.sciencedirect.com/
+
+Scopus: by subscription
+
+https://www.scopus.com
+
+
+### Google Scholar
+
+Convenient and fast. Covers also books and other pieces of literature.
+
+https://scholar.google.com/
+
+Easy to filter and build more complex queries, and to see how many other papers have cited a piece of research.
+
+Easy to export citations as well.
+
+#### Exercise
+
+Perform the same search (papers by Daniel Mateos San Martín) in the previous databases. Compare the results.
+How many citations has each of the papers received?
+
+## How to read a scientific paper
+
+What is a scientific paper?
+
+* Peer reviewed.
+
+* Presents novel findings (results).
+
+* Reproducible
+
+@Savage
+
+https://imgur.com/1h3K2TT/ 
+
+
+### Structure of a paper
+
+* Title: concise and expressive
+
+* Abstract: a short summary of the whole paper.
+
+* Introduction: relevant background, starting hypothesis.
+
+* Methods: should be enough to replicate the paper.
+
+* Results: explanation of the results, with a logical progression but without much interpretation. The core of the paper are the data, which are communicated through figures and tables. All the rest is there to support the data.
+
+* Discussion: interpretation of the results.
+
+* Acknowledgments: apart from personal acknowledgements, this section includes the sources of funding.
+Literature cited: it should be an appropriate and comprehensive list of the sources used.
+
+@KenyonCollege
+
+### How to read a paper
+
+There are many ways to read a paper.
+
+One option is the “three pass method”:
+
+1. Do a quick overview, reading the title, abstract, introduction and conclusions.
+
+2. Read carefully the whole text, studying the figures in detail.
+
+3. Re-create mentally the paper.
+
+@Keshav
+
+https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf.
+
+### The Feynman technique
+
+Choose a subject
+
+Write an explanation of what you understand about it.
+
+Identify gaps in your knowledge, and go to the sources to fill them.
+
+Repeat steps 2 and 3 until satisfied.
+
+@Fe
+
+https://fs.blog/2012/04/feynman-technique/.
+
+### Bibliography management
+
+Staying on top of a subject:
+
+* Alerts
+
+* RSS
+
+* Blogs
+
+Organizing and sharing the harvest:
+
+* Bookmarks or favorites: not so useful
+
+Programs to collect literature references online:
+
+* Papers
+
+* Mendeley
+
+* Refworks
+
+* EndNote
+
+### Mendeley 
+
+Mendeley is a free and multi-platform bibliography management tool.
+
+You collect references in it, which can then be exported or used to format a document inside Word or LibreOffice.
+
+#### Adding references to Mendeley
+
+* Manually
+
+* Web Importer plugin
+
+* The Mendeley Research Catalog
+
+* From a BibTeX file
+
+@Mendeley
+
+https://blog.mendeley.com/2011/03/21/7-ways-to-add-documents-to-mendeley/
+
+#### Inserting citations into a document
+
+Drag-and-drop: quick and convenient for immediate use.
+
+LibreOffice or Word Mendeley plugin: much more appropriate for writing a report, since it will generate the bibliography for you.
+
+LaTeX + BibTeX: a whole other level. Highly recommended for writing longer documents such as a thesis.
+
+### Bibtex
+
+Bibliography management format to be used with LaTeX. 
+
+```{latex}
+@article{mrx05, 
+  auTHor = "Mr. X", 
+  Title = {Something Great}, 
+  publisher = "nob" # "ody", 
+  YEAR = 2005, 
+} 
+```
+
+
+http://www.bibtex.org/Using/
+
+
+### Citation styles
+
+Chicago:
+
+Li, Yifeng, Wenqiang Shi, and Wyeth W. Wasserman. 2016. “Genome-Wide Prediction of Cis-Regulatory Regions Using Supervised Deep Learning Methods.” BioRxiv, February, 041616. https://doi.org/10.1101/041616.
+
+APA
+Li, Y., Shi, W., & Wasserman, W. W. (2016). Genome-Wide Prediction of cis-Regulatory Regions Using Supervised Deep Learning Methods. BioRxiv, 041616. https://doi.org/10.1101/041616
+
+Nature
+1. Li, Y., Shi, W. & Wasserman, W. W. Genome-Wide Prediction of cis-Regulatory Regions Using Supervised Deep Learning Methods. bioRxiv 041616 (2016). doi:10.1101/041616
+
+### Which citation style should I use?
+
+If you are submitting a paper to a journal, use the one required by the journal. 
+
+Else, use the Chicago style (author-date).
+
+@CitationToolsSupportTeam
+
+## Biomedical databases
+
+Stores data in a structured manner.
+
+Complex model of tables and accompanying connections.
+
+Specific structure: enables the entering & extraction of data.
+
+Files or tables containing records and fields.
+
+### Flat-file
+
+Stores data as text files.
+
+The file contains one record per line.
+
+It has to be updated.
+
+
+### The FASTA format
+
+TODO: Sample
+
+http://www.people.virginia.edu/~wrp/papers/ismb02_sql.pdf
+
+
+### EMBL / Swissprot flatfiles
+
+TODO: Sample
+
+http://www.people.virginia.edu/~wrp/papers/ismb02_sql.pdf
+
+
+### Genbank/ Genpept flatfiles
+
+TODO: Sample
+
+http://www.people.virginia.edu/~wrp/papers/ismb02_sql.pdf
+
+https://www.ncbi.nlm.nih.gov/genbank/samplerecord/
+
+TODO: replace sample for flat text. Use the genbank sample record?
+
+#### Exercise
+
+Using https://www.ncbi.nlm.nih.gov/:
+
+Look for the protein sequence of human insulin
+
+How many aminoacids long is it?
+
+When was it sequenced?
+
+### Flat files are not Relational
+
+Data type (attribute) is part of the data
+
+Record order matters
+
+Multiline records
+
+Massive duplication
+
+Some records are hierarchical
+
+Records contain multiple “sub-records”
+
+Implicit “Key”
+
+### Relational Databases
+
+Widely used for storing biological info
+
+Stores data within a number of tables 
+
+(records = rows; fields = columns)
+
+Key: shared field to link tables. Not all fields can be keys.
+
+SQL
+
+### Elements of a biomedical DB
+
+Types of data
+
+Data:
+Important info in the entry.
+(Sequence, structure, expression levels...)
+
+Annotation:
+Additional info.
+Usually given as URL pointers (links)
+
+### Types of data
+
+Primary data: Raw experimental results.
+
+Secondary or derived data: E.g.: Contain collections of protein sequences motifs or comparisons of multiple sequences that give measures of sequence similarity and relatedness.
+
+
+### Gene Ontology
+
+What is an ontology? Formal & explicit specifications of the terms used and the relationships between them.
+
+Gene Ontology (GO): collaborative project across many laboratories to provide a controlled vocabulary that describe gene and gene-associated info for all organisms.
+
+http://www.geneontology.org/
+
+TODO: expand, explain the need
+
+#### Subontologies in Gene Ontology
+
+* Cellular Component: parts of a cell or its extracellular environment
+
+* Molecular Function:  elemental activities of a gene product at the molecular level
+
+* Biological Process: operations or sets of molecular events with a defined beginning and end, pertinent to the functioning of integrated living units: cells, tissues, organs, and organisms.
+
+#### Exercise
+
+Go into the Gene Ontology page and find a term that identifies Transcription Factors.
+
+Think about the definition of a TF; what do they do?
+
+### Gene Set Enrichment Analysis
+
+With GSEA, you count the number of genes in your set each particular GO term is associated with. You then compare that number with the number you would expect in a random sample of genes and calculate a p-value for that.
 
 ## The database landscape
 
-## Accessing information in DBs
+### Centralized databases
+
+1995: sequencing of the complete genome of a free-living organism for the 1st time: Bacterium Haemophilus influenzae.
+1.8Mbp DNA
+
+Nowadays: quadrillions of nucleotides of DNA sequence data from 300.000 ≠ species.
+
+2 main technologies for DNA sequencing:
+
+	- Sanger sequencing (1970)
+
+	- NGS technologies (2005)
+
+### The need for databases: volume of information
+
+The International Nucleotide Sequence Database Collaboration (INSDC)
+
+TODO: expand
+
+### National Center for Biotechnology Information (NCBI)
+
+* Trace Archive: stores sequence traces.
+
+* SRA: stores NGS data.
+
+* EST: Expressed sequence tags (short sub-sequences of a cDNA sequence).
+
+* GSS: similar to EST, but genomic in origin (not mRNA).
+
+https://www.ncbi.nlm.nih.gov/
+
+
+### European Bioinformatics Institute (EBI)
+
+Ensembl: http://www.ensembl.org/
+
+Ensembl Genomes: http://ensemblgenomes.org/
+
+ENA: http://www.ebi.ac.uk/ena
+
+EGA: https://www.ebi.ac.uk/ega/
+
+### DNA Database of Japan
+
+- Trad: traditional division. Shares the same raw seq data with GenBank and EMBL-Bank.
+
+- BioProject: represents a higher order organization of research projects and the corresponding data.
+
+http://trace.ddbj.nig.ac.jp/bioproject/index_e.html
+
+- Biosamples: central location in which to capture and store descriptive information about the biological source materials, or samples, used to generate experimental data in any of DDBJ’s primary data archives.
+
+http://trace.ddbj.nig.ac.jp/biosample/index_e.html
+
+http://www.ddbj.nig.ac.jp/
+
+
+### Finding additional databases
+
+Every January, the Nucleic Acids Research journal publishes a database issue.
+
+@Rigden2019
+
+https://doi.org/10.1093/nar/gky1267
+
+## Types of data in DBs
+
+Many different DBs
+
+To be a successful practitioner of Bioinformatics, you need to have an idea where to look for each kind of information 
+
+TODO: image from Pevsner
+
+### Accessing information in DBs
+
+
+What do I call a gene?
+
+Gene names were originally assigned by the researchers that discovered them, without any particular concern for consistency.
+
+As more genes were discovered, the need for conventions became more apparent.
+
+Currently, gene nomenclature is standardized by the HGNC (HUGO gene nomenclature committee).
+https://www.genenames.org/about/guidelines/
+
+
+#### Gene names, gene symbols and accession numbers
+
+A gene name is a natural language description of a gene. It often is the same in different species, but it has to be unique within a species.
+
+	Examples: rhodopsin, insulin receptor, sonic the hedgehog
+
+A gene symbol is an abbreviation that is generated from the name. It serves the same purpose, it’s just shorter.
+Examples: RRH, INSR, SHH
+
+The gene symbol can also be used to refer to the protein, with a different styling. The specifics are different for different species.
+
+Accession numbers respond to the need for unique identifiers for entries in databases.
+Each database has their own system for unique identifiers, but they are all linked thanks to the INSDC.
+
+### GenBank and the Gene resource at NCBI
+
+Genbank is the American repository that forms part of the INSDC.
+
+It is an annotated collection of all publicly available sequence data.
+
+Accession numbers: GeneIDs
+https://www.ncbi.nlm.nih.gov/genbank/
+
+@Maglott2011
+
+### The RefSeq Project
+
+Provides an expertly curated accession number that corresponds to the most stable, agreed-upon “reference” version of a sequence.
+
+### Accession numbers in RefSeq
+
+Different prefixes for different kinds of sequences:
+
+https://www.ncbi.nlm.nih.gov/books/NBK21091/table/ch18.T.refseq_accession_numbers_and_mole/?report=objectonly
+https://www.ncbi.nlm.nih.gov/genbank/sequenceids/
+
+NC_: Genomic: Complete genomic molecule, usually reference assembly
+NG_: Genomic: Incomplete genomic region
+NM_: mRNA: Protein-coding transcripts (usually curated)
+NR_: RNA: Non-protein-coding transcripts
+NP_: Protein: Associated with an NM_ or NC_ accession
+
+### The Consensus Coding Sequence Project (CCDS)
+
+https://www.ncbi.nlm.nih.gov/projects/CCDS/CcdsBrowse.cgi
+
+EBI, NCBI, The Wellcome Trust Sanger Institute & UCSC
+
+Was established to identify a core set of protein coding sequences that provide a basis for a standard set of gene annotations.
+
+Human & mouse.
+
+It offers a “gold standard” of best supported gene and protein annotations with extensive manual annotation by experts (high quality).
+
+### Ensembl stable IDs
+
+Ensembl IDs have the format
+
+`ENS[species prefix][feature type prefix][a unique eleven digit number]`
+
+Except for humans, where they omit the species prefix
+
+https://www.ensembl.org/info/genome/stable_ids/index.html
+
+#### Exercise: the NCBI FTP server
+
+Go to the NCBI ftp server on your browser
+
+ftp://ftp.ncbi.nih.gov/
+
+Go to “genomes” and search for the honeybee (Apis mellifera). Find the assembled_chromosomes folder.
+
+How many chromosomes does the honeybee have?
+
+What are the different accession numbers for chromosome 12?
+
+Write a command to download the chromosome 12 nucleotide sequence (look for a .fa.gz file)
+How many nucleotides does it have, approximately?
+
 
 ## Genome browsers
+
+Visualization tools over genomic assemblies, and over annotation tracks linked to them.
+
+
+### Genome Assembly
+
+NGS technology produces short sequences (reads)
+
+Sequencing consortia need to assemble these reads into longer sequences
+
+Contig: set of overlapping sequences
+
+https://www.slideshare.net/GenomeRef/exploiting-long-read-sequencing-technology-to-build-a-substantially-improved-pig-reference-genome-sequence
+
+
+### Genome assemblies and builds in UCSC
+
+Progressively better reconstructions of the reference sequence are constructed and released: genome “builds”.
+
+The first release of an assembly is given a name using the first three characters of the organism's genus and species classification in the format gggSss#
+
+Some important organisms received a name before this (hgX, human genome; mmX Mus musculus)
+
+https://genome.ucsc.edu/FAQ/FAQreleases.html#release1
+
+The genome build affects coordinates, which is often problematic.
+
+### Genome assemblies and builds in GRC
+
+Genome Reference Consortium: Maintains reference genomes for many species of medical, scientific or human, mouse, zebrafish and chicken.
+
+Latest human genome build: GRCh38.p12, corresponds to hg38
+
+https://www.ncbi.nlm.nih.gov/grc
+
+
+### UCSC Genome browser
+
+TODO: screenshot
+
+https://genome.ucsc.edu/cgi-bin/hgGateway
+
+My favorite genome browser. Responsive and reasonably easy to use.
+
+You can activate visualization of many tracks, or add custom tracks with your own experimental data.
+
+Also useful for getting genomic sequence data.
+
+#### Exercise
+
+Go to the UCSC genome browser and find the human Meis1 gene. 
+
+Where is it located?
+
+How does the conservation of its exons compare to the surrounding genomic region? (look for a “conservation” track)
+Look at the H3K27Ac track, which often marks cis-regulatory sequences.
+
+Considering conservation and H3K27Ac, if you had to design experiments to find transcription factor binding sites that control this gene, where would you?
+
+### The Ensembl Genome Browser
+
+http://www.ensembl.org/index.html
+
+It automatically analyzes and annotates genome data and presents genomic data via its web browser.
+
+### The Vertebrate Genome Annotation (VEGA) Project
+
+http://vega.archive.ensembl.org/index.html
+
+By the Wellcome Trust Sanger Institute
+
+It offers high-quality, manual annotation of the human, mouse & other vertebrate genomes.
+
+Especially suited for comparing similar regions across different genomes.
+
+@Loveland2005
+
+#### Exercise
+
+Go to the human genome home in the Vega site, look for “comparative analysis” and check the Major Histocompatibility 
+
+Complex region in the human genome.
+
+Compare it with the mouse (find a salmon-colored track with bright green lines) In particular, look at the names of protein-coding genes (the dark blue boxes) in both species. What can you tell me about this locus?
+
+Can you hypothesize about the evolutionary relationship between these regions in human and mouse?
+
+
+### Integrative Genomics Viewer (IGV)
+
+A desktop (Java-based) Genome Browser
+
+Usually much more responsive than web-based tools. 
+
+If you’re going to be exploring genomes frequently, highly recommended.
+
+### Installing IGV with conda:
+
+```{bash}
+conda install -c bioconda igv
+```
+
+https://software.broadinstitute.org/software/igv/
+
+
+### Accessing large datasets
+
+#### UCSC Table Browser:
+
+https://genome.ucsc.edu/cgi-bin/hgTables
+
+Enables accurate, complete tabular descriptions of the same data that can be visualized in the Genome Browser.
+
+Tabular output describing the number of elements, and the chromosome, start, and stop positions.
+
+Bed format: versatile, popular, useful.
+
+http://www.ensembl.org/info/website/upload/bed.html
+
+
+TODO: add screenshots
+
+#### Ensembl BioMart
+
+http://www.ensembl.org/biomart/martview
+
+Huge source for genomic data, for different builds and organisms.
+
+Very useful filter and custom attribute extraction dialog.
+
+#### Exercise
+
+Use the Ensembl BioMart to find out how many genes for transcription factors are known in the naked mole rat (Heterocephalus glaber) genome.
+
+Further reading
+
+https://www.the-scientist.com/features/the-zombie-literature-33627
+
+https://arstechnica.com/science/2018/11/the-vagaries-of-peer-review/
+
+FASTA format specification *TODO: link
+
+https://www.owlnet.rice.edu/~cainproj/courses/HowToReadSciArticle.pdf
+
+https://www.nature.com/scitable/topicpage/scientific-papers-13815490/
+
