@@ -1,0 +1,66 @@
+---
+title: "05-Sequence_Alignment_Practical"
+---
+
+# Sequence Alignment Practical
+
+## Multiple alignment
+
+Align the sequences of the following proteins, using either an online tool or a local one.
+
+* How similar are they?
+
+* From the results of the alignment, can you hypothesize what parts of the sequence are critical for the structure?
+
+```
+NP_000135.2
+NP_001178881.1
+NP_001247670.1
+NP_001074196.1
+XP_021138933.1
+XP_012860394.1
+XP_011613542.1
+XP_021007750.1
+XP_020496819.1
+XP_025279155.1
+XP_007439493.1
+XP_024410954.1
+XP_016816418.1
+XP_023483020.1
+```
+
+## BLAST
+
+Retrieve the aminoacid sequence of Antennapedia, refseq accession number NP_996175.1. Find orthologous proteins from humans. Query refseq proteins with default parameters. Ignore the XP_ entries
+
+* What organism is the sequence from? 
+
+* What conserved protein domains do you find?
+
+* How many orthologs can you find in humans with an E value under $10^{-10}$?
+
+* Do they look familiar?
+
+* What are the 2 first hits? What is the relationship between them?
+
+* Describe their similarity.
+
+
+## BLAST
+
+Search for the (full) sequence of the HIV-1 pol protein, preferably the RefSeq version. Use it to search for orthologous nucleotide sequences in the human genome using the appropriate BLAST program from the NCBI suite.
+
+* Before performing the search, do you expect to find any hits?
+
+* How many hits do you find? How do you interpret them?
+
+* What is the E-value of the top hit? What does it mean?
+
+* Where in the human genome is the top hit located? What chromosome and exact coordinates.
+
+* Check the region in the UCSC genome browser. Looking at the “Multiz Alignments of 100 vertebrates” track and incorporating external information as needed, can you make an informed guess as to when (how many millions of years ago) this sequence appeared?
+
+
+## Further reading
+
+https://www.nationalgeographic.com/science/phenomena/2015/02/01/our-inner-viruses-forty-million-years-in-the-making/
