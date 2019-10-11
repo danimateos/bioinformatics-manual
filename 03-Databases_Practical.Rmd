@@ -1,3 +1,78 @@
 ---
 title: "03 - Databases Practical"
 ---
+
+# Databases practical
+
+
+## Instructions
+
+For each part of the practice, write your answers, citing sources, in a document. Add any image you may need to explain what you are referring to. 
+
+Do not copy text verbatim!
+
+Submit a PDF through the student portal.
+
+## Searching the literature
+
+“The naked mole rat (Heterocephalus glaber) does not develop cancer” is an often repeated statement, for example in the title of this Science article.
+
+* Do a scientific literature search to prove or disprove the statement. 
+
+* Write a short paragraph (~100 words) indicating your findings, citing only appropriate sources (properly peer-reviewed scientific papers or reviews).
+
+* Explain your search strategy and how the search progressed.
+
+* From where does the statement seem to originate? i.e.: what is the original source for the statement?
+
+* Provide all citations as both a BibTex entry and in the Chicago format.
+
+## Access to databases
+
+* Find the sequence of the human SHH protein (the just-translated, 462-aa long version)
+
+* Find the corresponding (mature) mRNA nucleotide sequence 
+
+* What does SHH stand for? How was it originally discovered?
+
+* Is it implicated in any human disease?
+
+* Where is it located in the human genome?
+
+
+
+## Ontologies
+
+Use the following list of 40 genes, taken from the [Genomic Data Commons] of the [Cancer Genome Atlas], as the 40 genes most often mutated in cancers occurring primarily on the lung:
+TP53, TTN, MUC16, CSMD3, RYR2, LRP1B, USH2A, ZFHX4, XIRP2, SYNE1, SPTA1, FLG, NAV3, MUC17, FAT3, RYR3, FAM135B, PCDH15, CSMD1, ZNF536, PCLO, PAPPA2, ANK2, CDH10, ADAMTS12, COL11A1, APOB, DNAH9, PCDH11X, TNR, DNAH5, OBSCN, RELN, FAT4, PKHD1, RYR1, DST, ERICH3, SI, PKHD1L1.
+
+* Use Gene Ontologies’ Gene Set Enrichment analysis to find the molecular functions that these genes might share more often that a comparable set taken at random from the human genome.
+
+* If you were a cancer researcher, what could you do with the conclusions from point 1?
+
+
+## Genome browsers
+
+The Hox genes are a family of transcription factors that are conserved across the animal kingdom and that have important roles in the development of most animals. They are not dispersed along the genome but concentrated in clusters. Answer the following questions and illustrate with screenshots. 
+
+* Using any of the genome browsers we took a look at, look up “Hox” in the human genome, and compare the genomic loci (there are four).
+
+* What can you tell me about this family of genes? Compare each locus in mouse to the corresponding human locus.
+
+* Within each locus there are several genes, numbered from 1 to 13. Are all genes present in all loci?
+
+* Does their position in the genome relative to each other seem random to you? Why?
+
+* Speculate: what does that mean regarding the functional relevance of their relative position? Consider that the human and mouse lineages diverged approximately 90 million years ago.
+
+## Further Reading
+
+https://www.nature.com/scitable/topicpage/hox-genes-in-development-the-hox-code-41402
+
+https://www.pnas.org/content/98/5/2497
+
+
+
+
+[Genomic Data Commons]: https://portal.gdc.cancer.gov/
+[Cancer Genome Atlas]: https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga
