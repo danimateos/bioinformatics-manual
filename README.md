@@ -20,6 +20,11 @@ Contributions
 
 This manual aspires to be a collaborative work. If you see errors, have any suggestion, or want to expand any section please fork, improve, and send me a [Pull Request]!
 
+Releasing
+=========
+
+Compile the book with bookdown into html and pdf, then copy it over to the blog (http://mateos.io)
+
 
 Sources
 =======

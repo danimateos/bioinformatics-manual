@@ -16,3 +16,5 @@ This is a course designed for 4th year students of Biomedical Engineering. As su
 
 - Molecular Biology, in particular genomics
 - Command line Linux 
+
+The code for this book is open source, under a GPLv3 license. It is hosted at https://github.com/danimateos/bioinformatics-manual

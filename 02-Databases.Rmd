@@ -368,7 +368,7 @@ LaTeX + BibTeX: a whole other level. Highly recommended for writing longer docum
 
 Bibliography management format to be used with LaTeX. 
 
-```{latex}
+```latex
 @article{mrx05, 
   auTHor = "Mr. X", 
   Title = {Something Great}, 
@@ -796,7 +796,7 @@ If you’re going to be exploring genomes frequently, highly recommended.
 
 ### Installing IGV with conda:
 
-```{bash}
+```bash
 conda install -c bioconda igv
 ```
 
@@ -830,9 +830,9 @@ Very useful filter and custom attribute extraction dialog.
 
 #### Exercise
 
-Use the Ensembl BioMart to find out how many genes for transcription factors are known in the naked mole rat (Heterocephalus glaber) genome.
+Use the [Ensembl BioMart](http://www.ensembl.org/biomart/martview) to find out how many genes for transcription factors are known in the naked mole rat (Heterocephalus glaber) genome.
 
-Further reading
+## Further reading
 
 https://www.the-scientist.com/features/the-zombie-literature-33627
 
