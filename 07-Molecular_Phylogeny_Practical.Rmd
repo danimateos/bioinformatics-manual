@@ -1,0 +1,72 @@
+---
+  title: "02-Molecular Phylogeny Practical"
+---
+
+
+# Molecular Phylogeny Practical
+
+## Instructions
+
+For each part of the practice, write your answers, citing sources, in a document. Add any image you may need to explain what you are referring to. 
+
+Do not copy text verbatim!
+
+Submit a PDF through the student portal.
+
+## Phylogeny with online tools
+
+Reconstruct the phylogeny of the following proteins, which we aligned in a previous episode. Use NCBI blast -> multiple alignment -> phylogenetic tree.
+
+* Which are the two most related sequences?
+
+* Which is the outgroup to all the others?
+
+* Place the following events in order: primate/rodent divergence, divergence of fish.
+
+* According to the tree, what is closer to what: humans to chimpanzees or rats to mice?
+
+```
+NP_000135.2
+NP_001178881.1
+NP_001247670.1
+NP_001074196.1
+XP_021138933.1
+XP_012860394.1
+XP_011613542.1
+XP_021007750.1
+XP_020496819.1
+XP_025279155.1
+XP_007439493.1
+XP_024410954.1
+XP_016816418.1
+XP_023483020.1
+```
+
+## Building a tree by UPMGA
+
+In six different towns, there are six different local beetles that are cherished by their communities. These communities keep arguing about which is the oldest beetle around. Can you help them settle this all-important matter once and for all? The beetles look like this:
+
+TODO image, also look for source
+
+Build a distance matrix for all pairs of beetles. The entry in each cell will be the number of different characteristics between those two beetles. Measure the distance as # of caracter differences.
+
+Use that distance matrix to build a phylogenetic tree by UPMGA
+
+Can you help the villagers decide which beetles are more similar to the last common ancestor of all of them?
+
+## Phylogeny with local tools
+
+We are going to query and download many sequences: all human refseq proteins that align with Antennapedia (NP_996175) under E-value 10-10, ignoring the XP_  entries. Then we are going to do an MSA, as we did last practice. We will use that MSA output to generate a phylogenetic tree by maximum likelihood.
+
+* Use MEGA to build a maximum likelihood tree and a maximum parsimony tree from those sequences. When answering the following questions, consider only the Hox proteins (Hox-AX, Hox-BX, Hox-CX, and Hox-DX).
+
+* Include the trees in the resulting pdf document.
+
+* There are four clusters of Hox genes, HoxA to HoxD. There are up to 13 different Hox gene types, 1 to 13. Both clusters and gene families arose by gene duplication. From your tree, can you say what set of duplications happened before, the 1 to 13 set or the A to D set? Justify your answer.
+
+* In the A to D set of duplications, can you make an educated guess as to what was the order in which the clusters split? That is, did A and B split from C and D, AC from BD, or AD from BC? Justify your answer.
+
+## Further reading
+
+https://www.sciencedirect.com/science/article/pii/S0012160613001334
+

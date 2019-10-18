@@ -1,0 +1,372 @@
+---
+  title: "08-Protein structure"
+---
+
+
+# Protein structure
+
+
+The 3D structure of a protein determines its capacity to function.
+Anfinsen et al. denatured ribonuclease: Observed rapid refolding, demonstrated that the primary aa seq determines its structure.
+
+We study protein structure to understand problems such as:
+
+* The consequence of disease-causing mutations
+
+* The properties of ligand-binding sites
+
+* The functions of homologs
+
+## Primary and Secondary Structure
+
+* Primary structure: sequence of aminoacids
+
+* Secondary structure: three dimensional form of local segments of proteins. Most proteins are composed of beta sheets and alpha helices.
+
+TODO: image
+
+## Predicting secondary structure
+
+Results from three secondary structure programs, with their consensus. 
+
+h: alpha helix; 
+
+c: random coil;  
+
+e: extended strand 
+
+TODO: image and source. even better, text
+
+Chou and Fasman (1974) developed an algorithm based on the frequencies of aa found in
+
+* α-helices
+
+* β-sheets
+
+* Turns
+
+GOR (Garnier, Osguthorpe, Robson): related algorithm
+
+Modern algorithms: use multiple sequence alignment and achieve higher success rate (about 70-75%)
+
+### Web servers for secondary structure prediction include:
+
+[GOR4]
+
+[Jpred]
+
+[NNPREDICT]
+
+[PHD]
+
+[Predator]
+
+[PredictProtein]
+
+[PSIPRED]
+
+### Exercise: predicting secondary structure
+
+Use Jpred to predict the structure of human beta-globin (AAA16334.1). Ignore the “Match found in PDB” warning and inspect the prediction page.
+
+* How many alpha-helices and beta-lamins is it predicted to contain?
+
+* This particular protein’s structure is already known. Go to PDBsum using the first link in the warning page (1dxt) and find the secondary structure information. How similar is it to the predicted structure?
+
+## Tertiary and Quaternary Structure
+
+TODO: image
+
+Tertiary structure: Three dimensional form of a single polypeptide chain.
+
+Quaternary structure: Three dimensional arrangement of different polypeptides, in those proteins that work as multi-subunit complexes.
+
+### The peptide bond: phi and psi angles
+
+An aminoacid can turn around only 2 of its covalent links.
+
+Different aminoacids have different preferences for the phi and psi angles.
+
+### Tertiary structure 
+
+Van der Waals interactions, hydrogen bonds and disulfide bonds stabilize the global structure of a protein within the constraints of phi and psi angles imposed by its sequence. 
+
+In principle we should be able to model all these interactions and understand how a protein folds.
+
+Protein structures have a lot of potential applications:
+
+* Drug development.
+
+* Nanotechnology.
+
+Main approaches for determining 3D structure:
+
+* Experimental determination
+
+* X-ray crystallography
+
+* NMR
+
+Prediction
+
+* Comparative modeling (based on homology)
+
+* Threading
+
+* Ab initio (de novo) prediction
+
+
+Why not just simulate the folding process by molecular dynamics? 
+
+TODO: image and citation Lindorff-Larsen et al., Science, 2011
+
+### Experimental determination of tertiary structure
+
+X-ray crystallography:
+
+* Used to determine 80% of structures
+
+* Requires high protein concentration
+
+* Requires crystals
+
+* Able to trace amino acid side chains
+
+* Earliest structure solved was myoglobin
+
+NMR: Nuclear Magnetic Resonance
+
+* Magnetic field applied to proteins in solution
+
+* Largest structures: 350 amino acids (40 kD)
+
+* Does not require crystallization
+
+
+#### X-ray crystallography
+
+Very costly and time-consuming. 
+
+Synchrotron radiation.
+
+Some proteins don’t ever cristallize.
+
+### The Protein Data Bank
+
+PDB is the principal repository for protein structures
+
+Established in 1971
+
+Accessed at https://www.rcsb.org/pdb/home/home.do
+
+Currently contains > 130,000 structure entities
+
+### Interactive visualization tools for PDB protein structures
+
+[Cn3D]
+
+[Jmol]
+
+[SwissPDB viewer]
+
+[Protein Workshop Viewer]
+
+[Simple Viewer]
+
+[VMD]
+
+[RasMol]
+
+[RasTop]
+
+
+
+### Web based tools for molecular visualization
+
+[3Dmol]
+
+[The protein data bank integrated viewer]
+
+[Aquaria]
+
+#### Exercise
+
+Use aquaria to access the structure we mentioned earlier (1DXT). In the main viewport, activate the menu and click on “sidechains”
+
+* Inspect the structure. How many heme groups are there?
+
+* Choose one of them. Can you tell which residue sidechains are contacting the heme group?
+
+* Now open the same structure in the PDB viewer. Click on “Ligand View” on the right and choose one of the ligands. Can you tell now?
+
+### Accessing protein structures
+
+[CATH]
+
+[Dali]
+
+[SCOP2]
+
+TODO: image
+
+## Protein structure prediction
+
+3 main approaches:
+
+* Homology modeling (comparative modeling). This is most useful when a template (protein of interest) can be matched (e.g. by BLAST) to proteins of known structure.
+
+* Fold recognition (threading). A target sequence lacks identifiable sequence matches and yet may have folds in common with proteins of known structure.
+
+* Ab initio prediction (template-free modeling). Assumes:
+
+    * All the information about the structure of a protein is contained in its aa sequence.
+
+    * A globular protein folds into the structure with the lowest free energy.
+
+### Protein structure in human disease
+
+TODO: image and quote
+
+### Folding@home
+
+Prediction of protein structure is extremely expensive computationally, so one approach has been to distribute it to volunteers that donate their free computing time.
+
+TODO: proper quote
+TODO: image
+
+Shirts, M, and V S Pande. 2000. “COMPUTING: Screen Savers of the World Unite!” Science (New York, N.Y.) 290 (5498): 1903–4. https://doi.org/10.1126/science.290.5498.1903.
+
+### foldit
+
+Another approach is to leverage human intuition and problem-solving skills by presenting the problem as a videogame.
+
+TODO: proper quote
+TODO: image
+
+Cooper, Seth, Firas Khatib, Adrien Treuille, Janos Barbero, Jeehyung Lee, Michael Beenen, Andrew Leaver-Fay, David Baker, Zoran Popović, and Foldit Players. 2010. “Predicting Protein Structures with a Multiplayer Online Game.” Nature 466 (7307): 756–60. https://doi.org/10.1038/nature09304.
+
+## Predicting protein function
+
+* What is “protein function”?
+
+* Biochemical function (molecular function)
+
+* Functional assignment based on homology
+
+* Function based on structure
+
+* Function based on ligand binding specificity
+
+* Function based on cellular process
+
+* Function based on biological process
+
+* Function based on “proteomics” or high throughput “functional genomics”
+
+TODO: image Seven perspectives, from p.572
+TODO: reconsider, what role does this play here?
+
+### Protein signatures
+
+Predictive models to classify proteins into families and to predict the presence of important domains or sequence features.
+
+Different types of signatures, built using different computational approaches.
+
+* Patterns
+
+* Profiles
+
+* Fingerprints
+
+* HMMs
+
+Common starting point: MSA of proteins sharing a set of characteristics (e.g. belonging to the same family or sharing a domain).
+The model is used to search a protein DB in an iterative manner, refining the model as more distantly related sequences in the DB are identified.
+Once the model is mature, the signature is ready and can be used for protein sequence analysis.
+
+TODO: image
+
+#### Patterns
+
+Many important sequence features (binding sites or active sites of enzymes) consist of only a few aa that are essential for protein function.
+
+* Patterns are very good at recognising such features.
+
+* They are built by identifying these regions in MSA.
+
+* The pattern of conservation within the sequence feature is then modelled as a regular expression.
+
+TODO: image
+
+#### Protein profiles
+
+Profiles are used to model protein families and domains.
+They are built by converting MSA into position-specific scoring matrices (PSSMs).
+aa at each position in the alignment are scored according to the frequency with which they occur.
+Substitution matrices (BLOSUM) can be used to add evolutionary distance weighting these scores.
+
+
+#### Fingerprints
+
+Most protein families are characterized by several conserved regions, which occur in a certain order.
+Fingerprints identify these regions.
+Very good at modelling the often small differences between closely related proteins.
+
+
+#### Hidden Markov Models (HMMs)
+
+- Markov model: stochastic (= random process) used to model randomly changing systems. It is assumed that future states depend only on the current state, not on the events that occurred before it.
+
+- Hidden Markov Model: is a statistical Markov model in which the system being modeled is assumed to be a Markov process with unobserved (i.e. hidden) states.
+
+TODO: citation
+
+Baldi, P, Y Chauvin, T Hunkapiller, and M A McClure. 1994. “Hidden Markov Models of Biological Primary Sequence Information.” Proceedings of the National Academy of Sciences of the United States of America 91 (3): 1059–63. https://doi.org/10.1073/pnas.91.3.1059.
+They can be used to summarize the patterns observed in a multiple sequence alignment of all the members of a protein family.
+
+TODO: How does an HMM describe a protein family?
+
+### Tools for function prediction
+
+[Pfamscan] : It is used to search a FASTA sequence against a library of Pfam HMM.
+
+[Interpro] : A tool that combines different protein signature recognition methods.
+
+[Pratt] : Search for patterns conserved in sets of unaligned protein sequences.
+
+[Phobius] : Prediction of transmembrane topology and signal peptides from the amino acid sequence of a protein.
+
+[Radar] : Detection and alignment of repeats in protein sequences.
+
+## Further reading
+
+https://www.ncbi.nlm.nih.gov/books/NBK6824/
+
+AlphaFold: DeepMind at CASP13
+
+[GOR4]: https://npsa-prabi.ibcp.fr/cgi-bin/npsa_automat.pl?page=npsa_gor4.html
+[Jpred]: http://www.compbio.dundee.ac.uk/jpred/
+[NNPREDICT]: http://130.88.97.239/bioactivity/nnpredictfrm.html
+[PHD]: https://npsa-prabi.ibcp.fr/cgi-bin/npsa_automat.pl?page=/NPSA/npsa_phd.html
+[Predator]: https://npsa-prabi.ibcp.fr/cgi-bin/npsa_automat.pl?page=/NPSA/npsa_predator.html
+[PredictProtein]: https://www.predictprotein.org/
+[PSIPRED]: http://bioinf.cs.ucl.ac.uk/psipred/
+[Cn3D]: https://www.ncbi.nlm.nih.gov/Structure/CN3D/cn3d.shtml
+[Jmol]: http://jmol.sourceforge.net/
+[SwissPDB viewer]: https://spdbv.vital-it.ch/
+[Protein Workshop Viewer]: https://www.rcsb.org/pdb/staticHelp.do?p=help/viewers/proteinWorkshop_viewer.html
+[Simple Viewer]: https://www.rcsb.org/pdb/staticHelp.do?p=help/viewers/simpleViewer_viewer.html
+[VMD]: http://www.ks.uiuc.edu/Research/vmd/
+[RasMol]: http://www.openrasmol.org/
+[RasTop]: http://www.geneinfinity.org/rastop/
+[3Dmol]: http://3dmol.csb.pitt.edu/
+[The protein data bank integrated viewer]: https://www.rcsb.org/
+[Aquaria]: http://aquaria.ws/
+[CATH]: http://www.cathdb.info/
+[Dali]: http://ekhidna2.biocenter.helsinki.fi/dali/
+[SCOP2]: http://scop2.mrc-lmb.cam.ac.uk/
+[Pfamscan]: https://www.ebi.ac.uk/Tools/pfa/pfamscan/
+[Interpro]: https://www.ebi.ac.uk/interpro/search/sequence-search
+[Pratt]: https://www.ebi.ac.uk/Tools/pfa/pratt/
+[Phobius]: http://phobius.sbc.su.se/
+[Radar]: https://www.ebi.ac.uk/Tools/pfa/radar/

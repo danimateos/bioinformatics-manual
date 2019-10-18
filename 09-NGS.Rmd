@@ -1,0 +1,986 @@
+---
+  title: "NGS"
+---
+
+# NGS
+
+
+
+## DNA Sequencing technologies
+
+* Sanger sequencing
+
+* NGS: Massive parallel sequencing
+
+    * Illumina
+
+    * Pyrosequencing
+
+    * ABI SOLiD
+
+    * Ion Torrent
+
+    * Pac Bio
+
+    * Nanopore sequencing
+
+
+
+### Sanger sequencing: what we had before NGS
+
+Introduced in 1977
+A template is denatured to form single strands, and extended with a polymerase in the presence of dideoxynucleotides (ddNTPs) that cause chain termination.
+Typical read lengths are up to 800 base pairs. For the sequencing of Craig Venter’s genome (2007; first whole genome of an individual), Sanger sequencing was employed because of its relatively long read lengths.
+
+* Reliable
+
+* Slow and expensive
+
+TODO: image
+
+#### Sanger sequencing traces
+
+SRA: NCBI trace archive 
+https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi
+ENA
+https://www.ebi.ac.uk/about/news/service-news/changes-trace-archive-ena
+DDBJ trace archive
+https://www.ddbj.nig.ac.jp/dta/submission-e.html
+
+TODO: image
+
+## Next Generation Sequencing
+
+Whole genome sequencing (WGS) costs have declined dramatically: The Human Genome Project, finished in 2003, is estimated to have costed between 1 and 3 billion US dollars. It took 13 years. Nowadays we can sequence an entire human genome for around 1000 US$ in a few days.  Data storage and analysis has become the dominant cost of sequencing.
+
+TODO: images for cost
+TODO: citation Muir et al, 2016 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4806511/
+
+TODO: citation https://www.genome.gov/27541954/dna-sequencing-costs-data/
+
+
+
+The 1000 genomes project: An ambitious project to sequence 1092 human genomes, from populations all over the world.
+Extensive catalog of human genetic variation.
+It was concluded in 2015, only around 12 years after the Human Genome Project.
+
+http://www.internationalgenome.org/
+
+https://en.wikipedia.org/wiki/1000_Genomes_Project
+
+TODO: citation https://www.nature.com/articles/nature11632
+
+### NGS capabilities
+
+Each technology has its limitations and advantages.
+Each introduces different kinds of errors, so they are complementary.
+
+TODO: table from Pevsner 2015.
+
+
+
+### Illumina: Cyclic reversible termination
+
+TODO: image, explanation
+
+Illumina: Cycle termination sequencing
+
+Disadvantage:
+
+* Short read length (~150 bases)
+
+Advantages:
+
+* Very fast
+
+* Low cost per base
+
+* Large throughput; up to 1 gigabase/experiment
+
+* Short read length makes it appropriate for resequencing
+
+* No need for gel electrophoresis
+
+* High accuracy
+
+* All four bases are present at each cycle, with sequential addition of dNTPs. This allows homopolymers to be accurately read.
+
+Around 80% of NGS data is generated with Illumina.
+
+### Roche 454: pyrosequencing
+
+TODO: image and explanation of principle
+
+Introduced in 2005 (sequenced Mycoplasma genitalium genome in one run)
+
+ ~2400 publications (as of Jan. 2013) but now defunct
+
+* Sequencing by synthesis: nucleotide incorporation leads to light emission
+
+Very similar to Illumina, except:
+
+* Only one dNTP is added each time.
+
+* Single color, produced by luciferase instead of fluorescent dyes.
+
+TODO: another image
+
+
+Advantages:
+
+* Very fast
+ 
+* Low cost per base, although higher than Illumina.
+ 
+* Large throughput; up to 40 megabases/experiment
+ 
+* No need for bacterial cloning (with its associated artifacts); this is especially helpful in metagenomics
+ 
+* High accuracy
+
+Disadvantages:
+ 
+* Short read lengths,(soon to be extended to ~500 bp)
+ 
+* Difficulty sequencing homopolymers accurately
+
+It has been applied, for example, to the sequencing of the Neanderthal genome (Prüfer et al, 2014).   
+
+TODO: citation  (Prüfer et al, 2014).   https://www.nature.com/articles/nature12886
+
+### Applied Biosystems SOLiD
+
+TODO: image and explanation
+
+Color Space. 
+
+Library preparation is similar to Illumina and 454.
+
+Instead of extending the sequences, labelled dinucleotides are then ligated and interrogated.
+
+Main advantage: very low error rate.
+
+
+### Ion Torrent
+
+TODO: explanation
+
+Direct measuring of the voltage and pH change produced when incorporating a nucleotide.
+
+Problems with long homopolymers.
+
+TODO: image and citation http://www.genomics.cn/en/navigation/show_navigation?nid=2640
+
+### PacBio
+
+A “captive” polymerase elongates a DNA chain, and fluorescence is directly observed.
+
+Two great advantages:
+
+* Very long reads, of around 5000bp
+
+* Can be used for epigenomics directly (detects methilation of adenine and cytosine).
+
+TODO: citation https://www.sciencedirect.com/science/article/pii/S1672022915001345
+
+
+### Oxford Nanopore’s MinION
+
+TODO: images
+
+Based on detecting the voltage change when different bases pass through a pore across a membrane.
+
+* Low cost of capital, although higher running costs than other technologies.
+
+* Extremely long reads: up to 100kbp
+
+* Very low accuracy
+
+* Doesn’t require amplification.
+
+* Highly portable
+
+https://www.nature.com/articles/550285a
+
+## Analysis of Genomic DNA with NGS technologies
+
+TODO: image from Pevsner
+
+Implies many steps.
+
+In each, we need to handle different file formats and tools.
+
+Key steps:
+
+* Quality Control
+
+* Alignment
+
+
+## The FASTQ format
+
+```
+@SRR390728.1 1 length=72
+CATTCTTCACGTAGTTCTCGAGCCTTGGTTTTCAGCGATGGAGAATGACTTTGACAAGCTGAGAGAAGNTNC
++
+;;;;;;;;;;;;;;;;;;;;;;;;;;;9;;665142;;;;;;;;;;;;;;;;;;;;;;;;;;;;;96&&&&(
+@SRR390728.2 2 length=72
+AAGTAGGTCTCGTCTGTGTTTTCTACGAGCTTGTGTTCCAGCTGACCCACTCCCTGGGTGGGGGGACTGGGT
++
+;;;;;;;;;;;;;;;;;4;;;;3;393.1+4&&5&&;;;;;;;;;;;;;;;;;;;;;<9;<;;;;;464262
+```
+
+The FASTQ format stores DNA sequence data as well as associated Phred quality scores of each base.
+Generated from base-calling software.
+
+### FASTQ quality scores
+
+TODO: ascii table
+
+FASTQ quality scores use ASCII characters relating quality scores (e.g. Q30 for 1 in 10-3 error rate) to a compact, one character symbol
+
+You do not need to learn the one character symbols, but you should know the importance of base quality scores in sequence analysis.
+
+Phred scores: The FASTQ format stores DNA sequence data as well as associated Phred quality scores of each base.
+
+TODO: table from Pevsner
+
+Phred quality scores of each base are usually defined:
+
+TODO: latex
+
+There have been alternative base quality definitions:
+
+TODO: latex
+
+### Accessing FASTQ files
+
+There are two main places you can find FASTQ files.
+
+* The central repositories at NCBI and EBI: the sequence read archive ([SRA]) and the European Nucleotide Archive ([ENA])
+
+TODO: links
+
+* A sequencing core: data are often returned to investigators in the FASTQ format. (In some cases the data are returned in the BAM format, which we’ll discuss later, from which FASTQ-formatted data can be retrieved.)
+
+Accessions in the SRA:
+
+* Study: [SRP020237](https://trace.ncbi.nlm.nih.gov/Traces/sra/?study=SRP020237)
+
+* Experiment: [SRX079566](https://www.ncbi.nlm.nih.gov/sra/SRX079566[accn])
+
+* Run: [SRR390728](https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR390728)
+
+TODO: definitions
+
+Installing the SRA-toolkit:
+
+```
+conda install sra-tools -c bioconda
+```
+
+https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=toolkit_doc
+https://anaconda.org/bioconda/sra-tools
+
+
+The Command Line and NGS analysis:
+
+Most next-generation sequence (NGS) analysis is done on the command line. Command line software (using Linux or the Unix-like platform on a Mac terminal) is capable of handling the data analysis tasks, and most NGS software is written for the Unix operating system.
+
+### SRA toolkit
+
+fastq-dump to obtain FASTQ formatted data
+
+TODO: code sample
+
+NCBI offers the SRA Toolkit to manipulate sequence data. The fastq-dump command can pull FASTQ-formatted data from an accession number (such as SRR390728).
+
+```
+fastq-dump SRR390728
+```
+
+Useful options: 
+
+* -X n: Choose only first n spots
+
+* -Z: dump to stdout
+
+Quickly inspecting FASTQ files:
+
+```
+fastq-dump -X 100 -Z SRR292241 | less
+```
+
+### Inspecting FASTQ files: less
+
+Move up/down with arrows and RePag/AvPag.
+
+Initiate search with /
+
+Move forward / back through search results with n/N
+
+Quit with q
+
+From the : prompt, -S for chopping / not chopping long lines.
+
+You can use regular expressions in the search
+
+* [A good primer](http://www.grymoire.com/Unix/Regular.html)
+
+* [A good regex tutorial](https://www.regular-expressions.info/)
+
+* [A regex practice online tool](https://regexr.com/)
+
+### The pipe character | and Unix commands
+
+You can link the output of a program, like less or fastq-dump, to the input of another using the | character
+
+Useful commands for FASTQ:
+
+* `gzcat`: read gz-compressed file, print to stdout.
+
+* `grep`: filter lines that contain a string or match a regex.
+
+* `wc`: word count. With the -l option, count lines.
+
+* `>`: Used instead of |, redirect stdout to file
+
+
+
+* `sort`
+
+* `uniq`
+
+* `awk`: a whole programming language. A bit out of our scope, but extremely powerful for text file processing.
+
+
+#### Exercise
+
+Download the first 100,000 spots from the SRR390728 accession from the Sequence Read Archive.
+
+* In the course of which experiment was it generated?
+
+* Search it for potential ribosomal binding sites, that is, the [Kozak Sequence]. Use a regular expression, and consider only the 3 most common nucleotides at each position for those positions for which there is a clear preference.
+
+* How many do you find?
+
+* Save them to a file, rbss.txt.
+
+
+### Quality control of FASTQ files
+
+Installing the fastqc program:
+
+```
+conda install fastqc -c bioconda
+```
+
+Then:
+
+```
+fastqc file.fastq
+```
+
+This will generate a .zip file. Within it there is a folder with a number of output files.
+
+#### Exercise
+
+Perform quality control with the fastqc program on the SRR390728.fastq file we downloaded. Inspect the results.
+
+* How many reads are there in the file?
+
+* What is the average quality per read? What does that correspond to in terms of error rates?
+
+* Are there particular positions in the reads that have lower quality?
+
+* What positions in the reads have relatively often (over 2%) no determined nucleotide? 
+
+## Genome assembly
+
+
+Genome assembly is the process of converting short reads into a detailed set of sequences corresponding to the chromosome(s) of an organism.  
+
+Strategies for genome assembly:
+
+1. Hierarchical assembly
+
+2. Whole-genome assembly
+
+3. Hybrid assembly
+
+4. Comparative assembly
+
+
+### Hierarchical Assembly
+
+Relies on bacterial artificial chromosome (BAC) libraries. 
+
+Each BAC is known to map to a particular genomic region.
+
+They are sequenced and assembled independently. As these start to overlap they are further assembled into scaffolds.
+
+TODO: image and citation
+
+### Whole Genome Assembly
+
+Instead of isolating individual parts of the genome using BACs, fragment the whole genome, sequence it straight away, and then assemble computationally. 
+
+It was originally used for small genomes, but it has become the main method of genome assembly even for large eukaryotic genomes since ~2000, when it was used for assembling the Drosophila genome.
+
+### Other methods
+
+* Hybrid assembly: WGA + hierarchical assembly.
+
+* Comparative assembly: use a finished reference genome from a close species as a scaffold. The chimpanzee genome was assembled using the human genome as a scaffold.
+
+
+### Relevance of genome assembly
+
+Genome assembly is needed when a genome is first sequenced. We can relate reads to chromosomes.
+For the human genome, the assembly is “frozen” as a snapshot every few years. The current assembly is GRCh38. (GRC refers to Genome Reference Consortium)
+For most human genome work we do not need to do de novo assembly. Instead we map reads to a reference genome—one that is already assembled.
+Genome assembly is a crucial behind-the-scenes part of calling human genome (or other) variants.
+
+### Software for genome assembly
+
+TODO: table
+
+## Aligning NGS reads
+
+The problem of alignment: recent software tools allow the mapping (alignment) of millions or billions of short reads to a reference genome. 
+For the human genome, this would take thousands of hours using BLAST. 
+Reads may come from regions of repetitive DNA (exacerbated by sequencing errors), which are particularly hard to map.
+
+
+TODO: image and citation Source: PMID 22124482
+![As repeat regions share lower identity, read mapping gains higher confidence]()
+
+#### Exercise: Aligning short reads to a reference
+
+Alignment is a critical first step in the use of NGS reads, for a variety of applications.
+
+For this exercise, we are going to align short reads to a reference genome in order to find variants. 
+
+Reference:
+
+_Poder haber sido llamadas estas Indias islas ó tierra firme ó alguna parte dellas Hespérides, no del todo lo negamos._
+
+TODO: imprimir y recortar antes de clase
+
+
+### Tools for alignment
+
+Alignment: from reads (FASTQ) to sequence/alignment map (SAM/BAM).
+
+There are dozens of aligners to choose from.
+
+Each aligner has many parameters you can choose.
+
+BWA is a popular aligner.  It stands for “Burroughs-Wheeler Aligner” referring to the algorithmic approach. 
+http://bio-bwa.sourceforge.net
+
+TODO: table?
+
+### TODO TODO TODO Bowtie
+
+
+TODO: image/text 
+
+Alignment to a reference genome: bowtie results
+
+TODO: image/text 
+
+![Visualizing aligned short reads](TODO: image)
+
+
+### BWA: Burrows-Wheeler Aligner
+
+A popular short-read aligner
+
+* Aligns short reads (<200 base pairs) to a reference genome
+
+* Fast, accurate
+
+* Command-line software for the Linux environment (like essentially all NGS tools)
+
+* Try it in a web-accessible version! Go to Galaxy > see list of tools on left sidebar > Genomics Analysis > NGS: Mapping > Map with BWA
+
+### Aligning the reads
+
+The most used aligners are bowtie2 and bwa.
+With bowtie, the command would be
+bowtie2 -x $INDEX_FILE -U $FASTQ_FILE -S $SAM_OUTPUT -p $N_THREADS
+We will do that  on the practical session.
+What we would get is a SAM file: sequence/alignment map.
+
+### Indexing a reference genome
+
+We will need also the human reference genome, which we can get from this SRA ftp server like so:
+
+```
+wget ftp://ftp-trace.ncbi.nih.gov/1000genomes/ftp/technical/reference/human_g1k_v37.fasta.gz
+```
+
+We would need to build an index, which will speed up substantially later processing but takes a long time. Luckily, the SRA provides it for us already:
+
+```
+wget ftp://ftp-trace.ncbi.nih.gov/1000genomes/ftp/technical/reference/human_g1k_v37.fasta.fai 
+```
+
+In any case, the command line to build that would be:
+
+```
+bowtie2-build human_g1k_v37.fasta.gz human_g1k_v37indexed
+```
+
+#### Exercise: aligning reads with BWA
+
+```
+conda install bwa -c bioconda
+```
+
+* `bwa index`: to index the reference genome (only needs to be done once per genome).
+
+* `bwa mem`: to align the reads
+```
+bwa mem ref.fa read1.fq read2.fq > out.sam
+```
+
+Download sample data from [here](http://schatz-lab.org/teaching/exercises/mapping/mapping.tgz)
+
+Perform the above steps and examine the results with `less`
+
+BWA: Luego enlaza con el ejercicio de SAMtools
+
+TODO: citation http://schatz-lab.org/teaching/exercises/mapping/	
+
+
+
+## The SAM/BAM formats
+
+BWA and other aligners produce output in the Sequence Alignment/Map (SAM) format:
+
+TODO: Image/text format description
+
+* SAM is a common format having sequence reads and their alignment to a reference genome.
+
+* BAM is the binary (compressed) form of a SAM file.
+
+Aligned BAM files are available at repositories (Sequence Read Archive at NCBI, ENA at Ensembl)
+
+SAMTools is a software package commonly used to analyze SAM/BAM files:
+
+http://samtools.sourceforge.net/
+
+
+TODO: SAM sample. image? text?
+
+TODO: SAM in detail
+
+## SAMtools
+
+http://quinlanlab.org/tutorials/samtools/samtools.html
+
+First, install SAMtools:
+
+```
+conda install samtools -c bioconda
+```
+
+TODO: move sample to mateos.io assets
+
+Download a sample from [here](https://dl.dropboxusercontent.com/s/xen2ba8j8lmgooc/sample.sam?dl=0).
+
+SAMtools help: like any other Unix utility:
+
+```
+samtools --help | less
+```
+
+It contains many utilities, each with its own help. For example, samtools view:
+
+```
+samtools view  | less
+```
+
+Converting SAM to BAM with samtools view: A BAM file is just a SAM file but stored in binary; you should always convert your SAM files into BAM to save storage space. BAM files are also faster to manipulate.
+
+Inspecting a SAM file:
+
+```
+head sample.sam 
+```
+
+Converting to BAM and inspecting:
+
+```
+samtools view -S -b sample.sam > sample.bam
+samtools view sample.bam | less
+```
+
+`samtools sort`: When you align FASTQ files with all current sequence aligners, the alignments produced are in random order with respect to their position in the reference genome. In other words, the BAM file is in the order that the sequences occurred in the input FASTQ files.
+
+```
+samtools sort sample.bam -o sample.sorted.bam
+samtools view sample.sorted.bam | head
+```
+
+```samtools index```: Indexing a genome sorted BAM file allows one to quickly extract alignments overlapping particular genomic regions. Moreover, indexing is required by genome viewers such as IGV so that the viewers can quickly display alignments in each genomic region to which you navigate.
+
+```
+samtools index sample.sorted.bam
+samtools view sample.sorted.bam 1:33000000-34000000
+
+```
+
+#### Miniexercise: 
+
+How many alignments are there in this region?
+
+Other uses of samtools view
+
+Inspecting the header: `samtools view -H sample.sorted.bam`
+
+Samtools flags: `samtools flags`
+
+Filtering only mapped reads with -F: `samtools view -h -F 4 sample.bam > only_mapped.sam`
+
+TODO: add SAMtools tview (?), lo de inspeccionar
+
+#### Exercise
+
+After aligning, run SAMTools to find variations. The basic steps are
+
+* `samtools faidx` to index the reference genome
+
+* `samtools view` to load the alignments
+
+* `samtools index` to index the BAM file
+
+* `samtools mpileup` to find variations.
+
+* `samtools view` is a useful command to inspect how the reads align to the genome at a given position
+
+http://schatz-lab.org/teaching/exercises/mapping/
+
+## BEDtools
+
+http://quinlanlab.org/tutorials/bedtools/bedtools.html
+
+
+
+### The BED format
+
+Widely used to specify genomic intervals.
+It’s a tab-separated table.
+Especially for display in genome browsers.
+
+Three mandatory fields: 
+
+* chrom - The name of the chromosome (e.g. chr3, chrY, chr2_random) or scaffold (e.g. scaffold10671).
+
+* chromStart - The starting position of the feature in the chromosome or scaffold. The first base in a chromosome is numbered 0.
+
+* chromEnd - The ending position of the feature in the chromosome or scaffold. The chromEnd base is not included in the display of the feature. For example, the first 100 bases of a chromosome are defined as chromStart=0, chromEnd=100, and span the bases numbered 0-99.
+
+TODO: sample
+
+TODO: citation https://genome.ucsc.edu/FAQ/FAQformat.html#format1
+
+There are  9 additional optional BED fields. In order to include one, you’ll need to include the previous ones. They are: name, score, strand, thickStart, thickEnd, itemRgb, blockCount, blockSizes, blockStarts.
+
+TODO: sample with optional fields
+
+It also contains header lines that define positioning and visualization options.
+
+### Installing BEDtools
+
+```
+conda install bedtools -c bioconda
+```
+
+Getting BED files: You can get the raw data for any track that you see in the Genome Browser, whether it’s BED, wig or any other format from:
+
+* [UCSC table browser](https://genome-euro.ucsc.edu/cgi-bin/hgTables).
+
+* [Ensembl biomart](https://www.ensembl.org/biomart).
+
+For this class:
+
+* [exons.bed](https://dl.dropboxusercontent.com/s/osb4heohfrrn1eg/exons.bed?dl=0)
+
+* [cpg.bed](https://dl.dropboxusercontent.com/s/7jspn9kd0xnbe8h/cpg.bed?dl=0)
+
+* [genome.txt](https://dl.dropboxusercontent.com/s/uqd4c232qdqnjy0/genome.txt?dl=0)
+
+TODO: Move files to mateos.io assets folder
+
+Getting table data from the UCSC table browser:
+
+TODO: image 
+
+
+### BEDtools intersect
+
+TODO: image
+
+By default, intersect reports the intervals that represent overlaps between your two files. To demonstrate, let’s identify all of the CpG islands that overlap exons.
+
+```
+bedtools intersect -a cpg.bed -b exons.bed | head -5
+```
+Bedtools intersect has many options that can customize its behavior.
+
+* `-wa`: write features from a
+
+* `-wb`: write features from b
+
+* `-wo`: write overlap
+
+* `-v`: Reverse.
+
+* `-f`: require a minimal fraction of overlap.
+
+### bedtools merge
+
+TODO: image
+
+Many datasets of genomic features have many individual features that overlap one another (e.g. aligments from a ChiP seq experiment). It is often useful to just combine the overlapping into a single, contiguous interval.
+The merge tool requires that the input file is sorted by chromosome, then by start position. This allows the merging algorithm to work very quickly without requiring any RAM. If your files are unsorted, the merge tool will raise an error. To correct this, you need to sort your BED using the UNIX sort utility. For example:
+
+```
+sort -k1,1 -k2,2n foo.bed > foo.sort.bed
+```
+
+### bedtools complement
+
+TODO: image
+
+Which intervals of the genome are NOT covered by intervals in a given feature file. 
+
+Complement requires a genome file specifying the number of chromosomes and lengths.
+
+
+### bedtools genomecov
+
+We often want to know what fraction of the genome is covered by 1 feature, 2 features, 3 features, etc. This is frequently crucial when assessing the “uniformity” of coverage from whole-genome sequencing. This is done with the versatile genomecov tool.
+
+Bedgraph output: Using the -bg option, one can also produce BEDGRAPH output which represents the “depth” feature coverage for each base pair in the genome:
+
+TODO: bedgraph sample
+TODO: image
+
+#### Exercise
+
+P300 is a transcription activator with many roles in eukaryotic cells. It is therefore important to know where in the genome it binds. Go to https://www.encodeproject.org/experiments/ENCSR602BTS/ and download the BED peak files that contain p300 binding locations determined in three independent replicates:
+
+* https://www.encodeproject.org/files/ENCFF630EQR/@@download/ENCFF630EQR.bed.gz
+
+* https://www.encodeproject.org/files/ENCFF089KVO/@@download/ENCFF089KVO.bed.gz 
+
+* https://www.encodeproject.org/files/ENCFF725HYX/@@download/ENCFF725HYX.bed.gz 
+
+Use BEDtools to examine how consistent the 3 replicates are:
+
+* How many of the peaks in the first replicate are present in the other two? 
+
+* Build the full contingency table for the first and second replicates.
+
+#### Exercise
+
+* Go to the UCSC table browser or the Ensembl Biomart and download all Refseq genes located in human chromosome 6 (GRCh38) in BED format.
+
+* Use bedtools to generate another BED file that contains the part of the genome covered by all promoters, defined as -2000pb to +500pb from the Transcription Start Site (TSS). 
+
+* Calculate how much of the genome is covered by promoters.
+
+* Intersect the previous p300 BED file (ENCFF630EQR.bed) with your promoter file.
+
+    * What portion of promoters are bound by p300 in the sample?
+
+    * What portion would you expect by chance?
+    
+* Now, calculate how much of the genome is transcribed, using bedtools on the refseq genes file.
+
+## Variant calling
+
+TODO: definition of variant calling, purpose
+
+The Genome Analysis toolkit: Popular suite of tools used for genotyping and variant discovery from the [Broad Institute].
+
+https://software.broadinstitute.org/gatk/
+
+[Genotyping with Genome Analysis Toolkit  (GATK)](TODO: image)
+
+
+### Variant Call Format (VCF) 
+
+A Variant Call Format (VCF) file summarizes variation. A typical VCF file from a human whole exome sequence experiment may contain ~80,000 rows. A typical human whole genome sequence experiment produces a VCF with ~4 million rows.
+
+TODO: format definition image? table?
+
+[VCF header](TODO sample)
+
+[VCF field definition line and first row of body](TODO sample)
+
+Fields include 
+
+* chromosome (CHROM)
+
+* position
+
+* identifier (e.g. rsID)
+
+* reference allele
+
+* alternate allele
+
+* quality score
+
+* extensive additional data (e.g. haplotypes, read depth, quality scores, functional consequences, accession numbers)
+
+Clockwise from top left: SNP, insertion, deletion, replacement.
+
+TODO: samples
+
+Large structural variants in VCF
+
+TODO: sample
+
+## Visualizing NGS data
+
+Many ways to visualize BAM files:
+
+* Genome Workbench from NCBI
+
+* Upload your BAM file to a server and point to it using the UCSC Genome Browser
+
+* Use Integrative Genomics Viewer (IGV)
+
+* Use samtools tview
+
+* BEDtools: a set of programs used to analyze BAM, GTF, BED, VCF, and other file types. 
+
+
+## NGS applications
+
+
+Specialized applications of NGS: There are many useful applications of NGS technology. These include:
+
+* RNA-seq to measure RNA levels (“gene expression” of genes and isoforms)
+
+* Chromatin immunoprecipitation sequencing (ChIP-Seq) to measure protein– DNA interactions 
+
+* Methyl-seq
+
+* FAIRE-seq
+
+* many others: ATAC-seq, ChIA-PET, FAIRE-seq, Chromosome Conformation Capture (3C), Hi-C
+
+### RNA-seq 
+
+RNA-seq for measuring gene expression.
+
+A very accurate way to quantify gene expression.
+
+More accurate and less biased than microarrays.
+
+Can detect uncatalogued transcripts.
+
+1. Purify RNA (degrade DNA)
+
+2. Reverse transcribe RNA to cDNA
+
+3. Sequence
+
+4. Align
+
+5. Functional analysis
+
+TODO: local image
+
+![Gene expression analysis with RNA-seq](https://figshare.com/articles/_Comparison_of_stranded_and_unstranded_RNA_seq_library_methods_and_their_influence_on_interpretation_and_analysis_/1504417)
+
+### ChIP-Seq
+
+ChIP-seq allows us to know where proteins bind in genomic DNA.
+
+1. Isolate protein-bound DNA
+
+2. Cross-link
+
+3. Purify fragments bound to protein of interest
+
+4. Sequence
+
+5. Align
+
+TODO: image of procedure
+
+
+https://www.illumina.com/techniques/sequencing/dna-sequencing/chip-seq.html
+
+Thanks to ChIP-seq, we can observe genome-wide patterns of DNA binding by transcription factors or other proteins.
+
+TODO: image of analysis
+
+http://dev.biologists.org/content/144/11/1948
+
+
+### Epigenetic experiments with NGS
+
+* Histone modifications ChIP-seq: H3K27Ac, etc.
+
+* DNase-seq
+
+* FAIRE-seq: formaldehyde-assisted identification of regulatory elements
+
+* ATAC-seq
+
+TODO: image from https://www.nature.com/articles/nrg3306
+
+To be added for further editions: ATAC-seq (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4374986/)
+
+
+### Chromatin conformation analysis with NGS
+
+ChIA-PET, Chromosome Conformation Capture (3C), Hi-C
+
+All based in chromatin cross-linking followed by ligation, then sequencing.
+Once the reads are aligned to a reference genome, they will reveal a pattern of long range interactions between different parts of the genome.
+
+TODO: image https://link.springer.com/article/10.1007/s00412-016-0593-6
+
+TODO: image https://www.abcam.com/protocols/getting-started-with-chromatin-conformation-capture-3c
+
+
+#### Exercise
+
+NGS application: chip-seq
+
+Let’s use the following reference:
+
+_Muchos años después, frente al pelotón de fusilamiento, el coronel Aureliano Buendía había de recordar aquella tarde remota en que su padre lo llevó a conocer el hielo._
+
+
+
+## Further reading
+
+https://en.wikipedia.org/wiki/Third-generation_sequencing
+https://labiotech.eu/medical/ngs-dna-sequencing-illumina-qiagen/
+http://maq.sourceforge.net/fastq.shtml
+https://www.nature.com/collections/jmgqdxpvsk/
+https://www.nature.com/articles/nrg.2016.49
+Long reads: their purpose and place
+https://genome.ucsc.edu/FAQ/FAQformat.html
+https://en.wikipedia.org/wiki/Third-generation_sequencing
+https://www.thermofisher.com/es/es/home/references/ambion-tech-support/translation-systems/general-articles/ribosomal-binding-site-sequence-requirements.html
+http://www.ncbi.nlm.nih.gov/assembly/basics
+http://www.ncbi.nlm.nih.gov/projects/genome/assembly/grc/
+http://bio-bwa.sourceforge.net/
+http://bioinformatics-core-shared-training.github.io/cruk-bioinf-sschool/Day1/Sequence%20Alignment_July2015_ShamithSamarajiwa.pdf
+Hi-C: A Method to Study the Three-dimensional Architecture of Genomes. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3149993/
+
+[Kozak Sequence]: https://en.wikipedia.org/wiki/Kozak_consensus_sequence
+[Galaxy]: https://usegalaxy.eu/
+[Broad Institute]: https://www.broadinstitute.org/
