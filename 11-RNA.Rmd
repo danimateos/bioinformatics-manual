@@ -1,0 +1,469 @@
+---
+  title: "RNA"
+---
+
+# RNA
+
+Genes in all organisms are expressed in a variety of developmental, environmental, or physiological conditions. The field of functional genomics includes the high-throughput study of gene expression. 
+Before the arrival of this new approach, the expression of one gene at a time was typically studied. Functional genomics may reveal the transcriptional program of entire genomes, allowing a global view of cellular function. 
+
+
+## The biological functions of RNA
+
+TODO: image and quoptation
+From Pevsner
+
+
+### Types of RNA
+
+* mRNA: translated into proteins
+
+* Noncoding RNAs
+
+    * tRNA: 15% of all RNA in the cell
+
+    * rRNA: 80% of all RNA in the cell
+
+    * snRNA
+
+    * snoRNA
+
+    * Others: miRNA, piRNA, lncRNA...
+
+### Noncoding RNA
+
+The main kinds of noncoding RNA are ribosomal RNA (rRNA) and transfer RNA (tRNA)
+
+XIST is an example of a well characterized noncoding RNA gene. It is located in the X inactivation center of the X chromosome and functions in X chromosome inactivation. While males have one copy of the X chromosome (with XY sex chromosomes), females have two copies of which one is inactivated in every diploid cell of mammalian and some other species. Xist is expressed from the inactive X and binds to its chromatin, facilitating chromosome inactivation.
+
+[Rfam](http://rfam.xfam.org/) is a database of noncoding RNA families across the tree of life.
+
+
+### Transfer RNA
+
+TODO: image http://pdb101.rcsb.org/motm/15
+
+Transfer RNA molecules carry a specific amino acid and match it to its corresponding codon on an mRNA during protein synthesis. tRNAs occur in 20 amino acid acceptor groups corresponding to the 20 amino acids specified in the genetic code. 
+
+tRNA forms a structure consisting of about 70–90 nucleotides folded into a characteristic cloverleaf. Key features of this structure include a D loop, an anti-codon loop which is responsible for recognizing messenger RNA codons, a T loop, and a 3’ end to which aminoacyl tRNA synthetases attach the appropriate amino acid specific for each tRNA. 
+
+
+![TODO image or table](Number of tRNA genes in selected organisms)
+
+
+## Ribosomal RNA
+
+Ribosomal RNA molecules form structural and functional components of ribosomes, the subcellular units responsible for protein synthesis. rRNA constitutes approximately 80–85% of the total RNA in a cell.
+
+![TODO image of rRNA]()
+
+rRNA derives from a multicopy ribosomal DNA (rDNA) gene family. In humans these families are localized to the p arms (i.e., short arms) of the five acrocentric chromosomes (13, 14, 15, 21, and 22).
+
+![TODO image of rRNA 2]()
+
+## Small nuclear RNA (snRNA) 
+
+Small nuclear RNA (snRNA) is localized to the nucleus and consists of a family of RNAs that are responsible for functions such as RNA splicing (in which introns are removed from genomic DNA to generate mature mRNA transcripts) and the maintenance of telomeres (chromosome ends). 
+
+## Small nucleolar RNA (snoRNA) 
+
+In eukaryotes, ribosome biogenesis occurs in the nucleolus. This process is facilitated by small nucleolar RNAs (snoRNAs), a group of noncoding RNAs that process and modify rRNA and small nuclear spliceosomal RNAs. 
+
+
+
+![The pervasive nature of transcription](TODO screenshot or image from Pevsner)
+
+Strong evidence for pervasive transcription comes from the ENCODE project @Djebali2012, @Birney2007. Transcriptional activity was measured using a series of technologies.
+
+Conclusions include the following: 
+
+* 62.1% and 74.7% of the human genome is spanned by processed or primary transcripts, respectively
+
+* genes express 10–12 isoforms per cell line
+
+* coding RNA transcripts tend to be cytosolic, while noncoding transcripts are localized to the nucleus
+
+* ∼6% of annotated coding and noncoding transcripts overlap small noncoding RNAs. 
+
+#### Exercise
+
+_∼6% of annotated coding and noncoding transcripts overlap small noncoding RNAs._
+
+What would be the figure that we would expect by mere chance? 
+
+In order to answer this question, we need to trace a plan.
+
+* Where do we get the data from?
+
+* What tool or tools can we use to answer?
+
+
+## mRNA
+
+Gene expression starts at transcription. It is context-dependent, and is regulated in several basic ways.
+
+* By region (e.g. brain versus kidney)
+
+* In development (e.g. fetal versus adult tissue)
+
+* In dynamic response to environmental signals  (e.g. immediate-early response genes)
+
+* In disease states
+
+* By gene activity
+
+
+![HBA2 mRNA in the context of the corresponding genomic DNA](TODO: image)
+
+The adjacent HBA1 and HBA2 genes on human chromosome 11 are shown (8000 base pair window). We can consider a2 globin mRNA as an example of a transcript.
+
+
+#### Exercise
+
+Imagine you sequenced this mature mRNA as well as the genomic region it comes from: the gene coding for it. 
+Draw the alignment plot that would result from it.
+
+
+#### Exercise
+
+Blasting mRNA to genomic RNA: BLAST HBA2 coding sequence (NM_000517.4, subject) to genomic DNA (NT_010393.16, nucleotides 162,000–164,000, query).
+
+* At what positions are the splice junctions in the mRNA?
+
+* Where in the chromosome is the Transcription Start Site (TSS)?
+
+
+### Low- and high-throughput technologies to study mRNAs 
+
+Three techniques for the study of mRNA:
+
+* Complementary DNA (cDNA) libraries
+
+* Microarrays (e.g. using the Affymetrix platform)
+
+* RNA-seq
+
+Low throughput techniques (Northern blots, PCR) may be laborious and able to provide only limited amounts of information. 
+
+Yet they also serve as trusted “gold standards” and provide crucial validation of high throughput techniques.
+
+### cDNA libraries
+
+TODO: image
+
+Microarrays and RNA-seq are two distinct technologies for high-throughput analysis of gene expression. 
+Both require the previous preparation of cDNA libraries.
+
+The sequencing of cDNA libraries allows the location and quantity of RNA transcripts to be measured. 
+
+* cDNA inserts, called expressed sequence tags (ESTs), are sequenced. 
+
+* The UniGene database partitions ESTs into nonredundant clusters that generally correspond to expressed genes.
+
+* Each cluster has some number of sequences associated with it, from one (singletons) to ~50,000
+
+
+UniGene is an experimental system for automatically partitioning GenBank sequences into a non-redundant set of gene-oriented clusters. Each UniGene cluster contains sequences that represent a unique gene, as well as related information such as the tissue types in which the gene has been expressed and map location.
+
+https://www.ncbi.nlm.nih.gov/unigene
+
+TODO: citation http://www.bioinfo.org.cn/relative/NCBI-UniGene.htm
+
+
+TODO: image or table: Cluster sizes for human entries in UniGene 
+
+
+### Microarray analysis of gene expression
+
+
+
+![General flow of high-throughput analysis of gene expression](TODO image)
+
+#### Experimental part of a microarray study
+
+**Experimental design**: Be sure to use enough biological replicates (typically n≥3 per group). Consult a statistician if you’re unsure.
+
+**RNA preparation**: RNA extraction, conversion, labeling, hybridization: evaluate and avoid systematic artifacts (avoid batch effects). Be sure to create an appropriately balanced, randomized experimental design.
+
+**Hybridization to DNA arrays**: Microarrays typically consist of oligonucleotides (deposited by photolithography), and samples are cRNA or cDNA with fluorescent tags.
+
+
+![Microarray experiment with radioactive probes](TODO image)
+
+Technology using radioactive probes is now obsolete except in niche applications, but this figure illustrates the essential nature of differential gene expression in two samples.
+
+Arrow indicates a transcript expressed at a lower level (in the bottom panel)
+
+#### Microarray data analysis
+
+The types of questions that we might ask from a microarray experiment are:
+
+Hypothesis testing
+
+* How can arrays be compared? 
+
+* Which RNA transcripts (genes) are regulated?
+
+* Are differences authentic?
+
+* What are the criteria for statistical significance?
+
+Clustering
+
+* Are there meaningful patterns in the data (e.g. groups)?
+
+Classification
+
+* Do RNA transcripts predict predefined groups, such as disease subtypes?
+
+
+Microarray experiments are often planned as “hypothesis-generating” experiments.
+
+The differential up- or down-regulation of specific RNA transcripts can be verified using independent assays such as
+
+* Northern blots
+
+* Polymerase chain reaction (RT-PCR)
+
+* In situ hybridization
+
+TODO: images for the above
+
+##### Depositing data at a database
+
+There are two main repositories: Gene expression Omnibus (GEO) at NCBI and ArrayExpress at the European Bioinformatics Institute (EBI).
+
+Minimum Information About a Microarray Experiment (MIAME) guidelines are followed to describe experiments:
+
+TODO: source for MIAME
+
+* Experimental design
+
+* Microarray design
+
+* Sample preparation
+ 
+* Hybridization procedures
+ 
+* Image analysis
+ 
+* Controls for normalization
+
+##### Gene Expression Omnibus
+
+GEO is a public functional genomics data repository supporting MIAME-compliant data submissions. Array- and sequence-based data are accepted. Tools are provided to help users query and download experiments and curated gene expression profiles
+
+https://www.ncbi.nlm.nih.gov/geo/
+
+
+###### GEO profiles
+
+![How was my favorite RNA transcript expressed across thousands of experiments?](TODO screenshot)
+
+![Example of a globin RNA transcript expressed at low levels in an experimental condition](TODO screenshot)
+
+
+#### The relationship between DNA, mRNA, and protein levels 
+
+Once mRNA levels are present at elevated or reduced levels, are the corresponding proteins differentially expressed in a similar manner? Perhaps surprisingly, there appears to be only a weak positive correlation between mRNA and protein levels. 
+Several groups have reported described correlation coefficients that were relatively high when highly abundant proteins were considered (e.g., r = 0.935, r = 0.86 in two studies) but lower when highly abundant proteins were excluded (e.g., r = 0.36, r = 0.49, r = 0.21, r = 0.18). 
+Weak correlations could be due to RNA structural effects, regulatory noncoding RNAs, codon bias, variable protein half-lives, and experimental error. 
+
+TODO: sources
+
+![Gene Expression profiles in the UCSC browser](TODO screenshots)
+
+
+#### The GTEx project 
+
+The genotype-tissue expression project combines the study of expression and expression quantitative trait loci (e-QTLs), that is, genotypic variation in the human that affects gene expression.
+The objective is providing a data resource for studies on the relationship between genetic variation and gene expression.
+
+
+### RNA-seq
+
+RNA-seq is used to accomplish the same goal as microarrays: quantifying RNA transcript levels. However, it is revolutionary because:
+
+* It allows the measurement of essentially all RNA transcripts (rather than only those pre-selected on a microarray surface)
+
+* It has a broader dynamic range
+
+* It allows identification of novel transcripts and transcript isoforms
+
+
+* It is able to quantify alternative splicing events. 
+
+
+![Workflow in high-throughput analysis of gene expression](TODO image)
+
+1. (Purple) Experiment/project dependent
+
+2. (Brown/yellow) Technique-dependent
+
+3. (Blue) Question-dependent
+
+4. (Green) Objective-dependent
+
+
+![Handling both spliced and unspliced reads](TODO: image https://slideplayer.com/slide/4784392/)
+
+Handling both spliced and unspliced reads is a problem specific to NGS treatment of RNA as opposed to sequencing DNA.
+
+
+#### TopHat
+
+A fast splice junction mapper for RNA-Seq reads. It aligns RNA-Seq reads to mammalian-sized genomes using the ultra high-throughput short read aligner Bowtie, and then analyzes the mapping results to identify splice junctions between exons. 
+
+TODO: image and citations
+
+https://ccb.jhu.edu/software/tophat/index.shtml
+https://github.com/infphilo/tophat
+
+
+Trapnell et al. (2013)
+
+![Alternative splicing and quantification of alternative isoforms](TODO image from https://www.rna-seqblog.com/spladder-identification-quantification-and-testing-of-alternative-splicing-events-from-rna-seq-data-2/)
+
+It’s hard to do and there is not always a unique solution
+
+#### Cufflinks
+
+Cufflinks assembles transcripts, estimates their abundances, and tests for differential expression and regulation in RNA-Seq samples. It accepts aligned RNA-Seq reads and assembles the alignments into a parsimonious set of transcripts. Cufflinks then estimates the relative abundances of these transcripts based on how many reads support each one, taking into account biases in library preparation protocols.
+
+TODO: citations
+
+http://cole-trapnell-lab.github.io/cufflinks/
+https://github.com/cole-trapnell-lab/cufflinks
+
+
+#### Exercise: Quantifying expression from reads
+
+### Single cell RNA-seq
+
+scRNA-seq
+A new technology, first publication  @Tang2009.
+Did not gain widespread popularity until ~2014 when new protocols and lower sequencing costs made it more accessible
+Measures the distribution of expression levels for each gene across a population of cells
+Allows to study new biological questions in which cell-specific changes in transcriptome are important, e.g. cell type identification, heterogeneity of cell responses, stochasticity of gene expression, inference of gene regulatory networks across the cells.
+
+TODO: citation https://hemberg-lab.github.io/scRNA.seq.course/introduction-to-single-cell-rna-seq.html
+
+TODO: expand big time
+TODO: include some practice (seurat? Online platform of some sort?)
+
+Datasets range from 100 to 1000000 cells  and increase in size every year
+Currently there are several different protocols in use, e.g. SMART-seq2 (Picelli et al. 2013), CELL-seq (Hashimshony et al. 2012) and Drop-seq (Macosko et al. 2015)
+There are also commercial platforms available, including the Fluidigm C1, Wafergen ICELL8 and the 10X Genomics Chromium
+Several computational analysis methods from bulk RNA-seq can be used
+In most cases computational analysis requires adaptation of the existing methods or development of new ones
+
+TODO: ctiations above
+
+
+![scRNA-seq Workflow](TODO image)
+
+
+![scRNAseq evolution](TODO image)
+
+#### Quantification of scRNAseq
+
+Two types:
+
+* Full-length: tries to achieve a uniform read coverage of each transcript.
+
+* Tag-based: only capture either the 5’- or 3’-end of each RNA. 
+The choice of quantification method has important implications for what types of analyses the data can be used for. In theory, full-length protocols should provide an even coverage of transcripts, but there are often biases in the coverage. 
+
+## Analysis of high-throughput gene expression experiments
+
+![Workflow in high-throughput analysis of gene expression](TODO image)
+
+1. (Purple) Experiment/project dependent
+
+2. (Brown/yellow) Technique-dependent
+
+3. (Blue) Question-dependent
+
+4. (Green) Objective-dependent
+
+### Fold change (log ratios)
+
+* To a statistician fold change is sometimes considered meaningless. Fold change can be large (e.g. >>two-fold up- or down-regulation) without being statistically significant (e.g. based on probability values from a t-test or ANOVA).
+
+* To a biologist fold change is almost always considered important for two reasons. First, a very small but statistically significant fold change might not be relevant to a cell’s function. Second, it is of interest to know which genes are most dramatically regulated, as these are often thought to reflect changes in biologically meaningful transcripts and/or pathways.
+
+### t-test
+
+We use the t-test to assess differences between two groups.
+
+Consider two groups for which you obtain measurements.
+
+1. Set a null hypothesis that there is no difference in the means of these two groups.
+
+2. Set an alternate hypothesis that there is a difference.
+
+3. In the numerator take the absolute value of the difference of the two group means.
+
+4. In the denominator calculate the noise.
+
+5. From the t-statistic obtain a probability value.
+
+![Transcript-specific variance is addressed by a t-test](TODO image)
+
+Assessing differences between groups: Each dot is a replicate. Comparison of conditions 4 and 5 would produce a significant difference (we reject the null). Comparison of 3 versus 5 might not. The P-value would be a lot highter in the second case.
+
+### False Discovery Rate (FDR)
+
+The false discovery rate (FDR) is a popular multiple comparisons correction. A false positive (also called a type I error) is sometimes called a false discovery.
+
+The FDR equals the p value of the t-test times the number of genes measured (e.g. for 10,000 genes and a p value of 0.01, there are 100 expected false positives).
+
+### Volcano plot
+
+![](TODO volcano plot)
+
+A volcano plot represents significance of regulated genes vs. fold change.
+A volcano plot shows fold change (x-axis) versus p value from ANOVA (y-axis). Each point is the expression level of a transcript. Points high up on the y-axis (above the pale green horizontal line) are significantly regulated.
+47
+
+### Hierarchical clustering
+
+![](TODO image)
+
+A form of unsupervised machine learning. 
+Very often used in studies of gene expression.
+You can cluster either genes or samples.
+
+
+#### Exercise
+
+Go to https://www.ncbi.nlm.nih.gov/sites/GDSbrowser?acc=GDS4153
+Click on “Cluster Analysis”
+
+* How many groups of samples would you think intuitively there are?
+
+* To what do they correspond on the top tree?
+
+* What does the left tree represent?
+
+
+## Further reading
+
+A survey of best practices for RNA-seq data analysis
+https://rnaseq.uoregon.edu/
+https://github.com/griffithlab/rnaseq_tutorial
+Method of the Year 2013
+https://icb.med.cornell.edu/wiki/index.php/Tophat_tutorial
+https://ccb.jhu.edu/software/tophat/tutorial.shtml
+https://www.illumina.com/documents/products/technotes/RNASeqAnalysisTopHat.pdf
+
+
+
+
+65
+
+CREDITS
+Special thanks to all the people who made and released these awesome resources for free:
+Presentation template by SlidesCarnival
+Photographs by Unsplash
+66
