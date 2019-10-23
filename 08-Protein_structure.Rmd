@@ -2,9 +2,7 @@
   title: "08-Protein structure"
 ---
 
-
 # Protein structure
-
 
 The 3D structure of a protein determines its capacity to function.
 Anfinsen et al. denatured ribonuclease: Observed rapid refolding, demonstrated that the primary aa seq determines its structure.

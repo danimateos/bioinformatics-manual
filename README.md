@@ -23,7 +23,7 @@ This manual aspires to be a collaborative work. If you see errors, have any sugg
 Releasing
 =========
 
-Compile the book with bookdown into html and pdf, then copy it over to the blog (http://mateos.io)
+Compile the book with bookdown into html and pdf, then copy it over to the blog (http://mateos.io). TODO more detail.
 
 
 Sources

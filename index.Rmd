@@ -1,5 +1,5 @@
 --- 
-title: "Bioinformatics Manual"
+title: "Bioinformatics For Engineers"
 author: "Daniel Mateos San Martín"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
