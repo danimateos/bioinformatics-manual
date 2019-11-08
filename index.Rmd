@@ -4,10 +4,10 @@ author: "Daniel Mateos San Martín"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 output: 
-- bookdown::pdf_book
 - bookdown::gitbook
 - bookdown::html_book
 - bookdown::epub_book
+- bookdown::pdf_book
 documentclass: book
 github-repo: danimateos/bioinformatics_manual
 description: "This is the official manual for the Bioinformatics course taught at the CEU San Pablo Bioengineering degree."

@@ -74,8 +74,10 @@ There is a huge demand for bioinformaticians.
 Pretty much every biology lab has to do some bioinformatics today. Most biologists are not equipped to be able to handle the work.
 Whether that translates into job opportunities is another matter
 
-![A chasm to bridge](https://bioinformaticshome.com/blog/assets/images/language%20barrier%20_430.jpg)
+![A chasm to bridge](images/language_barrier_430.jpg)
 
+
+@Martti
 
 ## Molecular Biology refresher
 
@@ -89,8 +91,13 @@ All of them are heteropolymers: they have a sequence which is critical to their 
 
 ### The Central Dogma of Molecular Biology
 
-![The Central Dogma of Molecular Biology](https://cdn.kastatic.org/ka-perseus-images/2b597889d05bc601803a3b4d9ec5ccd5e7b8d3af.png)
-![Transcription and splicing](https://www.curecdkl5.org/assets/Uploads/structures-of-the-gene.jpg)
+![The Central Dogma of Molecular Biology](images/central_dogma.png)
+
+@KhanAcademy
+
+![Transcription and splicing](images/structures-of-the-gene.jpg)
+
+@CDKL5UK
 
 In eukaryotes, not every nucleotide goes into the final mature mRNA. Some are eliminated by splicing.
 

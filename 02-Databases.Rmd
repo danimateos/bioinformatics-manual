@@ -536,7 +536,7 @@ With GSEA, you count the number of genes in your set each particular GO term is 
 1995: sequencing of the complete genome of a free-living organism for the 1st time: Bacterium Haemophilus influenzae.
 1.8Mbp DNA
 
-Nowadays: quadrillions of nucleotides of DNA sequence data from 300.000 ≠ species.
+Nowadays: quadrillions of nucleotides of DNA sequence data from 300.000 different species.
 
 2 main technologies for DNA sequencing:
 

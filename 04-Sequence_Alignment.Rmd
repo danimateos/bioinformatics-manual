@@ -20,7 +20,7 @@ Evolution will occur whenever two conditions are satisfied:
 
 * Selective pressure
 
-![Darwin's finches](https://bioinf.comav.upv.es/courses/intro_bioinf/_images/finches.jpg)
+![Darwin's finches](images/finches.jpg)
 
 
 \cite{CanizaresSales}
@@ -32,7 +32,7 @@ More similarity, more recent common ancestor
 
 Homology: Descent from a common ancestor.
 
-* Orthologs: Homologous sequences in ≠ species from a common ancestral gene during speciation (similar function).
+* Orthologs: Homologous sequences in different species from a common ancestral gene during speciation (similar function).
 
 * Paralogs: Homologous sequences within a single species by gene duplication.
 
@@ -266,7 +266,7 @@ Pairs of:
 
 * identical aa: highest score
 
-* aa ~ properties: higher than ≠ properties
+* aa with similar properties should score higher than those with different properties
 
 ## Interpreting alignment scores
 
