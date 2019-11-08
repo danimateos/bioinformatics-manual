@@ -457,13 +457,3 @@ https://icb.med.cornell.edu/wiki/index.php/Tophat_tutorial
 https://ccb.jhu.edu/software/tophat/tutorial.shtml
 https://www.illumina.com/documents/products/technotes/RNASeqAnalysisTopHat.pdf
 
-
-
-
-65
-
-CREDITS
-Special thanks to all the people who made and released these awesome resources for free:
-Presentation template by SlidesCarnival
-Photographs by Unsplash
-66

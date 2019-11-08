@@ -1,0 +1,490 @@
+---
+title: "Human disease"
+---
+
+
+# Human disease
+
+> Life is a relationship between molecules, not a property of any one molecule. So is therefore disease, which endangers life. While there are molecular diseases, there are no diseased molecules
+
+> Emile Zuckerkandl and Linus Pauling
+
+Human disease is a consequence of genetic variation.
+Genetic variation is responsible for the adaptive changes that underlie evolution.
+Some changes improve the fitness of a species.
+Other changes are maladaptive.
+For the individual in a species, these maladaptive changes represent disease.
+
+* Molecular perspective: mutation and variation
+
+* Medical perspective: pathological condition
+
+Bioinformatics perspectives on disease
+
+* The field of bioinformatics involves the use of computer algorithms and databases to study genes, genomes, and proteins.
+
+* DNA databases offer reference sequences to compare normal and disease-associated sequences 
+
+* Physical and genetic maps are used in gene-finding
+
+* Protein structure studies allow study of effects of mutation
+
+* Many functional genomics approaches applied to genes
+
+* Insight into human disease genes is provided through the study of orthologs and their function
+
+@Pevsner
+
+Perspectives on disease
+Medicine: diagnosis, treatment, prognosis, prevention of disease
+Genetics: understanding the origin and expression of individual human uniqueness
+Genomics: identifying and characterizing genes and their arrangement in chromosomes
+Bioinformatics: the use of computer algorithms and computer databases to study genes, genomes, and proteins.
+
+TODO: merge into a coherent narrative flow
+TODO: rewrite
+
+![Bioinformatics resources for the study of human disease](TODO image or table)
+
+
+### Classification of disease
+
+
+There are several approaches to disease classification that are relevant to our bioinformatics perspective of disease.
+Also, the field of bioinformatics is specifically involved in disease classification.
+
+* Death rankings
+
+* Disability-adjusted life years (DALYs)
+
+Classification systems:
+
+* International Statistical Classification of Diseases and Related Health Problems (ICD-9 and ICD-10)
+
+* National Library of Medicine (MeSH terms)
+
+
+![Leading causes of death in United States in 2010](TODO image or table)
+
+
+![Leading causes of death in the world](TODO image or table)
+
+
+#### Medical Subject Heading (MeSH) terms for disease
+
+The National Library of Medicine (NLM) has developed Medical Subjects Heading (MeSH) terms as a unified language for biomedical literature database searches. The current MeSH term system includes 23 disease categories. PubMed at NCBI also uses this classification system for indexing articles. 
+
+http://www.nlm.nih.gov/mesh/
+
+TODO: rewrite
+
+![Medical Subject Heading (MeSH) terms](TODO image or table)
+
+http://research.library.gsu.edu/c.php?g=115556&p=753156
+
+
+![Medical Subject Heading (MeSH) terms for disease]()
+
+https://meshb.nlm.nih.gov/search
+
+
+## Categories of human disease
+
+We can consider four main categories of human diseases according to their causes
+
+* Single‐gene (monogenic) disease
+
+* Complex disease
+
+* Genomic disease
+
+* Environmental disease  
+
+![](TODO image or table)
+
+### The relationship between genetics and human disease
+
+![Allele frequencies and effect sizes](TODO image)
+
+There is an inverse relationship between the effect adverse effect of an allele and its frequency in the population. 
+Frequencies can range from over 5% to under 0.1% minor allele frequency (MAF).
+The effect of a possibly deletereous allele is often expressed as an odds ratio. 
+This is the ratio of the probability of a carrier of the allele to develop the disease to the probability of a non carrier to develop it.
+An OR of 2 means that a carrier is twice as likely to develop the disease as a non carrier.
+A 1000 Genomes paper (2010) suggests that “on average, each person is found to carry approximately 250-300 loss-of-function variants in annotated genes and 50 to 100 variants previously implicated in inherited disorders.”
+					
+TODO citation. already rewritten
+
+https://www.ncbi.nlm.nih.gov/pubmed/20981092
+
+
+### Monogenic (single gene) disorders
+
+![Monogenic (single gene) disorders](TODO image or table)
+
+
+Sickle cell anemia, Rett syndrome
+
+TODO: monogenic disease. Summarize, there’s way too much info in pevsner
+
+### Complex disorders
+
+Multiple genes are involved. The combination of mutations in multiple genes define the disease.
+Complex diseases are non-Mendelian: they show familial aggregation, but not segregation. This means that they are heritable, but it is not easy to identify the responsible genes in pedigrees (e.g. by linkage
+analysis).
+Susceptibility alleles have a high population frequency. Examples are asthma, autism, high blood pressure, obesity, osteoporosis.
+
+TODO: rewrite
+
+### Genomic (chromosomal) disorders
+
+Many diseases are caused by deletions, duplications, or rearrangements of chromosomal DNA. In addition, aneuploidy can occur (having an abnormal number of chromosomes).
+Frequency : human fecundity may be only 25% (there is a loss of 75% of conceptuses).
+
+![](TODO image or table)
+
+TODO: Why so many chromosomal disorders affecting sexual chromosomes?
+
+
+![Common structural polymorphisms and disease 
+](TODO image or table)
+
+TODO: consider: exercise: how to diagnose these?
+
+
+### Environmental disease
+
+Even environmental disease is impacted by genetics. 
+For example, lead poisoning is an environmental disease.
+Two children exposed to the same dose of lead may have entirely different phenotypes, and this susceptibility has a genetic basis.
+Therefore genes affect susceptibility to environmental insults and infectious disease. 
+Even single-gene disorders involve many genes in their phenotypic expression.
+
+
+### Disease and genetic background
+
+Individuals from particular geographic origins may have increased risk for disease:
+
+* Tay‐Sachs disease is prevalent among Ashkenazi Jews. 
+
+* About 8% of the African‐American population are carriers of a mutant HBB gene. 
+
+* Males rather than females are susceptible to Alport disease, male pattern baldness, and prostate cancer. 
+
+* Cystic fibrosis affects ∼30,000 people in the United States with ∼12 million carriers, and is the most common fatal genetic disease in that country. While it affects all groups, Caucasians of northern European ancestry are particularly susceptible. 
+
+### Other classifications of disease: Organellar
+
+Diseases can also be classified based on the affected organelle.
+Some organelles are involved disproportionately in disease.
+
+TODO: why particular organelles in disease?
+
+* Mitochondria: Over 100 disease-causing mutations identified. 
+
+* Peroxisomes: Mutations affect either peroxisome function or peroxisome biogenesis; yeast provide a model
+
+* Lysosomes: There are many lysosomal storage diseases, such as Fabri syndrome.
+
+### Somatic mosaic disease
+
+Mosaicism is the occurrence of genetically distinct populations of cells within an organism derived from a single zygote.
+It arises with the life of the individual, as cells suffer mutations and pass them on to their descendants.
+Chimerism would involve a mix of cells from two zygotes.
+Genetic changes may involve somatic cells or germline cells.
+
+![](TODO image)
+https://en.wikipedia.org/wiki/Calico_cat
+
+Postzygotic, somatic, mosaic mutations have indeed been identified for diseases including the McCune‐ Albright syndrome (GNAS mutations), the Proteus syndrome (AKT mutations), and Sturge-Weber syndrome (mutations in GNAQ ).
+
+TODO: citation
+
+@Pevsner
+
+Cancer is a somatic mosaic disease, arising from a clone having somatic mutations and leading to malignant transformation. 
+Cancer occurs when DNA mutations confer selective advantage to cells that proliferate. 
+Knudson (1971) introduced a two‐hit hypothesis of cancer, suggesting that for dominantly inherited retinoblastoma one mutation is inherited through the germ cells while a second somatic mutation occurs; for a nonhereditary form of cancer two somatic mutations occur.
+There are six hallmarks of cancer, described by Hanahan and Weinberg (2011): proliferative signaling, evading growth suppressors, resisting cell death, enabling replicative immortality, induction of angiogenesis, and inactivating invasion and metastasis. 
+
+TODO: Knudson citation
+TODO: rewrite
+
+COSMIC (catalogue of somatic mutations in cancer) includes information on ~1 million cancer samples, >1.6 million mutations, and various types of mutations (fusions, genomic rearrangements, and copy number variants). 
+There are over 200 types of cancer and many disease mechanisms.
+The landscape of cancer includes two types of mutations. 
+
+* “Driver” mutations confer a selective growth advantage to cells, are implicated as causing the neoplastic process, and are positively selected for during tumorogenesis.
+ 
+ * “Passenger” mutations are retained by chance but confer no selective advantage and do not contribute to oncogenesis.
+
+TODO: rewrite
+
+![](TODO: image)
+
+The genomes of adult (right) and pediatric (left) cancers. Numbers in parentheses are the median number of nonsynonymous mutations per tumor
+
+Vogelstein et al. 2013
+
+TODO: citation
+
+## Human disease databases
+
+[Online Mendelian Inheritance in Man (OMIM)](TODO link) is a comprehensive database for human genes and genetic disorders, with a focus on monogenic disorders. It was started as MIM by Victor McKusick at JHU (1966). OMIM went online at NCBI in 1995. It is integrated with Entrez, NCBI Gene, Map View, and PubMed. 
+Focus on Mendelian disorders.
+Few entries on chromosomal diseases.
+
+TODO: citation MIM
+TODO: rewrite
+
+OMIM allows text searches by criteria such as author, gene identifier, or chromosome. A search of OMIM for “beta globin” produces results including entries on that gene, related globin genes, and diseases such sickle cell anemia. The insets show links to external resources and to ICD clinical diagnostic categories. 
+
+#### Exercise
+
+Search OMIM for HBB
+
+* What diseases is it implicated in?
+
+* What hereditary pattern do they show?
+
+* Can you tell the difference between a * entry and a # entry?
+
+### OMIM allelic variants
+
+Most OMIM allelic variants represent disease-causing mutations.
+They are selected for OMIM based on criteria such as historical importance, high population frequency, or involving an unusual pathogenetic mechanism.
+Some allelic variants simply represent polymorphisms.
+
+TODO: rewrite
+
+### OMIM numbering system
+OMIM number beginning 1 or 2 implies it entered the database before May 1994; OMIM number beginning 6 implies it was created after May 1994
+
+* `+` indicates a gene of known sequence and a phenotype
+
+* `%` indicates a confirmed Mendelian phenotype (or phenotypic locus) for which the underlying molecular basis is not known
+
+* `#` indicates a descriptive entry (usually of phenotype)
+
+* `*` preceding entry indicates a gene of known sequence. 
+
+![](TODO: image or table)
+
+![Current holdings of OMIM as of 2014](TODO: image or table)
+
+
+TODO: Integration exercise; with HBB or with some other gene.
+Where in the gene do mutations concentrate?
+What does this mean: is this part more critical or the opposite - compare with SNPs - the story of the returning WWII bombers with intact wings
+
+### Other central mutation databases
+
+GeneCards (Weizmann Institute): Collects and integrates information from several dozen independent databases such as OMIM, GenBank, UniGene, Ensembl, MIPS.
+
+http://www.genecards.org/
+
+Human Gene Mutation Database (HGMD): Major mutation database. Commercial access.
+
+http://www.hgmd.cf.ac.uk/
+
+
+#### ClinVar (NCBI)
+
+The ClinVar database provides data on human variants and their relationship to disease. 
+It links to the NIH Genetic Testing Registry (GTR), MedGen, Gene, OMIM, and PubMed. 
+GTR centralizes genetic test information.
+MedGen organizes human medical genetics information, for example providing several hundred entries on medical conditions relevant to a query for hemoglobin. 
+
+There are five categories of information in ClinVar:
+
+* Submissions are from organizations and individuals.
+
+* Variation includes sequences at one location (single allele) or multiple alleles (e.g., compound heterozygotes in which two parents transmit different alleles at a single locus, sometimes causing a phenotypic change). Variants are cross‐referenced to dbSNP and dbVar. 
+
+* Phenotype may represent one concept or more and is annotated by MeSH term, OMIM number, MedGen identifier, or Human Phenotype Ontology. 
+
+* Interpretation in ClinVar is submitter‐driven and uses terms recommended by the American College of Medical Genetics and Genomics (ACMG). 
+
+* Evidence typically consists of the number of individuals in which a given mutation was observed. 
+
+TODO: exercise on ClinVar
+
+The UCSC Genome Browser includes tracks to display data from disease databases.
+There is a category of tracks called “Phenotype and literature”, which contains tracks for CNVs, HGMD, ClinVar, OMIM, PhenCode, and more.
+
+TODO: rewrite
+
+#### Exercise 
+
+Go to human BRCA1. Turn on the ClinVar, OMIM, HGMD, and LOVD tracks.
+
+TODO: screenshot
+
+* What diseases is it implicated in?
+
+* Examine some of the other genes implicated in disease mentioned above.
+
+* Where do the pathogenic mutations seem to concentrate?
+
+
+### Two kinds of disease mutation databases
+
+Central: OMIM, GeneCards, Human Gene Mutation Database
+
+Locus-specific databases: these describe one gene in depth. They are often complementary to central databases and offer specialist expertise. There are hundreds of locus-specific databases.
+
+TODO: links
+
+There are two main gateways to large numbers of locus-specific databases. 
+The Human Genome Variation Society (HGVS) provides access to 1600 locus‐specific mutation databases. It offers many additional database resources. 
+
+http://www.hgvs.org/content/databases-tools
+
+The Leiden Open Variation Database (LOVD) has emerged as a platform supporting thousands of locus‐specific databases.
+
+http://www.lovd.nl/3.0/home
+
+TODO: rewrite
+
+The growing “interpretative gap”
+Databases reporting which alleles are associated with human disease have critical roles in the interpretation of the clinical significance of genomic variants. But there are many false positive results (variants listed as disease-associated that are common, or rare, and benign). 
+There is a large “interpretive gap” (Cutting, 2014) as increasing numbers of variants are identified, but their significance has not yet been assessed. Locus‐specific databases are excellent repositories for the cataloguing of variants, but they also need associated clinical or phenotypic data. 
+
+TODO: what does this actually mean?
+TODO: citation for Cutting
+
+## Identifying disease genes
+
+Four approaches to identifying disease genes:
+
+* Linkage analysis
+
+* Genome-wide association studies (GWAS)
+
+* Identification of chromosomal abnormalities
+
+* Genomic DNA sequencing
+
+### Linkage analysis
+
+A genetic linkage map displays genetic information in reference to linkage groups (chromosomes). 
+The mapping units are centiMorgans, based on recombination frequency between polymorphic markers such as SNPs or microsatellites. 
+One cM equals one recombination event in 100 meioses; for the human genome, the recombination rate is typically 1–2 cM/Mb.
+
+In linkage studies, genetic markers are used to search for coinheritance of chromosomal regions within families, that is, polymorphic markers that flank a disease locus segregate with the disease in families. Two genes that are in proximity on a chromosome will usually cosegregate during meiosis. 
+By following the pattern of transmission of a large set of markers in a large pedigree, linkage analysis can be used to localize a disease gene based on its linkage to a genetic marker locus. 
+Huntington’s disease, a progressive degenerative disorder, was the first autosomal disorder for which linkage analysis was used to identify the disease locus.
+
+TODO: rewrite
+TODO: image or physical demonstration
+
+Disease genes cloned by positional mapping
+Duchenne muscular dystrophy (1986) 
+Cystic fibrosis (1989)
+Huntington’s disease (1993)
+BRCA1 and BRCA2 (1994) 
+
+104
+TODO: read up and expand
+TODO: citations
+
+### GWAS
+
+It is difficult to identify the genetic causes of common human diseases that involve multiple genes, each of which may make only a small contribution to the disease risk. 
+Genome-wide association studies (GWAS) uses SNP markers to identify disease loci.
+In family‐based designs, markers are measured in probands and unaffected individuals to identify differences in the frequency of variants. 
+In population‐based designs, a large number of unrelated cases and controls are studied (typically hundreds or thousands in each group). Larger sample sizes offer increased statistical power. 
+
+
+SNPs are the most common type of genetic variation in humans. They account for 90% of the variation between individuals.
+Most are neutral polymorphisms. Some cause disease.
+The density of SNPs is about 1 every 100 to 300 bases.
+
+SNPs may occur anywhere: 
+
+* In coding regions (cSNPs)
+    * Synonymous or non-synonymous
+
+* In introns
+
+* In regulatory regions of genes
+
+* In intergenic regions.
+
+SNPs are poteintially very informative with respect to disease:
+
+1. Functional variation. A SNP associated with a nonsynonymous substitution in a coding region will change the amino acid sequence of a protein.
+
+2. Regulatory variation. A SNP in a noncoding region can influence gene expression.
+
+3. Association. SNPs can be used in whole-genome association studies. SNP frequency is compared between affected and control populations. 
+
+TODO: rewrite
+
+
+![Results of a genome‐wide association study using 16,179 individuals to search for genes contributing to seven common familial disorders](TODO: image)
+
+For each of seven diseases, the y axis shows the –log10 p value for SNPs that were positive for quality control criteria. The x axis shows the chromosomes. p values <1×10–5 are high-lighted in red. Panels are truncated at –log10(p value) = 15. Redrawn from Wellcome Trust Case Control Consortium (2007). 
+
+### Chromosomal abnormalities
+
+Common chromosomal aberrations in early development include the gain or loss of whole chromosomes. Such structural abnormalities may be detected by standard cytogenetic approaches such as karyotype analysis and fluorescence in situ hybridization (FISH). 
+These techniques may also reveal large‐scale duplications, deletions, or rearrangements. 
+
+* Spectral karyotyping/multiplex‐FISH (SKY/M‐FISH) permits each chromosome to be visualized, facilitating the identification of abnormal karyotypes.  
+
+* Array comparative genomic hybridization (aCGH) detects chromosomal abnormalities.
+
+* Whole genome sequencing has emerged as a powerful tool to detect structural variation.
+
+![](TODO: normal karyotype image)
+![](TODO: abnormal karyotype)
+
+http://people.musc.edu/~hazards/WebBioInformatics/SKY_CGH.htm
+
+
+### Genome sequencing for monogenic disease
+
+Whole exome sequencing (WES) has been useful for identifying variants that cause monogenic disorders.
+Mendelian diseases are typically caused primarily by mutations affecting the coding region of a gene. 
+The yield of whole‐exome sequencing has therefore been high: 
+Focus is on a small subset of the genome (∼60 megabases),  enriched for functionally relevant loci.
+Motivation to perform WES: is less than whole genome sequencing (WGS), and data analysis is relatively simpler.
+
+TODO: rewrite
+
+### Genome sequencing for complex disorders
+
+Whole genome sequencing (WGS) detects 3-4 million single nucleotide variants (SNVs) per individual, substantially more than in a SNP array
+Trio-based WES or WGS often used to study complex diseases
+Interpretation of variants relevant to the phenotype is challenging
+
+TODO: rewrite
+
+### Genome sequencing for the study of normal variation
+
+How many disease‐associated variants occur in healthy (“apparently normal”) people? Estimates vary. Per individual:
+11,000 synonymous SNVs (no amino acid change)
+10,500 nonsynonymous SNVs (amino acid changes)
+40–110 variants identified as disease‐causing in the HGMD database. 
+3–24 were homozygous, meaning that both chromosomal copies carried the deleterious variants. 
+
+112
+
+## Classifying disease genes
+
+![Classification of human disease genes](TODO: image)
+
+In the 2001 Nature issue on the human genome, Jimenez-Sanchez et al. analyzed 923 genes associated with human disease. These genes primarily cause monogenic disorders.
+They classified each gene according to the function of its protein product. Enzymes represent the largest functional category (31%). This represents a historical bias towards the study of enzymes; only 15% of positionally cloned genes encode enzymes. 
+
+TODO: citation Jimenez-Sanchez G, Childs B, Valle D. Human disease genes. Nature. 2001 Feb 15;409(6822):853-5.
+
+![Classification of human disease genes](TODO: image)
+
+The characteristics of diseases, organized by the function of the protein encoded by the disease gene 
+These studies help us to define a logic of disease, from genotype to phenotype.
+
+TODO: find something more recent on this topic
+
+## Further Reading

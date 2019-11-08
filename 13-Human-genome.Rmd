@@ -1,0 +1,465 @@
+---
+  title: "Human Genome"
+---
+
+
+# Human genome
+
+Dropped: Deeper looked at individual chromosomes.
+Dropped: Exercise with synteny tool
+Dropped: compare eukaryotes, talk about the c paradox, plants
+Dropped: The Human Genome Project: the race, celera, Craig Venter, the cost of sequencing
+Dropped: Garrod
+TODO: Paleogenomics: Empezar con Jurassic Park, Svante Paabo y el neandertal, Church y el mamut.
+
+## The Human Genome Project
+
+The human genome is the complete set of DNA in Homo sapiens.
+Its initial sequencing (2003) came 50 years after the publication of the double-stranded helical structure of DNA by Crick and Watson (1953).
+In 2001 the sequencing extensive draft versions of the human genome were reported separately by the International Human Genome Sequencing Consortium (IHGSC) and by Celera Genomics.
+
+TODO: rewrite
+
+### The public and private approaches
+
+The human genome was sequenced in parallel by a public consortium (IHGSC) and by Celera Genomics. 
+They used different sequencing strategies:
+
+* Whole genome shotgun sequencing (Celera): This technique had the potential to be faster than that of the public consortium, but it was not clear that it would be succesful. They demonstrated it was feasible with large eukaryotic genomes by sequencign Drosophila.
+
+* Hierarchical shotgun sequencing (public consortium): a more conscentious but slower approach. Each center was assigned a single chromosome. It handles better repetitive sequences, which comprise about 50% of the genome. It requires more human labor.
+
+    * 29,000 BAC clones
+
+    * 4.3 billion base pairs
+
+
+![Hierarchical shotgun sequencing](TODO: image)
+
+![Assembling forward and reverse reads](TODO: image)
+
+![Sequenced-clone contigs are merged to form scaffolds of known order and orientation](TODO: image)
+
+TODO: rewrite and more narration
+
+### Genome Reference Consortium (GRC)
+
+The Genome Reference Consortium (GRC) coordinates new assemblies for human, mouse, and zebrafish genomes, looking after the reference genome for each species. 
+The current human assembly is Genome Reference Consortium Human Build 38 (abbreviated GRCh38).
+The annotation of a new genome might take a long time and effort, so sometimes researchers prefer to use a build other than the last until the annotations they need are generated.
+
+TODO: explain what annotations are. (here or earlier)
+
+
+### Quality of the reference human genome
+
+![Build Stats](TODO: image or table)
+![Contig sizes](TODO: image or table)
+
+TODO: GRCh38
+
+TODO: define finished, draft, and predraft.
+
+N50 length: largest length L such that 50% of all nucleotides are contained in contigs or scaffolds of at least size L. 
+
+The original genome sequence released  in 2001 included a mixture of finished, draft, and pre-draft data. It had an N50 of 8.4Mb.
+
+The quality of genome sequence is assessed by counting the number of gaps and by measuring the nucleotide accuracy. About 91% of the unfinished draft sequence had an error rate less than 1 per 10,000 bases. This corresponds to a PHRAP score >40 (i.e. an error probability of 10-40/10, or 99.99% accuracy).
+
+@Pevsner
+
+http://www.ncbi.nlm.nih.gov/assembly/GCF_000001405.26/
+
+
+## Main conclusions of the Human Genome Project
+
+### 1) There are about 20,310 human protein-coding genes. 
+
+Initial estimates were a lot higher. In 2001 the public consortium estimated 31,000, while Celera estimated 38,500.
+
+![Human Genome stats](TODO: image or table https://www.ensembl.org/Homo_sapiens/Info/Index)
+
+There is not a clear correlation between complexity and number of genes. 
+
+TODO: tableize, update
+
+Fugu rubripes (pufferfish): 		31,000 to 38,000 
+						18,500*
+Arabidopsis thaliana (thale cress): 	27,600**
+Caenorhabditis elegans (worm): 	20,300*
+Drosophila melanogaster (fly): 		13,900*
+
+* 2017 estimate from Ensembl
+** 2017 estimate from TAIR
+
+
+### 2) The human proteome is far more complex than the set of proteins encoded by invertebrate genomes. 
+
+Although we don't have maby more genes than most invertebrates or plants, vertebrates have a very complex proteome thanks to mucho more extensive alternative splicing.
+
+TODO: include the example of the crazy gene. Is it vertebrate specific?
+
+### 3) 98% of the genome does not code for genes
+
+This was a shock. Non-coding DNA even used to be called 
+Over 50% of the genome consists of repetitive DNA derived from transposable elements:
+
+* LINEs (20%)
+
+* SINEs (13%)
+
+* LTR retrotransposons (8%)
+
+* DNA transposons (3%) 
+
+There has been a decline in activity of some of these elements in the human lineage.
+
+TODO: add exercise: quantify the percent in a given region?
+  Extract sequence
+  Align -> generate BED?
+  Coalesce, count
+
+### 4) Segmental duplication is a frequent occurrence in the human genome.
+
+Tandem duplications (rare)
+Retrotransposition (intronless paralogs)
+Segmental duplications (common)
+
+![](TODO image of what each is)
+
+### 5) There are >1 million Alu repeats in the human genome.
+
+These are about 300 base pairs and contain an AluI restriction enzyme site. About 10% of the genome is composed of Alu repeats
+Their distribution is non-random: they are retained in GC-rich regions and may have some function.
+
+
+### 6). The mutation rate is about twice as high in male meiosis than female meiosis. 
+
+Most mutation probably occurs in males.
+
+
+### 7) Human genetic variation
+
+More than 1.4 million single nucleotide polymorphisms (SNPs) were identified. Celera initially identified 2.1 million SNPs.
+Currently (2017), dbSNP at NCBI (build 150*) has about 324 million SNPs. An individual genome has about 3-4 million SNPs. Fewer than 1% of SNPs alter protein sequence. 
+
+TODO: update, rewrite
+
+TODO: citation
+
+https://www.ncbi.nlm.nih.gov/news/04-11-2017-human-snp-build-150/
+
+TODO: algo que se haga con SNPs?
+
+## Accessing and exploring the human genome
+
+NCBI map viewer
+
+www.ncbi.nlm.nih.gov
+
+Ensembl Project (EBI/Sanger Institute)
+
+www.ensembl.org
+
+UCSC (Golden Path)
+
+www.genome.ucsc.edu
+
+
+TODO: Exercise: how to get the reference sequence for a particular section (chrosomomal coordinates)
+
+### Ensembl conserved synteny display tool
+
+Synteny: physical co-localization of genetic loci on the same chromosome within an individual or species
+
+![Human-mouse large scale synteny diagram](TODO image)
+
+![Conserved synteny between human chromosome 11 and various mouse chromosomes](TODO image)
+
+
+![The human X chromosome is very highly conserved compared to mouse, while the Y is not](TODO image)
+
+TODO: interpretation
+
+https://www.ensembl.org/Homo_sapiens/Location/Synteny?r=6:133017695-133161157
+
+
+![The origin of human chromosome 2](TODO image)
+
+Human chromosome 2 shows synteny with two smaller chimpanzee chromosomes, which provides evidence that it originated by the fusion of two ancestral human acrocentric chromosomes. 
+
+TODO: why fusion instead of breakage?
+
+## The human genomic landscape
+
+In this section we will explore the large-scale characteristics of the human genome.
+
+These large scale characteristics fall in several categories:
+
+* Long-range variation in GC content
+
+* CpG islands
+
+* Comparison of genetic and physical distance
+
+* The repeat content of the human genome
+
+* The protein-coding gene content of the human genome
+
+* Non-coding genes
+
+
+### GC content
+
+The overall GC content of the human genome is 41%.
+
+![Histogram of GC content](TODO: image. generate?)
+
+The distribution of GC content in the genome shows a broad profile with some skewness to the right.
+
+
+### CpG islands
+
+CpG Dinucleotides are under-represented in genomic DNA, occuring at one fifth the expected random frequency.
+CpG dinucleotides are often methylated on cytosine, and this methylation is often associated with the promoters and exons of house-keeping (always on) genes. 
+Methylated cytosines may be spontaneously deaminated, turning into thymine. 
+This is a source of mutation and may be responsible for the under-representation of CpG dinucleotides.
+They have roles in gene silencing, genomic imprinting, and X-chromosome inactivation.
+
+More details in http://genesdev.cshlp.org/content/25/10/1010.full
+
+TODO: rewrite
+
+### Genetic vs physical distance
+
+Genetic maps (linkage maps) measure genetic distance based on meiotic recombination (DNA exchange).
+
+The units are centimorgans (cM). One cM corresponds to 1% recombination.
+Physical maps describe physical positions of DNA (genes)  in megabases (Mb).
+A comparison of the two types of map reveals the rate of recombination per nucleotide.
+
+![Recombination and genetic distance](TODO image)
+
+@Pevsner
+
+![Physical versus genetic distance for chromosome 12 ](TODO image)
+
+The recombination rate is lower near the centromere and higher near the telomeres, and is especially high in males
+
+### The repeat content of the human genome
+
+As mentioned earlier, the human genome has a high content of repetitive sequences. 
+Some estimates indicate up to two thirds of the human genome may be repetitive. TODO: citation https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3228813/
+These repetitive sequences fall into the following classes:
+
+Interspersed repeats
+
+* LINEs (21% of human genome)			
+
+* SINEs (13%)					
+
+* Long terminal repeat (LTR) transposons (8%)
+
+* DNA transposons (3%)
+
+Tandem repeats: 
+
+* Microsatellites
+
+* Minisatellites
+
+![](TODO image)
+
+![Interspersed repeats occupy a far greater proportion of the human genome than in other eukaryotic genomes](TODO image or table)
+
+Age of interspersed repeats: Human have a very low proportion of recent interspersed repeats compared to other lineages.
+
+TODO: why? how does this mesh with high amount of repeats?
+
+Simple sequence repeats (SSR) are perfect (or slightly imperfect) tandem repeats of k-mers. Microsatellites have k = 1 to 12, while minisatellites have k from about a dozen to 500 base pairs. They are repeated 5-50 times.
+Micro- and minisatellites comprise 3% of the genome.
+AC, AT, and AG are the most common dinucleotide repeats.
+High mutation rate and genetic diversity. Widely used for forensic DNA testing.
+
+Segmental duplications: About 5% of the finished human genome sequence consists of segmental duplications, typically 10-50 kb.
+Centromeres contain particularly large amounts of interchromosomally duplicated DNA. 
+
+TODO: rewrite
+
+![Intrachromosomal (black) and interchromosomal (red) segmental duplications in chromosome 22q](TODO image)
+
+### Human genes
+
+Human genome: gene content
+As for any eukaryotic genome, gene prediction is difficult. 
+The average human exon is only 150 nucleotides.
+Exon/intron borders can be difficult to assign.
+Introns are often many kilobases long. 
+Pseudogenes may be difficult to identify.
+Noncoding RNAs are also difficult to identify.
+According to Ensembl (2017), there are ~20,300 protein coding genes.  
+
+TODO: why does it result in that they are hard to identify?
+
+![Noncoding genes in the human genome](TODO image or table)
+
+Human protein coding genes
+
+When comparing RefSeq genes as a gold standard to the draft human genome sequence, 92% could be aligned at high stringency over part of their length, and 85% could be aligned at over half their length. 
+Some RefSeq genes had high quality matches to more than one genomic location, which could be due to paralogs, pseudogenes, or errors in the assembly.
+
+![Characteristics of human genes](TODO image or table)
+
+
+![Size distribution of exons in human, worm, and fly](TODO image)
+
+The average coding sequence for human genes is 1340 bp, comparable to the size of an average coding sequence in C. elegans and Drosophila. Most internal exons are about 50–200 bp in length in all three species, although worm and fly have a greater proportion of longer exons.
+
+![Size distribution of introns in human, worm, and fly](TODO image)
+
+However, the size of introns is much more variable in humans.
+
+![Gene density as a function of the GC content](TODO image)
+
+As GC content rises, relative gene density increases dramatically.
+Median exon length is unaffected by GC content, but introns are far shorter as GC content rises 
+
+The human proteome: The number of protein-coding genes in humans is comparable to the number of genes in other metazoans and plants and only three-fold greater than the number in unicellular fungi. 
+However, humans might produce many more different proteins from a comparable number of protein-coding genes.
+
+TODO: rewrite
+
+@Pevsner
+
+The human repertoire of protein domains shows a few domains used in many proteins.
+
+![Ten most common InterPro hits for Homo sapiens](TODO image or table)
+
+
+## The 25 human chromosomes
+
+* Autosomes: 1-22
+
+* Chromosome X
+
+* Chromosome Y
+
+* Mitochondrial genome
+
+![The 25 human chromosomes](TODO image)
+
+![The seven traditional cytogenetic groups](TODO image or table)
+
+
+## Human gene variation
+
+SNPs represent a fundamental form of variation in the human population. We can document:
+
+* The number of SNPs. Each person has 3-4 million single nucleotide variants (SNVs). 
+
+* The sequence (major and minor allele)
+
+* The copy number
+
+* The allele frequencies (some SNPs occur more often in people from particular geographic backgrounds)
+
+* The relationship to neighboring SNPs: linkage disequilibrium (LD) occurs when SNPs are tightly linked to each other and form blocks. The behavior of one SNP (a “tag SNP”) can serve as a proxy for the genotypes of neighboring SNPs. 
+
+TODO: rewrite and expand
+
+### Haplotypes
+
+TODO: definition of haplotype
+
+![SNPs and haplotypes](TODO image)
+
+Tag SNPs are useful because all the SNPs in the haplotype will be coinherited.
+Genotyping just these three will allow us to uniquely identify all of them.
+
+SNP data can be visualized with many tools, including:
+
+* Browsers at UCSC, NCBI, and Ensembl
+
+* HaploView
+
+* Integrative Genomics Viewer (IGV) from the Broad Institute
+
+* PLINK
+
+
+![HaploView: visualize linkage disequilibrium (LD) blocks](TODO image)
+
+A linkage disequilibrium plot includes squares representing relatedness between SNPs, based on D′(values in boxes) or r2 values (not shown). 
+
+LD statistics are available by right-clicking a box (one such box is open displaying data on two SNPs). This view is a portion of a selected 60 kilobase region. 
+
+TODO: rewrite
+
+### The HapMap project
+
+The HapMap project (2002-2009) aimed to develop a haplotype map of the human genome to describe common human variation.
+The aims were to find associations to health and disease, and to understand genetic variation.
+It represented a shortcut to a full picture of human genetic variation due to the high cost of sequencing.
+
+https://www.nature.com/articles/nature02168
+
+The HapMap project contributed basic knowledge of human genetic variation. 
+
+Important conclusions:
+
+* Most variation occurs in African populations.
+
+* Linkage disequilibrium displays a block-like structure 
+
+* LD blocks may span multiple recombination hotspots.
+
+* Some regions (e.g. centromeres) are characterized by lack of recombination across extended haplotype structures. 
+
+* SNPs are useful for genome-wide association studies 
+
+* Natural selection can remove deleterious mutations and preserve (fix) advantageous variants. 
+
+* The prevalence of structural variation can be measured through SNP analysis. 
+
+TODO: rewrite into more narrative format
+
+### The 1000 Genomes Project
+
+The 1000 genomes project (2008-2015) is another project carried out by an international consortium that examined human genetic variation.
+It consisted in NGS sequencing of many different individuals from 26 populations all over the world. its goal was to create a comprehensive resource on human genetic variation. It is significant as the first publicly available whole-genome sequence dataset on the population scale. 
+
+TODO citation
+
+https://www.nature.com/articles/nature15393
+
+One specific aim was to identify most (>95%) of the genetic variants that have at least a 1% frequency in the populations being studied. Major conclusions:
+
+* High rates of variation occur at the HLA and subtelomeric regions. Lowest rates occur in a 5 Mb, gene-dense region around 3p21. 
+
+* A catalogue of SNPs was generated to facilitate later genome-wide association studies (GWAS).
+
+* The number of variants has been described for different functional classes. 
+
+TODO: citation, improve wording above
+TODO: rewrite
+
+### Lessons on human genetic variation from sequencing individual genomes 
+
+The cost of genome sequencing has declined steadily.
+In 2007 the first two individual genomes were reported: J. Craig Venter and James Watson.
+Individual genome sequencing has the potential to facilitate the start of an era of individualized medicine in which DNA changes that are associated with a disease condition are identified. 
+Recently, the UK government has announced plans to sequence the whole genome of every infant born in the country. TODO citation: https://www.telegraph.co.uk/news/2019/11/05/children-receive-whole-genome-sequencing-birth-ambitions-laid/
+Each genome harbors 3-4 million SNPs and perhaps 600,000 structural variants.
+Trio sequencing shows that each individual harbors on the order of 100 _de novo_ variants.
+
+TODO: rewrite
+
+## Further reading
+
+[The International HapMap Project](https://deepblue.lib.umich.edu/bitstream/handle/2027.42/62838/nature02168.pdf;jsessionid=9AB822AC62F01275B696CAE96ED3D6D1?sequence=1)
+
+CREDITS
+Special thanks to all the people who made and released these awesome resources for free:
+Presentation template by SlidesCarnival
+Photographs by Unsplash
+119
