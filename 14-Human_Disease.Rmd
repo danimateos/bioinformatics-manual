@@ -33,7 +33,7 @@ Bioinformatics perspectives on disease
 
 * Insight into human disease genes is provided through the study of orthologs and their function
 
-@Pevsner
+@Pevsner2015
 
 Perspectives on disease
 Medicine: diagnosis, treatment, prognosis, prevention of disease
@@ -200,7 +200,7 @@ Postzygotic, somatic, mosaic mutations have indeed been identified for diseases 
 
 TODO: citation
 
-@Pevsner
+@Pevsner2015
 
 Cancer is a somatic mosaic disease, arising from a clone having somatic mutations and leading to malignant transformation. 
 Cancer occurs when DNA mutations confer selective advantage to cells that proliferate. 

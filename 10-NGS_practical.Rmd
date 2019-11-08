@@ -1,0 +1,231 @@
+---
+  title: "NGS practical"
+---
+
+# NGS practical
+
+TODO: introduce some functional context, so they know what they are doing.
+
+## Instructions
+
+
+Install bowtie2, SAMtools, bedtools, and deeptools if you haven’t already. Do it first, before reading the assignment (it might take a long time)
+
+```bash
+conda install -c bioconda bowtie2 deeptools samtools bedtools macs2 igv
+```
+
+For each section, you will find points labelled “Question(s)”. Answer these in a pdf document, with code, data samples and screenshots as needed. You will need to perform the different steps of the processing in order to be able to answer the questions.
+
+## Chip-seq analysis 1: Get the data
+
+The .fastq file that we will align is called gfp.fastq. We will align these reads to a mouse chromosome. There are a number of competing tools for short read alignment, each with its own set of strengths, weaknesses, and caveats. Here we will try Bowtie2, a widely used ultrafast, memory efficient short read aligner.
+
+These data are reported in 
+
+Chen, X et al. (2008), Integration of external signaling pathways with the core transcriptional network in embryonic stem cells. Cell. Jun 13;133(6):1106-17.
+
+TODO: citation
+
+Files we will use:
+
+* [mm10.fa](https://dl.dropboxusercontent.com/s/zmnlekku4kr0z0g/mm10.fa?dl=0)
+
+* [gfp.fastq](https://dl.dropboxusercontent.com/s/nnowzprygumi9zk/gfp.fastq?dl=0)
+
+* [oct4.fastq](https://dl.dropboxusercontent.com/s/9y3wcnusqaiqvyv/Oct4.fastq?dl=0)
+
+TODO citation https://github.com/ngs-docs/angus/blob/2018/chip-seq.md
+
+## Chip-seq analysis 2: Build the index
+
+Bowtie uses indexed genome for the alignment in order to keep its memory footprint small. Because of time constraints we will build the index only for one chromosome of the mouse genome (can you find out which chromosome it is after mapping?). For this we need the chromosome sequence in fasta format. This is stored in a file named mm10.fa, under the subdirectory bowtie_index. The indexed chromosome is generated using the command (even if it’s just one chromosome, it will take ~5' to build):
+
+```bash
+bowtie2-build mm10.fa mm10
+```
+
+This command will output 6 files that constitute the index. These files that have the prefix mm10 are stored in the same directory.
+
+Now that the genome is indexed we can move on to the actual alignment. The first argument -x provides the basename of the index for the reference genome (mm10 in our case), the second argument -U provides the file with the unpaired reads to be aligned in fastq format, and the -S parameter makes sure that the output is in SAM format.
+
+## Chip-seq analysis 3: Align the GFP reads using Bowtie
+
+```bash
+# This will finish in seconds, a real data set may take hours
+bowtie2 -x mm10 -U gfp.fastq -S gfp.sam -p 6
+```
+
+The above command outputs the alignment in SAM format and stores them in the file gfp.sam. Have a look at the alignment file:
+
+```bash
+less -S gfp.sam
+```
+
+### Questions:
+
+* Can you distinguish between the header of the SAM format and the actual alignments? How?
+
+* What information is contained in the header? And in the alingments?
+
+* To which chromosome are the reads mapped?
+
+## Chip-seq analysis 4: convert to BAM.
+
+SAM files are rather big and when dealing with a high volume of NGS data, storage space can become an issue. 
+We can convert SAM to BAM files (their binary equivalent files that are not human readable) that occupy much less space.
+
+```bash
+samtools view gfp.sam -bSo gfp.bam
+```
+
+Now, sort and index the bam
+
+```bash
+samtools sort gfp.bam -T gfp.temp -o gfp.sorted.bam
+samtools index gfp.sorted.bam
+```
+
+## Viewing with Online Browsers
+
+To visualize the alignments with an online browser, we need to convert the BAM file into a bedgraph file. The bedgraph format is for display of dense, continuous data and the data will be displayed as a graph.
+However, the bedgraph file can be big and slow when visualize in a genome browser. Instead, we will convert the bam file to bigWig format. Then we will need to put it in a web-accessible server (Dropbox or Google Drive should suffice) and we will be able to add them to our favorite genome browser. If you use Dropbox, take a look at the second link to be able to link your file. We will use bamCoverage from deepTools to convert the bam file to bigWig file on the fly.
+
+```bash
+bamCoverage -b gfp.sorted.bam --normalizeUsing RPKM -p 5 --extendReads 200 -o gfp.bw
+```
+
+The command above takes bam file as input and output a bigwig file. Internally, bamCoverage converts the bam file first to bedgraph and then uses bedGraphToBigWig to convert it to bigWig. 
+
+
+TODO: citation https://deeptools.readthedocs.io/en/develop/
+TODO: citation http://bergmanlab.genetics.uga.edu/?p=1989
+
+
+### Adding google Drive files to UCSC Genome Browser
+
+A file hosted on Google Drive has a shared link that looks like this:
+
+https://drive.google.com/file/d/FILE_ID/edit?usp=sharing
+
+This link can't be used out of a browser, for example in a wget command.
+When you access this link, it will render the file in the browser but if you can rewrite this URL slightly, the link, when clicked, will download the corresponding file in the user’s browser instead of opening it in the browser. The modified URL would be:
+
+https://drive.google.com/uc?export=download&id=FILE_ID
+
+All you have to do is make note of the FILE_ID in the original URL and use it in the modified URL. 
+
+### Adding Dropbox files to UCSC Genome Browser
+
+As with Google Drive, Dropbox sharing links take you to a web page, so if you use them in a wget command you'll get the html for that webpage.
+That URL automatically generated by Dropbox cannot therefore be read by the UCSC Genome Browser. For example, the link generated to the file “test.bed” in my Dropbox folder is “https://www.dropbox.com/s/7sjfbknsqhq6xfw/test.bed”, which gives an “Unrecognized format line 1” error when pasted into the UCSC Browser. 
+This can easily be fixed if you just want to load a single custom track  to the UCSC Browser using Dropbox by simply replacing “www.dropbox” in the URL generated by Dropbox with “dl.dropboxusercontent”. 
+In this example, the corrected path to the file would be “https://dl.dropboxusercontent.com/s/7sjfbknsqhq6xfw/test.bed”, which can be loaded by the UCSC Genome Browser automatically.
+
+
+## Viewing with the UCSC browser or IGB
+
+UCSC browser:
+
+Go to the UCSC browser.
+Select mouse GRCm38/mm10 genome
+Click add custom tracks in the bottom of the browser.
+Paste the following into the box substituting for your URL (all of it in a single line):
+
+```
+track type=bigWig name="Oct4" visibility="full" description="Oct4 ChIPseq" bigDataUrl=https://yourprovider/yourfile 
+```
+
+### Question
+
+* What happens if we chose the wrong genome build in UCSC genome browser? 
+
+* What do you expect to see in the track you just created? What do you see? Show me with screenshots.
+
+
+## Exercise 
+
+Create the corresponding file from the Oct4.fastq file.
+Load it in UCSC.
+Find at least one place where the control (gfp) track and the Oct4 track differ substantially near a Transcription Start Site. 
+
+### Questions:
+
+* What does it look like? Show me with screenshots.
+
+* Where in the genome is it?
+
+
+## macs2 peak calling
+
+MACS2 stands for Model based analysis of ChIP-seq. It was designed for identifying transcription factor binding sites. MACS2 captures the influence of genome complexity to evaluate the significance of enriched ChIP regions, and improves the spatial resolution of binding sites through combining the information of both sequencing tag position and orientation. MACS2 can be easily used for ChIP-Seq data alone, or with a control sample to increase specificity.
+Run macs2 on the files we generated
+
+```
+macs2 callpeak -t Oct4.bam -c gfp.bam --format=BAM --name=Oct4 --gsize=138000000 --tsize=26
+```
+
+Running macs2 will produce the following 4 files:
+
+* `Oct4_peaks.xls`: is a tabular file which contains information about called peaks. You can open it in excel and sort/filter using excel functions. Information include position, length and height of detected peak etc.
+
+* `Oct4_peaks.narrowPeak`: is BED6+4 format file which contains the peak locations together with peak summit, p-value and q-value. You can load it directly to UCSC genome browser.
+
+* `Oct4_summits.bed`: is in BED format, which contains the peak summits locations for every peaks. The 5th column in this file is -log10p-value the same as NAME_peaks.bed. If you want to find the motifs at the binding sites, this file is recommended. The file can be loaded directly to UCSC genome browser. But remember to remove the beginning track line if you want to analyze it by other tools.
+
+* `Oct4_model.r`: is an R script which you can use to produce a PDF image about the model based on your data. Load it to R by: $ Rscript NAME_model.r Then a pdf file NAME_model.pdf will be generated in your current directory. Note, R is required to draw this figure.
+
+### Question:
+
+Upload the Oct_peaks.bed file generated by MACS2 to one of the genome browsers (IGV or UCSC). Find the first peak in the file (use the head command to view the beginning of the bed file). 
+
+* Show it to me, with screenshots.
+
+* Does the peak look convincing to you?
+
+## Intersecting with known genes
+
+Download, inspect the file.
+
+```bash
+curl -LO http://hgdownload.cse.ucsc.edu/goldenPath/mm10/database/refGene.txt.gz
+gunzip refGene.txt.gz
+less -S refGene.txt
+```
+
+This is a list of all genes known in the mm10 genome. You can find its schema [here](http://rohsdb.cmb.usc.edu/GBshape/cgi-bin/hgTables?hgsid=583_AkEae6dMkhjf5kd9BxNksFo9ySiK&hgta_doSchemaDb=mm10&hgta_doSchemaTable=refGene). 
+
+### Question:
+
+Transform it into a .bed file with any tool you can. The BED format specification can be found [here](https://www.ensembl.org/info/website/upload/bed.html). Keep only fields 3, 4, 5, 6 and 13. Hint: check out the [cut command manual](http://man7.org/linux/man-pages/man1/cut.1.html). It could be very useful here.
+
+* Show me in your pdf the first 5 lines of the resulting file.
+
+We will need a genome information file containing sizes of each chromosome. Download the genome info file, get the promoters (defined rather arbitrarily as the 5kb upstream of the TSS), and inspect the resulting file.
+
+```bash
+curl -LO http://hgdownload.cse.ucsc.edu/goldenPath/mm10/bigZips/mm10.chrom.sizes
+bedtools flank -i mm10_refgene.bed -g mm10.chrom.sizes -l 5000 -r 0 -s > mm10.genes.5kb.promoters.bed
+head mm10.genes.5kb.promoters.bed
+```
+
+We are ready to intersect:
+
+```
+bedtools intersect -a Oct_peaks.bed -b mm10genes.5kb.promoters.bed -wa -wb > Oct4_peaks_overlap_promoter.txt
+cat Oct4_peaks_overlap_promoter.txt | cut -f8 | sort | uniq > genes_with_Oct4_binding.txt
+```
+
+### Question:
+
+Load the .bed file into the UCSC genome browser. Inspect a few of the genes. Has macs2 found convincing-looking peaks? Show me some examples.
+
+
+## Further reading
+http://quinlanlab.org/tutorials/bedtools/bedtools.html
+http://quinlanlab.org/tutorials/samtools/samtools.html
+https://davetang.org/wiki/tiki-index.php?page=SAMTools
+https://insidedna.io/tutorials/view/samtools-commands-tutorial-working-sam-bam-files
+https://github.com/crazyhottommy/ChIP-seq-analysis
+https://deeptools.readthedocs.io/en/develop/
+

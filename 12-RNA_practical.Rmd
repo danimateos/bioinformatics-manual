@@ -1,0 +1,136 @@
+---
+  title: "RNA practical"
+---
+
+# RNA practical
+
+
+
+## Installing tools
+
+
+Do this before anything else, so that it has time to complete.
+
+```bash
+conda install -c bioconda tophat igv samtools
+```
+
+## Today’s class
+
+The goal of this hands-on session is to perform some basic tasks in the downstream analysis of RNA-seq data. We will start from RNA-seq data. We will align it to the zebrafish genome using Tophat. 
+
+We would later perform transcriptome reconstruction using Cufflinks and we would compare the gene expression between two different conditions in order to identify differentially expressed genes using Cuffdiff, but today we are going to just inspect the aligned reads manually.
+
+TODO: citation https://www.ebi.ac.uk/training/online/course/ebi-next-generation-sequencing-practical-course/rna-sequencing/rna-seq-analysis-transcriptome
+
+
+The data come from Zebrafish (Danio rerio) development. 
+The zebrafish is a widely used model organism, particularly in the fields of development and regeneration. 
+It is easy to breed, genetically modifiable and transparent.
+We have the reads from RNAseq of two conditions: 2-cell stage and 6h post-fertilization, a more advanced stage.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ahJjLzyioWM" frameborder="0" allowfullscreen></iframe>
+
+
+## Obtaining the data
+
+Download the reads from https://www.dropbox.com/sh/6v9d0u90ewdciiy/AABB_rQ0lurqLi-YOTPMqTpka?dl=0
+Go to http://www.ensembl.org/index.html and download the ZV9 chromosome 12 sequence data (genomes/Danio rerio/ZV9). 
+Save the file in a subdirectory called genome and uncompress it.
+
+### Questions
+
+* Why do we need the genomic sequence?
+
+* What would happen if we downloaded the sequence from a different build?
+
+## Build a genomic index
+
+Build an index for the genome
+
+```bash
+bowtie2-build genome/Danio_rerio.Zv9.dna.chromosome.12.fa genome/ZV9
+```
+
+### Questions: 
+
+* What are we doing with this command? 
+
+* Why is it necessary/useful?
+
+## Alignment
+
+TODO https://ccb.jhu.edu/software/tophat/manual.shtml
+
+Align the forward and reverse reads for the “2cells” condition with TopHat.
+
+```bash
+mkdir tophat
+tophat --solexa-quals -g 2 -p 4 --library-type fr-unstranded -o tophat/ZV9_2cells genome/ZV9 data/2cells_1.fastq data/2cells_2.fastq
+```
+
+### Questions: 
+
+* What are we doing? 
+
+* What is the meaning of each of the options we are using here?
+
+    * `--solexa-quals`
+
+    * `-g`
+
+    * `-p`
+
+    * `--library-type`
+    
+    * `-o`
+
+
+## Alignment, part 2 
+
+Now, align the forward and reverse reads for the “6h” condition with TopHat. 
+Remember to change both the input and output paths in order not to overwrite the results from the previous run!
+
+## Prepare TopHat output for viewing
+
+IGV requires that both SAM and BAM files be sorted by position and indexed, and that the index files follow a specific naming convention. 
+Specifically, a BAM index file should be named by appending .bai to the bam file name. Remember that we already did this in the previous practical. Check there for details.
+The bam files that we are looking for are the accepted_hits.bam files in each of the “6h” and “2cell” directories. 
+
+* Write the output files as 2cells.sorted.bam and 6h.sorted.bam, in the same folders.
+
+* Create an index for each of the files.
+
+TODO: keep or discard?
+```
+samtools sort tophat/ZV9_2cells/accepted_hits.bam -T tophat/ZV9_2cells/accepted_hits.temp -o tophat/ZV9_2cells/2cells.sorted.bam
+samtools index tophat/ZV9_2cells/2cells.sorted.bam
+samtools sort tophat/ZV9_6h/accepted_hits.bam -T tophat/ZV9_6h/accepted_hits.temp -o tophat/ZV9_6h/6h.sorted.bam
+```
+
+
+## Inspect the aligned reads in the IGV genome browser 
+
+Open igv (from terminal, write `igv &`).
+Load the zebrafish (Danio rerio) genome and genes track using the top-left box.
+Load both the .sorted.bam files that we generated (file/load from file)
+Go to chr12:20,279,671-20,309,713. Answer the following questions attaching screenshots if needed (zoom in if you need to):
+
+### Questions
+
+* Can you identify the splice junctions from the BAM file?
+
+* Are the junctions annotated for CBY1 consistent with our experimental data?
+
+* Are all annotated genes expressed?
+
+* Why do we see different alignments in the 2cell and 6h conditions?
+
+http://software.broadinstitute.org/software/igv/bam
+
+
+## Further reading
+
+https://ccb.jhu.edu/software/tophat/manual.shtml
+https://www.youtube.com/watch?v=8TsIJr8kQLc
+
