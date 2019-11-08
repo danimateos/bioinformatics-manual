@@ -66,7 +66,7 @@ The original genome sequence released  in 2001 included a mixture of finished, d
 
 The quality of genome sequence is assessed by counting the number of gaps and by measuring the nucleotide accuracy. About 91% of the unfinished draft sequence had an error rate less than 1 per 10,000 bases. This corresponds to a PHRAP score >40 (i.e. an error probability of 10-40/10, or 99.99% accuracy).
 
-@Pevsner
+@Pevsner2015
 
 http://www.ncbi.nlm.nih.gov/assembly/GCF_000001405.26/
 
@@ -240,7 +240,7 @@ A comparison of the two types of map reveals the rate of recombination per nucle
 
 ![Recombination and genetic distance](TODO image)
 
-@Pevsner
+@Pevsner2015
 
 ![Physical versus genetic distance for chromosome 12 ](TODO image)
 
@@ -329,7 +329,7 @@ However, humans might produce many more different proteins from a comparable num
 
 TODO: rewrite
 
-@Pevsner
+@Pevsner2015
 
 The human repertoire of protein domains shows a few domains used in many proteins.
 
