@@ -3,11 +3,17 @@ title: "Bioinformatics For Engineers"
 author: "Daniel Mateos San Martín"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
-output: bookdown::gitbook
+output: 
+- bookdown::pdf_book
+- bookdown::gitbook
+- bookdown::html_book
+- bookdown::epub_book
 documentclass: book
 github-repo: danimateos/bioinformatics_manual
 description: "This is the official manual for the Bioinformatics course taught at the CEU San Pablo Bioengineering degree."
 bibliography: sources.bib
+biblio-style: chicago
+link-citations: yes
 ---
 
 # Prerequisites

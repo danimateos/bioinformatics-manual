@@ -1,0 +1,3 @@
+delete_merged_file: true
+edit: https://github.com/danimateos/bioinformatics-manual/edit/master/%s
+history: https://github.com/danimateos/bioinformatics-manual/commits/master/%s
