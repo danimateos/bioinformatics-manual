@@ -155,7 +155,7 @@ TODO: algo que se haga con SNPs?
 
 NCBI map viewer
 
-www.ncbi.nlm.nih.gov
+https://www.ncbi.nlm.nih.gov/mapview/s
 
 Ensembl Project (EBI/Sanger Institute)
 
@@ -184,11 +184,23 @@ TODO: interpretation
 https://www.ensembl.org/Homo_sapiens/Location/Synteny?r=6:133017695-133161157
 
 
+
+You can synteny display from the Ensembl genome browser. Click on the location tab, then on the left panel look for "comparative genomics".
+
+![](TODO screenshot)
+
+#### TODO exercise: 
+
+what is the origin of chromosome 2 in humans? Investigate with the synteny tool, by checking the synteny of chromosome 2 with chimpanzee, gorilla, and cow.
+
+Solution:
+
 ![The origin of human chromosome 2](TODO image)
 
 Human chromosome 2 shows synteny with two smaller chimpanzee chromosomes, which provides evidence that it originated by the fusion of two ancestral human acrocentric chromosomes. 
 
 TODO: why fusion instead of breakage?
+
 
 ## The human genomic landscape
 
