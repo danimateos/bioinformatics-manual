@@ -38,7 +38,7 @@ The peer review system exists to validate academic work and helps to improve the
 
 It takes the form of anonymous reviews requested by the editor when deciding whether to publish a manuscript.
 
-\cite{Elsevier}
+@Elsevier
 
 
 
@@ -73,7 +73,7 @@ B = the total number of "citable items" published in 2015 and 2016.
 
 2017 impact factor  =  A/B
  
-DeGroote2016
+@DeGroote2016
 
 
 ### The effect of Impact Factor on evaluation
@@ -118,7 +118,7 @@ https://en.wikipedia.org/wiki/Fair_Access_to_Science_and_Technology_Research_Act
 
 ### sci-hub
 
-(pirated) repository holding any scientific paper.
+![Sci-hub is a (pirated) repository holding any scientific paper.](images/scihub_raven.png)
 
 Founded by Alexandra Elbakyan in 2011.
 
@@ -422,27 +422,705 @@ It has to be updated.
 
 ### The FASTA format
 
-TODO: Sample
+```
+>NP_000552.2 glutathione S-transferase Mu 1 isoform 1 [Homo sapiens]
+MPMILGYWDIRGLAHAIRLLLEYTDSSYEEKKYTMGDAPDYDRSQWLNEKFKLGLDFPNLPYLIDGAHKI
+TQSNAILCYIARKHNLCGETEEEKIRVDILENQTMDNHMQLGMICYNPEFEKLKPKYLEELPEKLKLYSE
+FLGKRPWFAGNKITFVDFLVYDVLDLHRIFEPKCLDAFPNLKDFISRFEGLEKISAYMKSSRFLPRPVFS
+KMAVWGNK
 
-http://www.people.virginia.edu/~wrp/papers/ismb02_sql.pdf
+>NP_666533.1 glutathione S-transferase Mu 1 isoform 2 [Homo sapiens]
+MPMILGYWDIRGLAHAIRLLLEYTDSSYEEKKYTMGDAPDYDRSQWLNEKFKLGLDFPNLPYLIDGAHKI
+TQSNAILCYIARKHNLCGETEEEKIRVDILENQTMDNHMQLGMICYNPEFEKLKPKYLEELPEKLKLYSE
+FLGKRPWFAGNKGLEKISAYMKSSRFLPRPVFSKMAVWGNK
+
+>XP_005270839.1 glutathione S-transferase Mu 1 isoform X1 [Homo sapiens]
+MGDAPDYDRSQWLNEKFKLGLDFPNLPYLIDGAHKITQSNAILCYIARKHNLCGETEEEKIRVDILENQT
+MDNHMQLGMICYNPEFEKLKPKYLEELPEKLKLYSEFLGKRPWFAGNKITFVDFLVYDVLDLHRIFEPKC
+LDAFPNLKDFISRFEGLEKISAYMKSSRFLPRPVFSKMAVWGNK
+```
+
+https://www.ncbi.nlm.nih.gov/protein/NP_000552.2,NP_666533.1,XP_005270839.1
 
 
 ### EMBL / Swissprot flatfiles
 
-TODO: Sample
+```
+ID   GSTM1_HUMAN             Reviewed;         218 AA.
+AC   P09488; Q5GHG0; Q6FH88; Q8TC98; Q9UC96;
+DT   01-JUL-1989, integrated into UniProtKB/Swiss-Prot.
+DT   23-JAN-2007, sequence version 3.
+DT   13-NOV-2019, entry version 204.
+DE   RecName: Full=Glutathione S-transferase Mu 1;
+DE            EC=2.5.1.18;
+DE   AltName: Full=GST HB subunit 4;
+DE   AltName: Full=GST class-mu 1;
+DE   AltName: Full=GSTM1-1;
+DE   AltName: Full=GSTM1a-1a;
+DE   AltName: Full=GSTM1b-1b;
+DE   AltName: Full=GTH4;
+GN   Name=GSTM1; Synonyms=GST1;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+OC   Mammalia; Eutheria; Euarchontoglires; Primates; Haplorrhini;
+OC   Catarrhini; Hominidae; Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1), AND VARIANT ASN-173 (ALLELE
+RP   GSTM1B).
+RX   PubMed=3419925; DOI=10.1093/nar/16.17.8541;
+RA   Dejong J.L., Chang C.M., Whang Peng J., Knutsen T., Tu C.-P.D.;
+RT   "The human liver glutathione S-transferase gene superfamily:
+RT   expression and chromosome mapping of an Hb subunit cDNA.";
+RL   Nucleic Acids Res. 16:8541-8554(1988).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1).
+RX   PubMed=3174634; DOI=10.1073/pnas.85.19.7293;
+RA   Seidegaard J., Vorachek W.R., Pero R.W., Pearson W.R.;
+RT   "Hereditary differences in the expression of the human glutathione
+RT   transferase active on trans-stilbene oxide are due to a gene
+RT   deletion.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 85:7293-7297(1988).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1), AND VARIANT ASN-173 (ALLELE
+RP   GSTM1B).
+RC   TISSUE=Liver;
+RA   Chen P., Wu Y., Zhang C., Han L., Wu Y., Xie D., Chen L.;
+RL   Submitted (DEC-2003) to the EMBL/GenBank/DDBJ databases.
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORMS 1 AND 2).
+RC   TISSUE=Liver;
+RA   Chen P., Zhang C., Xie D., Wu Y., Han L., Chen L.;
+RL   Submitted (JAN-2004) to the EMBL/GenBank/DDBJ databases.
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM 1), AND VARIANT
+RP   ASN-173 (ALLELE GSTM1B).
+RA   Halleck A., Ebert L., Mkoundinya M., Schick M., Eisenstein S.,
+RA   Neubert P., Kstrang K., Schatten R., Shen B., Henze S., Mar W.,
+RA   Korn B., Zuo D., Hu Y., LaBaer J.;
+RT   "Cloning of human full open reading frames in Gateway(TM) system entry
+RT   vector (pDONR201).";
+RL   Submitted (JUN-2004) to the EMBL/GenBank/DDBJ databases.
+RN   [6]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM 2).
+RC   TISSUE=Testis;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA
+RT   project: the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [7]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 1-189 (ISOFORM 1), AND VARIANT
+RP   ASN-173 (ALLELE GSTM1B).
+RX   PubMed=8471052; DOI=10.1042/bj2910041;
+RA   Zhong S., Spurr N.K., Hayes J.D., Wolf C.R.;
+RT   "Deduced amino acid sequence, gene structure and chromosomal location
+RT   of a novel human class Mu glutathione S-transferase, GSTM4.";
+RL   Biochem. J. 291:41-50(1993).
+RN   [8]
+RP   PROTEIN SEQUENCE OF 2-31, AND TISSUE SPECIFICITY.
+RC   TISSUE=Fetal liver;
+RX   PubMed=7822249; DOI=10.1093/oxfordjournals.jbchem.a124525;
+RA   Mera N., Ohmori S., Itahashi K., Kiuchi M., Igarashi T., Rikihisa T.,
+RA   Kitada M.;
+RT   "Immunochemical evidence for the occurrence of Mu class glutathione S-
+RT   transferase in human fetal livers.";
+RL   J. Biochem. 116:315-320(1994).
+RN   [9]
+RP   PROTEIN SEQUENCE OF 2-25.
+RC   TISSUE=Aorta, and Heart;
+RX   PubMed=2110160;
+RA   Tsuchida S., Maki T., Sato K.;
+RT   "Purification and characterization of glutathione transferases with an
+RT   activity toward nitroglycerin from human aorta and heart. Multiplicity
+RT   of the human class Mu forms.";
+RL   J. Biol. Chem. 265:7150-7157(1990).
+RN   [10]
+RP   PROTEIN SEQUENCE OF 2-24.
+RX   PubMed=3979555; DOI=10.1016/0014-5793(85)80324-0;
+RA   Alin P., Mannervik B., Joernvall H.;
+RT   "Structural evidence for three different types of glutathione
+RT   transferase in human tissues.";
+RL   FEBS Lett. 182:319-322(1985).
+RN   [11]
+RP   PROTEIN SEQUENCE OF 2-24.
+RX   PubMed=3864155; DOI=10.1073/pnas.82.21.7202;
+RA   Mannervik B., Alin P., Guthenberg C., Jensson H., Tahir M.K.,
+RA   Warholm M., Joernvall H.;
+RT   "Identification of three classes of cytosolic glutathione transferase
+RT   common to several mammalian species: correlation between structural
+RT   data and enzymatic properties.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 82:7202-7206(1985).
+RN   [12]
+RP   PROTEIN SEQUENCE OF 2-15.
+RX   PubMed=1846734; DOI=10.1016/0003-9861(91)90329-h;
+RA   Singhal S.S., Ahmad H., Sharma R., Gupta S., Haque A.K., Awasthi Y.C.;
+RT   "Purification and characterization of human muscle glutathione S-
+RT   transferases: evidence that glutathione S-transferase zeta corresponds
+RT   to a locus distinct from GST1, GST2, and GST3.";
+RL   Arch. Biochem. Biophys. 285:64-73(1991).
+RN   [13]
+RP   PROTEIN SEQUENCE OF 2-13.
+RC   TISSUE=Colon;
+RX   PubMed=1420361; DOI=10.1016/0167-4781(92)90135-m;
+RA   Singhal S.S., Saxena M., Awasthi S., Ahmad H., Sharma R.,
+RA   Awasthi Y.C.;
+RT   "Gender related differences in the expression and characteristics of
+RT   glutathione S-transferases of human colon.";
+RL   Biochim. Biophys. Acta 1171:19-26(1992).
+RN   [14]
+RP   PROTEIN SEQUENCE OF 53-60, AND IDENTIFICATION BY MASS SPECTROMETRY.
+RC   TISSUE=Liver;
+RX   PubMed=11271497;
+RX   DOI=10.1002/1522-2683(200011)21:17<3785::aid-elps3785>3.0.co;2-2;
+RA   Hubbard M.J., McHugh N.J.;
+RT   "Human ERp29: isolation, primary structural characterisation and two-
+RT   dimensional gel mapping.";
+RL   Electrophoresis 21:3785-3796(2000).
+RN   [15]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 60-118.
+RX   PubMed=2362832; DOI=10.1093/nar/18.12.3670;
+RA   Comstock K.E., Sanderson B.J.S., Claflin G., Henner W.D.;
+RT   "GST1 gene deletion determined by polymerase chain reaction.";
+RL   Nucleic Acids Res. 18:3670-3670(1990).
+RN   [16]
+RP   NUCLEOTIDE SEQUENCE [MRNA] OF 125-186.
+RX   PubMed=8317488;
+RA   Pearson W.R., Vorachek W.R., Xu S.J., Berger R., Hart I., Vannais D.,
+RA   Patterson D.;
+RT   "Identification of class-mu glutathione transferase genes GSTM1-GSTM5
+RT   on human chromosome 1p13.";
+RL   Am. J. Hum. Genet. 53:220-233(1993).
+RN   [17]
+RP   X-RAY CRYSTALLOGRAPHY (2.68 ANGSTROMS), AND MUTAGENESIS OF HIS-108.
+RX   PubMed=9930979; DOI=10.1021/bi982164m;
+RA   Patskovsky Y.V., Patskovska L.N., Listowsky I.;
+RT   "Functions of His107 in the catalytic mechanism of human glutathione
+RT   S-transferase hGSTM1a-1a.";
+RL   Biochemistry 38:1193-1202(1999).
+RN   [18] {ECO:0000244|PDB:1YJ6}
+RP   X-RAY CRYSTALLOGRAPHY (2.50 ANGSTROMS) IN COMPLEX WITH GLUTATHIONE.
+RA   Patskovsky Y.V., Patskovska L.N., Listowsky I., Almo S.C.;
+RT   "Human glutathione S-transferase M1A-1A catalyzes formation of Gsh-
+RT   metal complexes.";
+RL   Submitted (JAN-2005) to the PDB data bank.
+RN   [19]
+RP   X-RAY CRYSTALLOGRAPHY (1.9 ANGSTROMS) IN COMPLEXES WITH GLUTAHIONE
+RP   ANALOGS, CATALYTIC ACTIVITY, FUNCTION, AND MUTAGENESIS OF TYR-7;
+RP   HIS-108; MET-109 AND TYR-116.
+RX   PubMed=16548513; DOI=10.1021/bi051823+;
+RA   Patskovsky Y., Patskovska L., Almo S.C., Listowsky I.;
+RT   "Transition state model and mechanism of nucleophilic aromatic
+RT   substitution reactions catalyzed by human glutathione S-transferase
+RT   M1a-1a.";
+RL   Biochemistry 45:3852-3862(2006).
+CC   -!- FUNCTION: Conjugation of reduced glutathione to a wide number of
+CC       exogenous and endogenous hydrophobic electrophiles.
+CC       {ECO:0000269|PubMed:16548513}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=glutathione + RX = a halide anion + an S-substituted
+CC         glutathione + H(+); Xref=Rhea:RHEA:16437, ChEBI:CHEBI:15378,
+CC         ChEBI:CHEBI:16042, ChEBI:CHEBI:17792, ChEBI:CHEBI:57925,
+CC         ChEBI:CHEBI:90779; EC=2.5.1.18;
+CC         Evidence={ECO:0000269|PubMed:16548513};
+CC   -!- SUBUNIT: Homodimer.
+CC   -!- SUBCELLULAR LOCATION: Cytoplasm.
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=2;
+CC       Name=1;
+CC         IsoId=P09488-1; Sequence=Displayed;
+CC       Name=2;
+CC         IsoId=P09488-2; Sequence=VSP_036618;
+CC   -!- TISSUE SPECIFICITY: Liver (at protein level).
+CC       {ECO:0000269|PubMed:7822249}.
+CC   -!- POLYMORPHISM: There are two alleles; GSTM1A and GSTM1B which
+CC       differ in position 173. The sequence shown is that of allele
+CC       GSTM1A. {ECO:0000269|PubMed:3174634, ECO:0000269|PubMed:8471052,
+CC       ECO:0000269|Ref.3, ECO:0000269|Ref.5}.
+CC   -!- SIMILARITY: Belongs to the GST superfamily. Mu family.
+CC       {ECO:0000305}.
+CC   -!- WEB RESOURCE: Name=SHMPD; Note=The Singapore human mutation and
+CC       polymorphism database;
+CC       URL="http://shmpd.bii.a-star.edu.sg/gene.php?genestart=A&genename=GSTM1";
+CC   -----------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   -----------------------------------------------------------------------
+DR   EMBL; X08020; CAA30821.1; -; mRNA.
+DR   EMBL; J03817; AAA59203.1; -; mRNA.
+DR   EMBL; AY510272; AAR85979.1; -; mRNA.
+DR   EMBL; AY532926; AAT06767.1; -; mRNA.
+DR   EMBL; AY532927; AAT06768.1; -; mRNA.
+DR   EMBL; CR541868; CAG46666.1; -; mRNA.
+DR   EMBL; BC024005; AAH24005.1; -; mRNA.
+DR   EMBL; X68676; CAA48636.1; -; Genomic_DNA.
+DR   EMBL; X51451; CAA35817.1; -; Genomic_DNA.
+DR   CCDS; CCDS809.1; -. [P09488-1]
+DR   CCDS; CCDS810.1; -. [P09488-2]
+DR   PIR; S01719; S01719.
+DR   RefSeq; NP_000552.2; NM_000561.3. [P09488-1]
+DR   RefSeq; NP_666533.1; NM_146421.2. [P09488-2]
+DR   PDB; 1GTU; X-ray; 2.68 A; A/B/C/D=2-218.
+DR   PDB; 1XW6; X-ray; 1.90 A; A/B/C/D=1-218.
+DR   PDB; 1XWK; X-ray; 2.30 A; A/B/C=1-218.
+DR   PDB; 1YJ6; X-ray; 2.50 A; A/B/C=1-218.
+DR   PDB; 2F3M; X-ray; 2.70 A; A/B/C/D/E/F=1-218.
+DR   PDBsum; 1GTU; -.
+DR   PDBsum; 1XW6; -.
+DR   PDBsum; 1XWK; -.
+DR   PDBsum; 1YJ6; -.
+DR   PDBsum; 2F3M; -.
+DR   SMR; P09488; -.
+DR   BioGrid; 109199; 9.
+DR   IntAct; P09488; 11.
+DR   STRING; 9606.ENSP00000311469; -.
+DR   BindingDB; P09488; -.
+DR   ChEMBL; CHEMBL2081; -.
+DR   DrugBank; DB01834; (9R,10R)-9-(S-glutathionyl)-10-hydroxy-9,10-dihydrophenanthrene.
+DR   DrugBank; DB04187; (9S,10S)-9-(S-glutathionyl)-10-hydroxy-9,10-dihydrophenanthrene.
+DR   DrugBank; DB03314; 5-fluorotryptophan.
+DR   DrugBank; DB00993; Azathioprine.
+DR   DrugBank; DB01008; Busulfan.
+DR   DrugBank; DB00958; Carboplatin.
+DR   DrugBank; DB00515; Cisplatin.
+DR   DrugBank; DB11672; Curcumin.
+DR   DrugBank; DB14635; Curcumin sulfate.
+DR   DrugBank; DB00143; Glutathione.
+DR   DrugBank; DB00526; Oxaliplatin.
+DR   DrugBank; DB02458; S-(2,4-dinitrophenyl)glutathione.
+DR   DrugBank; DB02165; Zinc Trihydroxide.
+DR   SwissLipids; SLP:000001613; -.
+DR   iPTMnet; P09488; -.
+DR   PhosphoSitePlus; P09488; -.
+DR   BioMuta; GSTM1; -.
+DR   DMDM; 121735; -.
+DR   EPD; P09488; -.
+DR   jPOST; P09488; -.
+DR   MassIVE; P09488; -.
+DR   PaxDb; P09488; -.
+DR   PeptideAtlas; P09488; -.
+DR   PRIDE; P09488; -.
+DR   ProteomicsDB; 52227; -. [P09488-1]
+DR   ProteomicsDB; 52228; -. [P09488-2]
+DR   DNASU; 2944; -.
+DR   Ensembl; ENST00000309851; ENSP00000311469; ENSG00000134184. [P09488-1]
+DR   Ensembl; ENST00000349334; ENSP00000234981; ENSG00000134184. [P09488-2]
+DR   GeneID; 2944; -.
+DR   KEGG; hsa:2944; -.
+DR   CTD; 2944; -.
+DR   DisGeNET; 2944; -.
+DR   GeneCards; GSTM1; -.
+DR   HGNC; HGNC:4632; GSTM1.
+DR   HPA; CAB022669; -.
+DR   HPA; CAB047357; -.
+DR   HPA; HPA055972; -.
+DR   HPA; HPA055973; -.
+DR   MIM; 138350; gene.
+DR   neXtProt; NX_P09488; -.
+DR   OpenTargets; ENSG00000134184; -.
+DR   PharmGKB; PA182; -.
+DR   eggNOG; ENOG410IN5J; Eukaryota.
+DR   eggNOG; ENOG4110YU0; LUCA.
+DR   GeneTree; ENSGT00940000160258; -.
+DR   HOGENOM; HOG000115735; -.
+DR   InParanoid; P09488; -.
+DR   KO; K00799; -.
+DR   OrthoDB; 1162336at2759; -.
+DR   PhylomeDB; P09488; -.
+DR   TreeFam; TF353040; -.
+DR   BRENDA; 2.5.1.18; 2681.
+DR   Reactome; R-HSA-156590; Glutathione conjugation.
+DR   SABIO-RK; P09488; -.
+DR   SIGNOR; P09488; -.
+DR   ChiTaRS; GSTM1; human.
+DR   EvolutionaryTrace; P09488; -.
+DR   GeneWiki; Glutathione_S-transferase_Mu_1; -.
+DR   GenomeRNAi; 2944; -.
+DR   Pharos; P09488; -.
+DR   PRO; PR:P09488; -.
+DR   Proteomes; UP000005640; Chromosome 1.
+DR   Bgee; ENSG00000134184; Expressed in 92 organ(s), highest expression level in liver.
+DR   ExpressionAtlas; P09488; baseline and differential.
+DR   Genevisible; P09488; HS.
+DR   GO; GO:0005737; C:cytoplasm; IDA:BHF-UCL.
+DR   GO; GO:0005829; C:cytosol; IDA:HPA.
+DR   GO; GO:0045171; C:intercellular bridge; IDA:HPA.
+DR   GO; GO:0019899; F:enzyme binding; IPI:BHF-UCL.
+DR   GO; GO:0043295; F:glutathione binding; IDA:BHF-UCL.
+DR   GO; GO:0004364; F:glutathione transferase activity; IDA:BHF-UCL.
+DR   GO; GO:0042803; F:protein homodimerization activity; IPI:BHF-UCL.
+DR   GO; GO:0070458; P:cellular detoxification of nitrogen compound; IDA:BHF-UCL.
+DR   GO; GO:1901687; P:glutathione derivative biosynthetic process; TAS:Reactome.
+DR   GO; GO:0006749; P:glutathione metabolic process; IDA:BHF-UCL.
+DR   GO; GO:0018916; P:nitrobenzene metabolic process; IDA:BHF-UCL.
+DR   GO; GO:0042178; P:xenobiotic catabolic process; IDA:BHF-UCL.
+DR   Gene3D; 3.40.30.10; -; 1.
+DR   InterPro; IPR010987; Glutathione-S-Trfase_C-like.
+DR   InterPro; IPR036282; Glutathione-S-Trfase_C_sf.
+DR   InterPro; IPR040079; Glutathione_S-Trfase.
+DR   InterPro; IPR004045; Glutathione_S-Trfase_N.
+DR   InterPro; IPR004046; GST_C.
+DR   InterPro; IPR003081; GST_mu.
+DR   InterPro; IPR036249; Thioredoxin-like_sf.
+DR   Pfam; PF14497; GST_C_3; 1.
+DR   Pfam; PF02798; GST_N; 1.
+DR   PRINTS; PR01267; GSTRNSFRASEM.
+DR   SFLD; SFLDS00019; Glutathione_Transferase_(cytos; 1.
+DR   SUPFAM; SSF47616; SSF47616; 1.
+DR   SUPFAM; SSF52833; SSF52833; 1.
+DR   PROSITE; PS50405; GST_CTER; 1.
+DR   PROSITE; PS50404; GST_NTER; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; Alternative splicing; Complete proteome; Cytoplasm;
+KW   Direct protein sequencing; Phosphoprotein; Polymorphism;
+KW   Reference proteome; Transferase.
+FT   INIT_MET      1      1       Removed. {ECO:0000269|PubMed:1420361,
+FT                                ECO:0000269|PubMed:1846734,
+FT                                ECO:0000269|PubMed:2110160,
+FT                                ECO:0000269|PubMed:3864155,
+FT                                ECO:0000269|PubMed:3979555,
+FT                                ECO:0000269|PubMed:7822249}.
+FT   CHAIN         2    218       Glutathione S-transferase Mu 1.
+FT                                /FTId=PRO_0000185816.
+FT   DOMAIN        2     88       GST N-terminal.
+FT   DOMAIN       90    208       GST C-terminal.
+FT   REGION        7      8       Glutathione binding. {ECO:0000269|Ref.18,
+FT                                ECO:0000305|PubMed:16548513}.
+FT   REGION       43     46       Glutathione binding. {ECO:0000269|Ref.18,
+FT                                ECO:0000305|PubMed:16548513}.
+FT   REGION       59     60       Glutathione binding. {ECO:0000269|Ref.18,
+FT                                ECO:0000305|PubMed:16548513}.
+FT   REGION       72     73       Glutathione binding. {ECO:0000269|Ref.18,
+FT                                ECO:0000305|PubMed:16548513}.
+FT   BINDING      50     50       Glutathione. {ECO:0000269|Ref.18,
+FT                                ECO:0000305|PubMed:16548513}.
+FT   BINDING     116    116       Substrate.
+FT   MOD_RES      34     34       Phosphothreonine.
+FT                                {ECO:0000250|UniProtKB:P10649}.
+FT   MOD_RES     210    210       Phosphoserine.
+FT                                {ECO:0000250|UniProtKB:P04905}.
+FT   VAR_SEQ     153    189       Missing (in isoform 2).
+FT                                {ECO:0000303|PubMed:15489334,
+FT                                ECO:0000303|Ref.4}.
+FT                                /FTId=VSP_036618.
+FT   VARIANT     173    173       K -> N (in allele GSTM1B;
+FT                                dbSNP:rs1065411).
+FT                                {ECO:0000269|PubMed:3174634,
+FT                                ECO:0000269|PubMed:8471052,
+FT                                ECO:0000269|Ref.3, ECO:0000269|Ref.5}.
+FT                                /FTId=VAR_003617.
+FT   VARIANT     210    210       S -> T (in dbSNP:rs449856).
+FT                                /FTId=VAR_014497.
+FT   MUTAGEN       7      7       Y->F: Reduces catalytic activity 100-
+FT                                fold. {ECO:0000269|PubMed:16548513}.
+FT   MUTAGEN     108    108       H->Q: Reduces catalytic activity by half.
+FT                                {ECO:0000269|PubMed:16548513,
+FT                                ECO:0000269|PubMed:9930979}.
+FT   MUTAGEN     108    108       H->S: Changes the properties of the
+FT                                enzyme toward some substrates.
+FT                                {ECO:0000269|PubMed:16548513,
+FT                                ECO:0000269|PubMed:9930979}.
+FT   MUTAGEN     109    109       M->I: Reduces catalytic activity by half.
+FT                                {ECO:0000269|PubMed:16548513}.
+FT   MUTAGEN     116    116       Y->A: Reduces catalytic activity 10-fold.
+FT                                {ECO:0000269|PubMed:16548513}.
+FT   MUTAGEN     116    116       Y->F: Slight increase of catalytic
+FT                                activity. {ECO:0000269|PubMed:16548513}.
+FT   CONFLICT     44     44       S -> T (in Ref. 7; CAA48636).
+FT                                {ECO:0000305}.
+FT   CONFLICT    207    207       P -> T (in Ref. 4; AAT06767).
+FT                                {ECO:0000305}.
+FT   STRAND        3     11       {ECO:0000244|PDB:1XW6}.
+FT   HELIX        12     14       {ECO:0000244|PDB:1XW6}.
+FT   HELIX        15     23       {ECO:0000244|PDB:1XW6}.
+FT   STRAND       28     33       {ECO:0000244|PDB:1XW6}.
+FT   TURN         38     41       {ECO:0000244|PDB:1XW6}.
+FT   HELIX        44     50       {ECO:0000244|PDB:1XW6}.
+FT   STRAND       60     65       {ECO:0000244|PDB:1XW6}.
+FT   STRAND       68     72       {ECO:0000244|PDB:1XW6}.
+FT   HELIX        73     83       {ECO:0000244|PDB:1XW6}.
+FT   HELIX        91    115       {ECO:0000244|PDB:1XW6}.
+FT   HELIX       120    142       {ECO:0000244|PDB:1XW6}.
+FT   STRAND      146    152       {ECO:0000244|PDB:1XW6}.
+FT   HELIX       156    170       {ECO:0000244|PDB:1XW6}.
+FT   TURN        172    177       {ECO:0000244|PDB:1XW6}.
+FT   HELIX       179    189       {ECO:0000244|PDB:1XW6}.
+FT   HELIX       192    198       {ECO:0000244|PDB:1XW6}.
+FT   STRAND      200    202       {ECO:0000244|PDB:1XW6}.
+FT   STRAND      214    216       {ECO:0000244|PDB:1XW6}.
+SQ   SEQUENCE   218 AA;  25712 MW;  98FB03E87B83A31B CRC64;
+     MPMILGYWDI RGLAHAIRLL LEYTDSSYEE KKYTMGDAPD YDRSQWLNEK FKLGLDFPNL
+     PYLIDGAHKI TQSNAILCYI ARKHNLCGET EEEKIRVDIL ENQTMDNHMQ LGMICYNPEF
+     EKLKPKYLEE LPEKLKLYSE FLGKRPWFAG NKITFVDFLV YDVLDLHRIF EPKCLDAFPN
+     LKDFISRFEG LEKISAYMKS SRFLPRPVFS KMAVWGNK
+//
+```
 
-http://www.people.virginia.edu/~wrp/papers/ismb02_sql.pdf
+https://www.uniprot.org/uniprot/P09488
 
 
 ### Genbank/ Genpept flatfiles
 
-TODO: Sample
-
-http://www.people.virginia.edu/~wrp/papers/ismb02_sql.pdf
+```
+LOCUS       NP_000552                218 aa            linear   PRI 13-OCT-2019
+DEFINITION  glutathione S-transferase Mu 1 isoform 1 [Homo sapiens].
+ACCESSION   NP_000552
+VERSION     NP_000552.2
+DBSOURCE    REFSEQ: accession NM_000561.4
+KEYWORDS    RefSeq; MANE Select.
+SOURCE      Homo sapiens (human)
+  ORGANISM  Homo sapiens
+            Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+            Mammalia; Eutheria; Euarchontoglires; Primates; Haplorrhini;
+            Catarrhini; Hominidae; Homo.
+REFERENCE   1  (residues 1 to 218)
+  AUTHORS   Kalacas NA, Garcia JA, Sy Ortin T, Valdez Jr A, Fellizar A, Ramos
+            MC and Albano PM.
+  TITLE     GSTM1 and GSTT1 Genetic Polymorphisms and Breast Cancer Risk in
+            Selected Filipino Cases
+  JOURNAL   Asian Pac. J. Cancer Prev. 20 (2), 529-535 (2019)
+   PUBMED   30803216
+  REMARK    GeneRIF: GSTM1 Polymorphism is associated with Breast Cancer Risk.
+            Publication Status: Online-Only
+REFERENCE   2  (residues 1 to 218)
+  AUTHORS   Hu CY, Lu DL, Wu T, Cheng SL, Wu TT, Wang S and Zhang T.
+  TITLE     Glutathione-S-transferases M1/T1 gene polymorphisms and male
+            infertility risk in Chinese populations: A meta-analysis
+  JOURNAL   Medicine (Baltimore) 98 (6), e14166 (2019)
+   PUBMED   30732132
+  REMARK    GeneRIF: Our meta-analysis supports that the GSTM1/GSTT1 null
+            genotype might contribute to individual susceptibility to male
+            infertility in Chinese populations
+REFERENCE   3  (residues 1 to 218)
+  AUTHORS   Zhang Y, Zhang H, Lin P and Zhang G.
+  TITLE     Glutathione S-transferase gene polymorphisms and risk of nasal or
+            colorectal polyposis
+  JOURNAL   Biosci. Rep. 39 (1) (2019)
+   PUBMED   30617052
+  REMARK    GeneRIF: we did not detect any evident association between the
+            GSTM1 present/null polymorphism and nasal or colorectal polyposis
+            (NP or CP)risk.
+            Publication Status: Online-Only
+REFERENCE   4  (residues 1 to 218)
+  AUTHORS   Zhang Y, Zhang S, Yan D, Pan H, Liu B, Li T, Wang X, Cai W and Wang
+            B.
+  TITLE     Carrying the T Allele of the SNP rs574344, an eQTL of GSTM1,
+            Contributes to Longevity in the Han Chinese Population
+  JOURNAL   Genet Test Mol Biomarkers 23 (1), 12-15 (2019)
+   PUBMED   30589570
+  REMARK    GeneRIF: We determined that the T/T genotype is associated with a
+            longer lifespan (OR = 5.972, 95% CI 1.798-19.833, p = 0.001, for
+            all genders; p = 0.006 adjusted by gender). We also observed a
+            significant difference (p < 0.05) in the distribution of alleles
+            and genotypes in both the male group (TT vs. TA, OR = 1.043, 95% CI
+            1.022-1.067, p = 0.043) and the female group (TT vs. TA, OR =
+            3.592, 95% CI 0.982-13.147, p = 0.039)
+REFERENCE   5  (residues 1 to 218)
+  AUTHORS   Li JY, Huang LN, Xue HL, Zhu QQ and Li CH.
+  TITLE     Glutathione S-transferase mu-1, glutathione S-transferase theta-1
+            null genotypes, and oral cancer risk: A meta-analysis in the
+            Chinese population
+  JOURNAL   J Cancer Res Ther 14 (Supplement), S1052-S1056 (2018)
+   PUBMED   30539845
+  REMARK    GeneRIF: GSTM1 null genotype might be associated with an increased
+            risk of developing oral cancer in individuals from Mainland but not
+            from Taiwan China. [meta-analysis]
+REFERENCE   6  (residues 1 to 218)
+  AUTHORS   Zhong S, Wolf CR and Spurr NK.
+  TITLE     Chromosomal assignment and linkage analysis of the human
+            glutathione S-transferase mu gene (GSTM1) using intron specific
+            polymerase chain reaction
+  JOURNAL   Hum. Genet. 90 (4), 435-439 (1992)
+   PUBMED   1483702
+REFERENCE   7  (residues 1 to 218)
+  AUTHORS   Singhal SS, Saxena M, Awasthi S, Ahmad H, Sharma R and Awasthi YC.
+  TITLE     Gender related differences in the expression and characteristics of
+            glutathione S-transferases of human colon
+  JOURNAL   Biochim. Biophys. Acta 1171 (1), 19-26 (1992)
+   PUBMED   1420361
+REFERENCE   8  (residues 1 to 218)
+  AUTHORS   Bogaards JJ, van Ommen B and van Bladeren PJ.
+  TITLE     Purification and characterization of eight glutathione
+            S-transferase isoenzymes of hamster. Comparison of subunit
+            composition of enzymes from liver, kidney, testis, pancreas and
+            trachea
+  JOURNAL   Biochem. J. 286 (Pt 2), 383-388 (1992)
+   PUBMED   1530570
+REFERENCE   9  (residues 1 to 218)
+  AUTHORS   Strange RC, Fryer AA, Matharoo B, Zhao L, Broome J, Campbell DA,
+            Jones P, Pastor IC and Singh RV.
+  TITLE     The human glutathione S-transferases: comparison of isoenzyme
+            expression in normal and astrocytoma brain
+  JOURNAL   Biochim. Biophys. Acta 1139 (3), 222-228 (1992)
+   PUBMED   1627661
+REFERENCE   10 (residues 1 to 218)
+  AUTHORS   Singhal SS, Ahmad H, Sharma R, Gupta S, Haque AK and Awasthi YC.
+  TITLE     Purification and characterization of human muscle glutathione
+            S-transferases: evidence that glutathione S-transferase zeta
+            corresponds to a locus distinct from GST1, GST2, and GST3
+  JOURNAL   Arch. Biochem. Biophys. 285 (1), 64-73 (1991)
+   PUBMED   1846734
+COMMENT     REVIEWED REFSEQ: This record has been curated by NCBI staff. The
+            reference sequence was derived from DB459176.1, X08020.1 and
+            BC036805.1.
+            This sequence is a reference standard in the RefSeqGene project.
+            On Sep 17, 2002 this sequence version replaced NP_000552.1.
+            
+            Summary: Cytosolic and membrane-bound forms of glutathione
+            S-transferase are encoded by two distinct supergene families. At
+            present, eight distinct classes of the soluble cytoplasmic
+            mammalian glutathione S-transferases have been identified: alpha,
+            kappa, mu, omega, pi, sigma, theta and zeta. This gene encodes a
+            glutathione S-transferase that belongs to the mu class. The mu
+            class of enzymes functions in the detoxification of electrophilic
+            compounds, including carcinogens, therapeutic drugs, environmental
+            toxins and products of oxidative stress, by conjugation with
+            glutathione. The genes encoding the mu class of enzymes are
+            organized in a gene cluster on chromosome 1p13.3 and are known to
+            be highly polymorphic. These genetic variations can change an
+            individual's susceptibility to carcinogens and toxins as well as
+            affect the toxicity and efficacy of certain drugs. Null mutations
+            of this class mu gene have been linked with an increase in a number
+            of cancers, likely due to an increased susceptibility to
+            environmental toxins and carcinogens. Multiple protein isoforms are
+            encoded by transcript variants of this gene. [provided by RefSeq,
+            Jul 2008].
+            
+            Transcript Variant: This variant (1) represents the longest
+            transcript and encodes the longest isoform (1).
+            
+            Publication Note:  This RefSeq record includes a subset of the
+            publications that are available for this gene. Please see the Gene
+            record to access additional publications.
+            
+            ##Evidence-Data-START##
+            Transcript exon combination :: BC036805.1, DRR138524.1045798.1
+                                           [ECO:0000332]
+            RNAseq introns              :: single sample supports all introns
+                                           SAMEA1968540, SAMEA1968832
+                                           [ECO:0000348]
+            ##Evidence-Data-END##
+            
+            ##RefSeq-Attributes-START##
+            MANE Ensembl match     :: ENST00000309851.10/ ENSP00000311469.5
+            RefSeq Select criteria :: based on conservation, expression,
+                                      longest protein
+            ##RefSeq-Attributes-END##
+FEATURES             Location/Qualifiers
+     source          1..218
+                     /organism="Homo sapiens"
+                     /db_xref="taxon:9606"
+                     /chromosome="1"
+                     /map="1p13.3"
+     Protein         1..218
+                     /product="glutathione S-transferase Mu 1 isoform 1"
+                     /EC_number="2.5.1.18"
+                     /note="glutathione S-transferase M1;
+                     S-(hydroxyalkyl)glutathione lyase; GST class-mu 1;
+                     glutathione S-alkyltransferase; glutathione
+                     S-aryltransferase; glutathione S-aralkyltransferase; HB
+                     subunit 4; GST HB subunit 4"
+                     /calculated_mol_wt=25581
+     Region          3..189
+                     /region_name="GstA"
+                     /note="Glutathione S-transferase [Posttranslational
+                     modification, protein turnover, chaperones]; COG0625"
+                     /db_xref="CDD:223698"
+     Region          3..84
+                     /region_name="GST_N_Mu"
+                     /note="GST_N family, Class Mu subfamily; GSTs are
+                     cytosolic dimeric proteins involved in cellular
+                     detoxification by catalyzing the conjugation of
+                     glutathione (GSH) with a wide range of endogenous and
+                     xenobiotic alkylating agents, including carcinogens;
+                     cd03075"
+                     /db_xref="CDD:239373"
+     Site            order(7..8,46,50,59..60,72..73)
+                     /site_type="other"
+                     /note="GSH binding site (G-site) [chemical binding]"
+                     /db_xref="CDD:239373"
+     Region          7..8
+                     /region_name="Glutathione binding. {ECO:0000269|Ref.18,
+                     ECO:0000305|PubMed:16548513}"
+                     /experiment="experimental evidence, no additional details
+                     recorded"
+                     /note="propagated from UniProtKB/Swiss-Prot (P09488.3)"
+     Site            order(10..12,15,18,22,25,35,74,77..78)
+                     /site_type="other"
+                     /note="C-terminal domain interface [polypeptide binding]"
+                     /db_xref="CDD:239373"
+     Site            34
+                     /site_type="phosphorylation"
+                     /experiment="experimental evidence, no additional details
+                     recorded"
+                     /note="Phosphothreonine. {ECO:0000250|UniProtKB:P10649};
+                     propagated from UniProtKB/Swiss-Prot (P09488.3)"
+     Region          43..46
+                     /region_name="Glutathione binding. {ECO:0000269|Ref.18,
+                     ECO:0000305|PubMed:16548513}"
+                     /experiment="experimental evidence, no additional details
+                     recorded"
+                     /note="propagated from UniProtKB/Swiss-Prot (P09488.3)"
+     Site            order(56..57,68,72,78..79,82)
+                     /site_type="other"
+                     /note="dimer interface [polypeptide binding]"
+                     /db_xref="CDD:239373"
+     Region          59..60
+                     /region_name="Glutathione binding. {ECO:0000269|Ref.18,
+                     ECO:0000305|PubMed:16548513}"
+                     /experiment="experimental evidence, no additional details
+                     recorded"
+                     /note="propagated from UniProtKB/Swiss-Prot (P09488.3)"
+     Region          72..73
+                     /region_name="Glutathione binding. {ECO:0000269|Ref.18,
+                     ECO:0000305|PubMed:16548513}"
+                     /experiment="experimental evidence, no additional details
+                     recorded"
+                     /note="propagated from UniProtKB/Swiss-Prot (P09488.3)"
+     Region          92..212
+                     /region_name="GST_C_Mu"
+                     /note="C-terminal, alpha helical domain of Class Mu
+                     Glutathione S-transferases; cd03209"
+                     /db_xref="CDD:198318"
+     Site            order(92,94,98,102..103,106,137,141)
+                     /site_type="other"
+                     /note="dimer interface [polypeptide binding]"
+                     /db_xref="CDD:198318"
+     Site            order(98,101,155,158..159,162,165,193,197)
+                     /site_type="other"
+                     /note="N-terminal domain interface [polypeptide binding]"
+                     /db_xref="CDD:198318"
+     Site            order(105,108..109,112..113,116,163,166,208..210)
+                     /site_type="other"
+                     /note="substrate binding pocket (H-site) [chemical
+                     binding]"
+                     /db_xref="CDD:198318"
+     Site            210
+                     /site_type="phosphorylation"
+                     /experiment="experimental evidence, no additional details
+                     recorded"
+                     /note="Phosphoserine. {ECO:0000250|UniProtKB:P04905};
+                     propagated from UniProtKB/Swiss-Prot (P09488.3)"
+     CDS             1..218
+                     /gene="GSTM1"
+                     /gene_synonym="GST1; GSTM1-1; GSTM1a-1a; GSTM1b-1b; GTH4;
+                     GTM1; H-B; MU; MU-1"
+                     /coded_by="NM_000561.4:58..714"
+                     /note="isoform 1 is encoded by transcript variant 1"
+                     /db_xref="CCDS:CCDS809.1"
+                     /db_xref="GeneID:2944"
+                     /db_xref="HGNC:HGNC:4632"
+                     /db_xref="MIM:138350"
+ORIGIN      
+        1 mpmilgywdi rglahairll leytdssyee kkytmgdapd ydrsqwlnek fklgldfpnl
+       61 pylidgahki tqsnailcyi arkhnlcget eeekirvdil enqtmdnhmq lgmicynpef
+      121 eklkpkylee lpeklklyse flgkrpwfag nkitfvdflv ydvldlhrif epkcldafpn
+      181 lkdfisrfeg lekisaymks srflprpvfs kmavwgnk
+//
+```
+https://www.ncbi.nlm.nih.gov/protein/NP_000552.2
 
 https://www.ncbi.nlm.nih.gov/genbank/samplerecord/
-
-TODO: replace sample for flat text. Use the genbank sample record?
 
 #### Exercise
 
@@ -546,9 +1224,15 @@ Nowadays: quadrillions of nucleotides of DNA sequence data from 300.000 differen
 
 ### The need for databases: volume of information
 
-The International Nucleotide Sequence Database Collaboration (INSDC)
+The International Nucleotide Sequence Database Collaboration (INSDC) is an initiative by which the three main repositories of sequence data from the DNA Data Bank of Japan, The European Bioinformatics Institute (European Nucleotide Archive), and the National Center for Biotechnology information (GenBank) share all sequence data.
 
-TODO: expand
+This means that most of the databases are synchronized daily, so you can find any sequence in any of them.
+
+![Databases under the INSDC](images/insdc_databases.png)
+
+@INSDC
+
+http://www.insdc.org/
 
 ### National Center for Biotechnology Information (NCBI)
 
@@ -736,9 +1420,9 @@ https://www.ncbi.nlm.nih.gov/grc
 
 ### UCSC Genome browser
 
-TODO: screenshot
+![The UCSC genome browser](images/ucsc_genome_browser.png)
 
-https://genome.ucsc.edu/cgi-bin/hgGateway
+https://genome-euro.ucsc.edu/cgi-bin/hgGateway
 
 My favorite genome browser. Responsive and reasonably easy to use.
 
@@ -750,7 +1434,7 @@ Also useful for getting genomic sequence data.
 
 Go to the UCSC genome browser and find the human Meis1 gene. 
 
-Where is it located?
+Where is it located? In what chromosome, and in what position within that chromosome?
 
 How does the conservation of its exons compare to the surrounding genomic region? (look for a “conservation” track)
 Look at the H3K27Ac track, which often marks cis-regulatory sequences.
@@ -788,6 +1472,8 @@ Can you hypothesize about the evolutionary relationship between these regions in
 
 ### Integrative Genomics Viewer (IGV)
 
+![The IGV browser](images/igv_browser.png)
+
 A desktop (Java-based) Genome Browser
 
 Usually much more responsive than web-based tools. 
@@ -807,6 +1493,10 @@ https://software.broadinstitute.org/software/igv/
 
 #### UCSC Table Browser:
 
+
+![The UCSC table browser](images/ucsc_table_browser.png)
+
+
 https://genome.ucsc.edu/cgi-bin/hgTables
 
 Enables accurate, complete tabular descriptions of the same data that can be visualized in the Genome Browser.
@@ -818,9 +1508,9 @@ Bed format: versatile, popular, useful.
 http://www.ensembl.org/info/website/upload/bed.html
 
 
-TODO: add screenshots
-
 #### Ensembl BioMart
+
+![The Ensembl Biomart](images/ensembl_biomart.png)
 
 http://www.ensembl.org/biomart/martview
 
@@ -844,3 +1534,4 @@ https://www.owlnet.rice.edu/~cainproj/courses/HowToReadSciArticle.pdf
 
 https://www.nature.com/scitable/topicpage/scientific-papers-13815490/
 
+http://www.people.virginia.edu/~wrp/papers/ismb02_sql.pdf

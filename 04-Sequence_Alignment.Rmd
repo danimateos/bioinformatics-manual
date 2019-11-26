@@ -326,12 +326,11 @@ We can align highly conserved sequences and then examine them for an empirical m
 
 ![Dayhoff step 1](images/dayhoff_step1.png)
 
-\cite{Pevsner2015}
-\cite{Dayhoff1978}
+@Pevsner2015, @Dayhoff1978
 
 Phylogenetic: compares to the inferred ancestor.
 
-Amino acid substitutions:
+![Amino acid substitutions](images/pevsner_chapter_03/image20.png)
 
 * Green-shaded boxes: substitutions very commonly accepted.
 
@@ -343,10 +342,8 @@ Original (columns); Changes (rows)
 
 #### Step 2
 
-Relative frequency of aminoacids. Not every aa is equally frequent in nature.
 
-
-TODO: table
+![Relative frequency of aminoacids. Not every aa is equally frequent in nature.](images/pevsner_chapter_03/image19.png)
 
 @Pevsner2015
 
@@ -354,20 +351,18 @@ TODO: table
 
 #### Step 3
 
-Relative mutability of aminoacids. Not all aminoacids are equally evolutionarily stable.
+Not all aminoacids are equally evolutionarily stable.
 Criticality of structural / functional role.
 Existence of similar aminoacids
 Number of mutations required in DNA (genetic code).
 
-TODO: table
+![Relative mutability of aminoacids.](images/pevsner_chapter_03/image21.png)
 
 @Pevsner2015
 
-Freq of PAM / freq of aminoacid
+![The 20 common amino acids.](images/20-Common-Amino-Acids-v3.png)
 
-
-
-Dayhoff model
+@CompoundInterest
 
 #### Step 4
 
@@ -375,12 +370,34 @@ Mutation probability matrix for the evolutionary distance of 1 PAM (The PAM1 mut
 
 1 PAM is defined as the evolutionary divergence in which 1% of aa have been changed between two proteins. Not directly translatable into years. Original in columns.Replacement in rows.
 
-TODO: table
+```
+         Ala  Arg  Asn  Asp  Cys  Gln  Glu  Gly  His  Ile  Leu  Lys  Met  Phe  Pro  Ser  Thr  Trp  Tyr  Val
+           A    R    N    D    C    Q    E    G    H    I    L    K    M    F    P    S    T    W    Y    V
+Ala A  9867     2    9   10    3    8   17   21    2    6    4    2    6    2   22   35   32    0    2   18
+Arg R     1  9913    1    0    1   10    0    0   10    3    1   19    4    1    4    6    1    8    0    1
+Asn N     4     1 9822   36    0    4    6    6   21    3    1   13    0    1    2   20    9    1    4    1
+Asp D     6     0   42 9859    0    6   53    6    4    1    0    3    0    0    1    5    3    0    0    1
+Cys C     1     1    0    0 9973    0    0    0    1    1    0    0    0    0    1    5    1    0    3    2
+Gln Q     3     9    4    5    0 9876   27    1   23    1    3    6    4    0    6    2    2    0    0    1
+Glu E    10     0    7   56    0   35 9865    4    2    3    1    4    1    0    3    4    2    0    1    2
+Gly G    21     1   12   11    1    3    7 9935    1    0    1    2    1    1    3   21    3    0    0    5
+His H     1     8   18    3    1   20    1    0 9912    0    1    1    0    2    3    1    1    1    4    1
+Ile I     2     2    3    1    2    1    2    0    0 9872    9    2   12    7    0    1    7    0    1   33
+Leu L     3     1    3    0    0    6    1    1    4   22 9947    2   45   13    3    1    3    4    2   15
+Lys K     2    37   25    6    0   12    7    2    2    4    1 9926   20    0    3    8   11    0    1    1
+Met M     1     1    0    0    0    2    0    0    0    5    8    4 9874    1    0    1    2    0    0    4
+Phe F     1     1    1    0    0    0    0    1    2    8    6    0    4 9946    0    2    1    3   28    0
+Pro P    13     5    2    1    1    8    3    2    5    1    2    2    1    1 9926   12    4    0    0    2
+Ser S    28    11   34    7   11    4    6   16    2    2    1    7    4    3   17 9840   38    5    2    2
+Thr T    22     2   13    4    1    3    2    2    1   11    2    8    6    1    5   32 9871    0    2    9
+Trp W     0     2    0    0    0    0    0    0    0    0    0    0    0    1    0    1    0 9976    1    0
+Tyr Y     1     0    3    0    3    0    1    0    4    1    1    0    0   21    0    1    1    2 9945    1
+Val V    13     2    1    1    3    2    2    3    3   57   11    1   17    1    3    2   10    0    2 9901
+```
 
+All frequencies scaled by 10000.
 
-@Pevsner2015
-
-
+@DeDUVEINSTITUTE
 
 #### Step 5
 
@@ -390,12 +407,11 @@ Very interesting for comparing distantly related proteins.
 
 It corresponds to about 20% identity.
 
+![PAM 250](images/pevsner_chapter_03/image26.png)
+
 @Pevsner2015
 
 
-PAM 250
-
-TODO: table
 
 #### Step 6: Relatedness odds matrix
 
@@ -423,28 +439,27 @@ We want a scoring matrix so that when we do a pairwise alignment (or a BLAST sea
 
 Logarithms are easier to use for a scoring system. They allow us to sum the scores of aligned residues (rather than having to multiply them).
 
-Log-odds matrix for PAM250 
+$$s_{ij} = 10 \times log_{10}\left(R_{ij}\right) = 10 \times log_{10}\left(\frac{M_{ij}}{f_i}\right) $$
 
-TODO: table
+
+![A sample of the log-odds matrix for PAM250.](images/pevsner_chapter_03/image31.png)
 
 Here, a positive score means that the replacement occurs more frequently in related proteins than expected by chance.
 That is, it is a lot more likely that a tryptophan stays a tryptophan than that it changes to anything else, even in fairly distantly related proteins.
 
-
 @Pevsner2015
 
-
 ### BLOSUM matrices
+
 An alternative to PAM matrices.
 They are based on local multiple alignments.
 They are based on observed alignments; they are not extrapolated from comparisons of closely related proteins.
 Stands for blocks substitution matrix.
 
-BLOSUM62: Calculated from comparisons of sequence blocks with up to 62% identity.
+BLOSUM62 is very widely used because it performs better than most of BLOSUM and PAM matrices at detecting distant relationships between proteins.
+Calculated from comparisons of sequence blocks with up to 62% identity.
 
-Performs better than most of BLOSUM and PAM matrices at detecting distant relationships between proteins.
-
-TODO: table
+![BLOSUM62](images/pevsner_chapter_03/image34.png)
 
 @Pevsner2015
 
@@ -456,7 +471,7 @@ TODO: table
 
 ### Applications of different matrices
 
-![Use of different substitution matrices](images/use_of_substitution_matrices.png)
+![Use of different substitution matrices](images/pevsner_chapter_03/image35.png)
 
 @Pevsner2015
 
@@ -466,7 +481,7 @@ TODO: table
 
 2 sequences can be compared in a matrix along x- & y-axes.
 
-If they are identical, what will the graph look like?
+Ask yourself: if they are identical, what will the graph look like? What if they are mostly identical but one of them has a gap?
 
 Mini exercise: Use this ![online tool](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastSearch&PROG_DEF=blastn&BLAST_PROG_DEF=blastn&BLAST_SPEC=GlobalAln&LINK_LOC=BlastHomeLink) to align any sequence of aminoacids to itself.
 
@@ -478,6 +493,7 @@ Objective: find the optimal subpaths, and add them up to achieve the best score.
 * allowing for conservative substitutions
 
 * choosing a scoring system (simple or complicated)
+
 Needleman-Wunsch is guaranteed to find optimal alignment(s), but it scales poorly with the length of sequences.
 
 Steps:
@@ -488,9 +504,7 @@ Steps:
 
 * Identify the optimal alignment(s)
 
-Example alignments
-
-TODO: figure
+![An example alignment](images/pevsner_chapter_03/image38.png)
 
 #### Procedure:
 
@@ -508,9 +522,21 @@ Grey-shaded boxes: identity.
 
 3. Trace optimal path
 
-TODO: images
+Step 1: Set up matrix
+
+
+![Step 1](images/pevsner_chapter_03/image40.png)
+
 
 Step 2: Score matrix
+
+![Step 2](images/pevsner_chapter_03/image41.png)
+![Step 2](images/pevsner_chapter_03/image42.png)
+![Step 2](images/pevsner_chapter_03/image43.png)
+![Step 2](images/pevsner_chapter_03/image44.png)
+![Step 2](images/pevsner_chapter_03/image45.png)
+![Step 2](images/pevsner_chapter_03/image46.png)
+
 
 We use a very simple scoring scheme for simplicity, but it would be more appropriate to use a PAM or BLOSUM scoring matrix.
 
@@ -519,7 +545,10 @@ Each cell gets the best score from three possibilities: top, left (both of which
 
 Step 3: trace optimal path
 
-TODO: image
+![Step 3](images/pevsner_chapter_03/image47.png)
+![Step 3](images/pevsner_chapter_03/image48.png)
+![Step 3](images/pevsner_chapter_03/image49.png)
+
 
 Highlighted cells: optimal path (best scores) → resulting alignment.
 Begin at the lower right cell and proceed back to the start following the red arrows in the previous figure.
@@ -563,7 +592,7 @@ Local alignment is almost always used for database searches such as BLAST. It is
 
 Smith and Waterman (1981) solved the problem of  performing optimal local sequence alignment. Other methods (BLAST, FASTA) are faster but less thorough.
 
-TODO: image? text?
+![Global versus local alignments.](images/pevsner_chapter_03/image50.jpeg)
 
 @Pevsner2015
 
@@ -576,7 +605,6 @@ Smith-Waterman is very rigorous and it is guaranteed to find an optimal alignmen
 But Smith-Waterman is slow. It requires computer space and time proportional to the product of the two sequences being aligned (or the product of a query against an entire database). 
 
 For that, we use heuristic local alignment tools.
-
 
 
 ### The FASTA format
@@ -657,21 +685,26 @@ Use the human myoglobin protein as a query to search for paralogous protein sequ
 Find cytoglobins, where are hemoglobins? Tweak algorithm parameters -> scoring matrix.
 
 ### BLAST variants: Choosing a BLAST program
+
 We will choose depending on our biological question.
 
-TODO: blast variants image
+![The different BLAST variants and their application.](images/pevsner_chapter_04/image3.jpeg)
 
 Choosing a database: proteins
 
-TODO: table
+TODO: summarized, updated table
 
 Choosing a database: nucleotides
 
-TODO: table
+TODO: summarized, updated table
 
 * Numbers from 2015
 
+![Basic BLAST options.](images/basic_blast.png)
+
 ### Optional parameters
+
+![Optional parameters for BLAST.](images/optional_blast_parameters.png)
 
 * Choose the organism to search
 
@@ -686,8 +719,9 @@ TODO: table
 * Change the output format
 
 
-TODO: blast variants image
+![BLAST cheat sheet](images/pevsner_chapter_04/image22.jpeg)
 
+@Pevsner2015
 
 ## Multiple sequence alignment
 
@@ -792,11 +826,9 @@ Modify the alignment using dynamic programming or other methods until the soluti
 
 Examples: MUSCLE, MAFFT
 
-TODO: 6.6 Pevsner
+![Iterative MSA](images/pevsner_chapter_06/image20.jpeg)
 
 @Pevsner2015
-
-
 
 #### Consistency-based algorithms
 

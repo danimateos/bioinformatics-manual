@@ -36,6 +36,8 @@ The nature of the data has changed radically.
 In the most recent generation, data have become more quantitative and precise.
 It is possible to determine the genome sequence of an individual organism (experimental error, but high quality of sequencing methods)
 
+TODO: better introduction
+
 ### The different perspectives of Bioinformatics
 
 TODO: image from Pevsner
@@ -116,9 +118,11 @@ In reality, it is even more complex: see next slide
 
 ### Transcriptional regulation
 
-TODO: image and citation
+![Regulation of gene expression is exerted at every step in the process, but mainly studied at transcription.](images/lenhard_regulation.png)
 
-Regulation of gene expression is exerted at every step in the process, but mainly at transcription.
+@Lenhard2012
+
+
 
 ### Transcription factors 
 
@@ -129,9 +133,11 @@ Transcription factors bind particular places in the genome. The binding sites fo
 
 ### Cis regulatory elements
 
-TODO: image and citation
 
-Regions of non-coding DNA that bind transcription factors, and that regulate the expression of a nearby gene.
+![Cis regulatory elements are regions of non-coding DNA that bind transcription factors, and that regulate the expression of a nearby gene.](images/witkopp_regulatory_elements.png)
+
+@Wittkopp2012
+
 
 * Promoter: the region near the Transcription Start Site (TSS) of a gene that binds the core transcriptional machinery and related transcription factors.
 * Enhancer: a region farther away from a TSS that binds TFs and affects the transcription of the gene in question.
@@ -192,9 +198,9 @@ Application:
 
 ### Bridging the 2 cultures
 
-TODO: Galaxy screenshot
+![https://usegalaxy.eu/](images/usegalaxy.eu.png)
 
-Galaxy presents a web-based GUI for many popular command line tools ties them together.
+Galaxy presents a web-based GUI for many popular command line tools that ties them together in a way that is easy to use. It is a great tool to get an introduction to bioinformatics.
 
 
 ### In this course
@@ -213,8 +219,6 @@ VirtualBox and other VM software allow us to run an operating system inside anot
 
 The host is the regular OS
 The guest is the OS running inside a virtual machine
-
-TODO: VM screenshot
 
 ## VMs with VirtualBox
 
