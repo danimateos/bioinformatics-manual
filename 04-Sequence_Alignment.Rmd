@@ -49,7 +49,7 @@ The resulting genes will evolve independently: they are paralogs.
 
 \cite{Discoveryandinnovation.com}
 
-Many proteins have a globin domain: a part of their sequence forms the globin fold: a series of eight α-helices.
+Many proteins have a globin domain: a part of their sequence forms the globin fold: a series of eight alpha-helices.
 All genes that contain a globin domain form part of the globin superfamily.
 
 How does this look in terms of sequence?
@@ -288,9 +288,9 @@ Define values for all possible pairs of residues
 
 Contain values proportional to the probability that $aa_i$ mutates into $aa_j$ for all pairs of aa.
 
-![Substitution matrix for GPCRs](images/substitution_matrix_gpcr.webp)
+![Substitution matrix for GPCRs](images/substitution_matrix_gpcr.jpg)
 
-\cite{Rios2015}
+@Rios2015
 
 ### Building substitution matrices
 

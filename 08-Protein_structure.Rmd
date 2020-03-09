@@ -37,9 +37,9 @@ TODO: image and source. even better, text
 
 Chou and Fasman (1974) developed an algorithm based on the frequencies of aa found in
 
-* α-helices
+* alpha-helices
 
-* β-sheets
+* beta-sheets
 
 * Turns
 
@@ -339,6 +339,8 @@ TODO: How does an HMM describe a protein family?
 ## Further reading
 
 https://www.ncbi.nlm.nih.gov/books/NBK6824/
+
+[New universe of miniproteins is upending cell biology and genetics](https://www.sciencemag.org/news/2019/10/new-universe-miniproteins-upending-cell-biology-and-genetics)
 
 AlphaFold: DeepMind at CASP13
 

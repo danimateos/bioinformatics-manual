@@ -122,8 +122,9 @@ https://www.ncbi.nlm.nih.gov/pubmed/20981092
 
 ![Monogenic (single gene) disorders](TODO image or table)
 
+Sickle cell anemia: interesting because the mutation in heterozygosity confers malaria resistance.
 
-Sickle cell anemia, Rett syndrome
+Rett syndrome: neurological disease that is linked to more than 900 different mutations in CEP2, in chromosome X.
 
 TODO: monogenic disease. Summarize, there’s way too much info in pevsner
 
@@ -488,3 +489,5 @@ These studies help us to define a logic of disease, from genotype to phenotype.
 TODO: find something more recent on this topic
 
 ## Further Reading
+
+https://www.economist.com/science-and-technology/2019/11/07/modern-genetics-will-improve-health-and-usher-in-designer-children
